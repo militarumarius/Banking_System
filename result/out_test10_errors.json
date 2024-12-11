@@ -1,4 +1,15 @@
 [ {
+  "command" : "deleteAccount",
+  "output" : {
+    "success" : "Account deleted",
+    "timestamp" : 10
+  },
+  "timestamp" : 10
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 15
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Marinela",
@@ -15,13 +26,7 @@
     "firstName" : "Alice",
     "lastName" : "Dima",
     "email" : "Alice_Dima@hotmail.ro",
-    "accounts" : [ {
-      "type" : "classic",
-      "balance" : 0.0,
-      "currency" : "RON",
-      "cards" : [ ],
-      "IBAN" : "RO69POOB6209498372540635"
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Jan",
     "lastName" : "Ababe",

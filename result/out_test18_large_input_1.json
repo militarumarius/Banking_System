@@ -606,7 +606,10 @@
       "type" : "classic",
       "balance" : 0.0,
       "currency" : "CHF",
-      "cards" : [ ],
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
+      } ],
       "IBAN" : "RO53POOB7122855990652257"
     } ]
   }, {
@@ -618,7 +621,7 @@
       "balance" : 14230.0,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "7901879264253296",
+        "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
@@ -822,7 +825,10 @@
       "type" : "classic",
       "balance" : 0.0,
       "currency" : "CHF",
-      "cards" : [ ],
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
+      } ],
       "IBAN" : "RO53POOB7122855990652257"
     } ]
   }, {
@@ -834,7 +840,7 @@
       "balance" : 14230.0,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "7901879264253296",
+        "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
@@ -1007,10 +1013,7 @@
       "type" : "classic",
       "balance" : 36468.0,
       "currency" : "INR",
-      "cards" : [ {
-        "cardNumber" : "8207906978464446",
-        "status" : "active"
-      } ],
+      "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -1049,10 +1052,7 @@
       "type" : "classic",
       "balance" : 14649.0,
       "currency" : "EUR",
-      "cards" : [ {
-        "cardNumber" : "7901879264253296",
-        "status" : "active"
-      } ],
+      "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   }, {
@@ -1223,10 +1223,7 @@
       "type" : "classic",
       "balance" : 36468.0,
       "currency" : "INR",
-      "cards" : [ {
-        "cardNumber" : "8207906978464446",
-        "status" : "active"
-      } ],
+      "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -1265,10 +1262,7 @@
       "type" : "classic",
       "balance" : 14649.0,
       "currency" : "EUR",
-      "cards" : [ {
-        "cardNumber" : "7901879264253296",
-        "status" : "active"
-      } ],
+      "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   }, {
@@ -1290,7 +1284,10 @@
       "type" : "classic",
       "balance" : 954.0,
       "currency" : "EUR",
-      "cards" : [ ],
+      "cards" : [ {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
+      } ],
       "IBAN" : "RO76POOB4035116042454483"
     } ]
   }, {
@@ -1430,6 +1427,90 @@
   } ],
   "timestamp" : 172
 }, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 173
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 174
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 175
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 176
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 177
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 178
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 179
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 180
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 181
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 182
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 183
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 184
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 185
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 186
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 187
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 188
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 189
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 190
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 191
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 192
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 193
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Sachi",
@@ -1439,10 +1520,7 @@
       "type" : "classic",
       "balance" : 36468.0,
       "currency" : "INR",
-      "cards" : [ {
-        "cardNumber" : "8207906978464446",
-        "status" : "active"
-      } ],
+      "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -1481,10 +1559,7 @@
       "type" : "classic",
       "balance" : 14649.0,
       "currency" : "EUR",
-      "cards" : [ {
-        "cardNumber" : "7901879264253296",
-        "status" : "active"
-      } ],
+      "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   }, {
@@ -1506,7 +1581,10 @@
       "type" : "classic",
       "balance" : 954.0,
       "currency" : "EUR",
-      "cards" : [ ],
+      "cards" : [ {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
+      } ],
       "IBAN" : "RO76POOB4035116042454483"
     } ]
   }, {

@@ -26,6 +26,9 @@
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
+      }, {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
@@ -43,6 +46,9 @@
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
+        "status" : "active"
+      }, {
+        "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"

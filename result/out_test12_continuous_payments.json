@@ -121,6 +121,17 @@
   } ],
   "timestamp" : 24
 }, {
+  "command" : "deleteAccount",
+  "output" : {
+    "success" : "Account deleted",
+    "timestamp" : 37
+  },
+  "timestamp" : 37
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 45
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Brian",
@@ -134,7 +145,7 @@
         "cardNumber" : "8207906978464446",
         "status" : "active"
       }, {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "1322658752653937",
         "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
@@ -174,13 +185,7 @@
     "firstName" : "James",
     "lastName" : "Pace",
     "email" : "James_Pace@gmail.us",
-    "accounts" : [ {
-      "type" : "classic",
-      "balance" : 0.0,
-      "currency" : "USD",
-      "cards" : [ ],
-      "IBAN" : "RO65POOB8944016386845896"
-    } ]
+    "accounts" : [ ]
   }, {
     "firstName" : "Ivona",
     "lastName" : "Aane",

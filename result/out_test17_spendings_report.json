@@ -90,6 +90,9 @@
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
+      }, {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
@@ -97,7 +100,7 @@
       "balance" : 2822.0,
       "currency" : "RON",
       "cards" : [ {
-        "cardNumber" : "6796819982034243",
+        "cardNumber" : "1322658752653937",
         "status" : "active"
       } ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -112,6 +115,9 @@
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
+        "status" : "active"
+      }, {
+        "cardNumber" : "4686471658318359",
         "status" : "active"
       } ],
       "IBAN" : "RO90POOB5450777208072365"

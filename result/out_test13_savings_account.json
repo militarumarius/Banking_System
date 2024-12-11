@@ -97,6 +97,10 @@
   } ],
   "timestamp" : 18
 }, {
+  "command" : "deleteAccount",
+  "output" : { },
+  "timestamp" : 19
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Beniamin",
