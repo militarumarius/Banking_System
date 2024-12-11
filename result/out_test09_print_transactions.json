@@ -1,0 +1,82 @@
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Laurie",
+    "lastName" : "Johnson",
+    "email" : "Laurie_Johnson@gmail.us",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 3500.0,
+      "currency" : "USD",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Alicia",
+    "lastName" : "Stafford",
+    "email" : "Alicia_Stafford@gmail.us",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 813.0,
+      "currency" : "USD",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Denis",
+    "lastName" : "Cousin",
+    "email" : "Denis_Cousin@hotmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 29.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  } ],
+  "timestamp" : 10
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Laurie",
+    "lastName" : "Johnson",
+    "email" : "Laurie_Johnson@gmail.us",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 3500.0,
+      "currency" : "USD",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Alicia",
+    "lastName" : "Stafford",
+    "email" : "Alicia_Stafford@gmail.us",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 813.0,
+      "currency" : "USD",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Denis",
+    "lastName" : "Cousin",
+    "email" : "Denis_Cousin@hotmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 29.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "type" : "savings",
+      "balance" : 197.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "interestRate" : 0.3,
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 19
+} ]

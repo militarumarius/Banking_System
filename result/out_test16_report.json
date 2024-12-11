@@ -1,0 +1,80 @@
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Emanuel",
+    "lastName" : "Dumitrescu",
+    "email" : "Emanuel_Dumitrescu@gmail.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 838.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "type" : "classic",
+      "balance" : 216.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Jacques",
+    "lastName" : "Loiseau",
+    "email" : "Jacques_Loiseau@gmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 791.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "type" : "classic",
+      "balance" : 586.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 9
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Emanuel",
+    "lastName" : "Dumitrescu",
+    "email" : "Emanuel_Dumitrescu@gmail.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 838.0,
+      "currency" : "RON",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "type" : "classic",
+      "balance" : 216.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Jacques",
+    "lastName" : "Loiseau",
+    "email" : "Jacques_Loiseau@gmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 791.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "type" : "classic",
+      "balance" : 586.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 14
+} ]

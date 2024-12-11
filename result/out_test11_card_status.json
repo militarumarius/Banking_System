@@ -1,0 +1,41 @@
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "David",
+    "lastName" : "Rogers",
+    "email" : "David_Rogers@gmail.us",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 1775.0,
+      "currency" : "USD",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Olivia",
+    "lastName" : "Suciu",
+    "email" : "Olivia_Suciu@yahoo.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 58.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Carla",
+    "lastName" : "Valencia",
+    "email" : "Carla_Valencia@yahoo.us",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 323.0,
+      "currency" : "USD",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  } ],
+  "timestamp" : 22
+} ]

@@ -3,6 +3,8 @@ package org.poo.main;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import org.poo.actionHandler.Action;
+import org.poo.bank.BankDatabase;
 import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
 import org.poo.fileio.ObjectInput;
@@ -73,7 +75,8 @@ public final class Main {
         ObjectInput inputData = objectMapper.readValue(file, ObjectInput.class);
 
         ArrayNode output = objectMapper.createArrayNode();
-
+        BankDatabase bank = new BankDatabase(inputData);
+        Action.actionHandler(inputData, output, bank);
         /*
          * TODO Implement your function here
          *
@@ -93,10 +96,10 @@ public final class Main {
          *
          */
 
+
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePath2), output);
     }
-
     /**
      * Method used for extracting the test number from the file name.
      *

@@ -1,0 +1,97 @@
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Margaux",
+    "lastName" : "Nicolas",
+    "email" : "Margaux_Nicolas@gmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 4782.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Lucas",
+    "lastName" : "Garnier",
+    "email" : "Lucas_Garnier@outlook.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 5845.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Georgeta",
+    "lastName" : "Nistor",
+    "email" : "Georgeta_Nistor@outlook.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 3359.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Emanoil",
+    "lastName" : "Barbu",
+    "email" : "Emanoil_Barbu@hotmail.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 3461.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 10
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Margaux",
+    "lastName" : "Nicolas",
+    "email" : "Margaux_Nicolas@gmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 5707.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Lucas",
+    "lastName" : "Garnier",
+    "email" : "Lucas_Garnier@outlook.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 6204.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Georgeta",
+    "lastName" : "Nistor",
+    "email" : "Georgeta_Nistor@outlook.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 4144.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Emanoil",
+    "lastName" : "Barbu",
+    "email" : "Emanoil_Barbu@hotmail.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 4198.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 16
+} ]
