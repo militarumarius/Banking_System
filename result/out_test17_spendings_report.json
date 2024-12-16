@@ -44,7 +44,7 @@
     "email" : "Simion_Mazilescu@yahoo.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 6720.0,
+      "balance" : 4959.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -53,7 +53,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
-      "balance" : 1840.0,
+      "balance" : 2367.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -78,6 +78,13 @@
   } ],
   "timestamp" : 14
 }, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 37,
+    "description" : "Card not found"
+  },
+  "timestamp" : 37
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Simion",
@@ -85,7 +92,7 @@
     "email" : "Simion_Mazilescu@yahoo.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 15392.0,
+      "balance" : 20413.4,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -97,7 +104,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
-      "balance" : 2822.0,
+      "balance" : 9061.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
@@ -111,7 +118,7 @@
     "email" : "Anthony_Graham@yahoo.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 3608.0,
+      "balance" : 1148.2142857142858,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -123,7 +130,7 @@
       "IBAN" : "RO90POOB5450777208072365"
     }, {
       "type" : "classic",
-      "balance" : 15742.0,
+      "balance" : 13324.0,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "7004757825892043",

@@ -51,6 +51,13 @@
   } ],
   "timestamp" : 7
 }, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 11,
+    "description" : "Card not found"
+  },
+  "timestamp" : 11
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Daniel",
@@ -58,7 +65,7 @@
     "email" : "Daniel_Masson@outlook.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 11169.0,
+      "balance" : 9416.4,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -77,7 +84,7 @@
     "email" : "Ryan_Powell@gmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1500.0,
+      "balance" : 2861.1111111111113,
       "currency" : "USD",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"

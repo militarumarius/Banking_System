@@ -14,7 +14,7 @@
     "email" : "Selma_Birnbaum@icloud.de",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7400.0,
+      "balance" : 7264.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -23,7 +23,7 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "classic",
-      "balance" : 0.0,
+      "balance" : 74.0,
       "currency" : "EUR",
       "cards" : [ ],
       "IBAN" : "RO30POOB9523423715747796"
@@ -34,7 +34,7 @@
     "email" : "Leanne_Scott-Davies@yandex.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1613.0,
+      "balance" : 1597.0,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -55,7 +55,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
-      "balance" : 5150.0,
+      "balance" : 3235.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
@@ -69,7 +69,7 @@
     "email" : "Gina_Johnson@mail.com.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 851.0,
+      "balance" : 534.5384615384615,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
@@ -83,7 +83,7 @@
     "email" : "Zachary_Martin@aol.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 924.0,
+      "balance" : 711.6666666666666,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
@@ -112,7 +112,7 @@
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 8561.0,
+      "balance" : 8575.444444444445,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
@@ -189,6 +189,104 @@
   } ],
   "timestamp" : 38
 }, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 78,
+    "description" : "Card not found"
+  },
+  "timestamp" : 78
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 79,
+    "description" : "Card not found"
+  },
+  "timestamp" : 79
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 80,
+    "description" : "Card not found"
+  },
+  "timestamp" : 80
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 81,
+    "description" : "Card not found"
+  },
+  "timestamp" : 81
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 82,
+    "description" : "Card not found"
+  },
+  "timestamp" : 82
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 83,
+    "description" : "Card not found"
+  },
+  "timestamp" : 83
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 84,
+    "description" : "Card not found"
+  },
+  "timestamp" : 84
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 85,
+    "description" : "Card not found"
+  },
+  "timestamp" : 85
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 86,
+    "description" : "Card not found"
+  },
+  "timestamp" : 86
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 87,
+    "description" : "Card not found"
+  },
+  "timestamp" : 87
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 88,
+    "description" : "Card not found"
+  },
+  "timestamp" : 88
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 89,
+    "description" : "Card not found"
+  },
+  "timestamp" : 89
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 90,
+    "description" : "Card not found"
+  },
+  "timestamp" : 90
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 91,
+    "description" : "Card not found"
+  },
+  "timestamp" : 91
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Selma",
@@ -196,7 +294,7 @@
     "email" : "Selma_Birnbaum@icloud.de",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7400.0,
+      "balance" : 7264.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -205,7 +303,7 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "classic",
-      "balance" : 2032.0,
+      "balance" : 2106.0,
       "currency" : "EUR",
       "cards" : [ ],
       "IBAN" : "RO30POOB9523423715747796"
@@ -216,7 +314,7 @@
     "email" : "Leanne_Scott-Davies@yandex.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2165.0,
+      "balance" : 1996.111111111111,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -237,7 +335,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
-      "balance" : 8760.0,
+      "balance" : 6655.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
@@ -251,7 +349,7 @@
     "email" : "Gina_Johnson@mail.com.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7164.0,
+      "balance" : 6691.538461538462,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
@@ -265,7 +363,7 @@
     "email" : "Zachary_Martin@aol.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1828.0,
+      "balance" : 1612.9738095238095,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
@@ -294,7 +392,7 @@
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 8615.0,
+      "balance" : 8629.444444444445,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
@@ -449,6 +547,104 @@
   } ],
   "timestamp" : 92
 }, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 151,
+    "description" : "Card not found"
+  },
+  "timestamp" : 151
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 152,
+    "description" : "Card not found"
+  },
+  "timestamp" : 152
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 153,
+    "description" : "Card not found"
+  },
+  "timestamp" : 153
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 154,
+    "description" : "Card not found"
+  },
+  "timestamp" : 154
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 155,
+    "description" : "Card not found"
+  },
+  "timestamp" : 155
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 156,
+    "description" : "Card not found"
+  },
+  "timestamp" : 156
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 157,
+    "description" : "Card not found"
+  },
+  "timestamp" : 157
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 158,
+    "description" : "Card not found"
+  },
+  "timestamp" : 158
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 159,
+    "description" : "Card not found"
+  },
+  "timestamp" : 159
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 160,
+    "description" : "Card not found"
+  },
+  "timestamp" : 160
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 161,
+    "description" : "Card not found"
+  },
+  "timestamp" : 161
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 162,
+    "description" : "Card not found"
+  },
+  "timestamp" : 162
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 163,
+    "description" : "Card not found"
+  },
+  "timestamp" : 163
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 164,
+    "description" : "Card not found"
+  },
+  "timestamp" : 164
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Selma",
@@ -456,7 +652,7 @@
     "email" : "Selma_Birnbaum@icloud.de",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7400.0,
+      "balance" : 7264.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -465,7 +661,7 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "classic",
-      "balance" : 2565.0,
+      "balance" : 2639.0,
       "currency" : "EUR",
       "cards" : [ ],
       "IBAN" : "RO30POOB9523423715747796"
@@ -476,7 +672,7 @@
     "email" : "Leanne_Scott-Davies@yandex.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2493.0,
+      "balance" : 2101.311111111111,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -500,7 +696,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
-      "balance" : 9560.0,
+      "balance" : 5869.875,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
@@ -514,7 +710,7 @@
     "email" : "Gina_Johnson@mail.com.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7399.0,
+      "balance" : 6997.213461538462,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
@@ -528,7 +724,7 @@
     "email" : "Zachary_Martin@aol.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2576.0,
+      "balance" : 1885.9738095238095,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
@@ -542,7 +738,7 @@
     "email" : "Estera_Nistor@gmx.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 2649.0,
+      "balance" : 2663.464285714286,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
@@ -557,7 +753,7 @@
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 11641.0,
+      "balance" : 11655.444444444445,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
@@ -583,7 +779,7 @@
     "email" : "Fiona_Jones@icloud.gb",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 743.0,
+      "balance" : 558.0,
       "currency" : "GBP",
       "cards" : [ ],
       "IBAN" : "RO00POOB5687892910835215"
@@ -605,7 +801,7 @@
     "email" : "Chaaya_Goswam@mail.com.in",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7701.0,
+      "balance" : 7476.0,
       "currency" : "INR",
       "cards" : [ ],
       "IBAN" : "RO33POOB4049920806186500"
@@ -627,7 +823,7 @@
     "email" : "Lorenzo_Mora_Quiroz@hotmail.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 133.0,
+      "balance" : 4991.636363636363,
       "currency" : "MXN",
       "cards" : [ ],
       "IBAN" : "RO98POOB8412955460158769"
@@ -674,7 +870,7 @@
     "email" : "Mercedes_Godoy@gmx.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 454.0,
+      "balance" : 189.0,
       "currency" : "MXN",
       "cards" : [ ],
       "IBAN" : "RO33POOB9999273999620457"
@@ -699,7 +895,7 @@
     "email" : "Eugene_Harper@gmx.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1297.0,
+      "balance" : 1024.0,
       "currency" : "CHF",
       "cards" : [ ],
       "IBAN" : "RO53POOB7122855990652257"

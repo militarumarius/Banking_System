@@ -6,7 +6,7 @@
     "email" : "Madalin_Diaconu@hotmail.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 283.0,
+      "balance" : 173.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
@@ -17,7 +17,7 @@
     "email" : "Iulia_Stoica@hotmail.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 513.0,
+      "balance" : 623.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -32,7 +32,7 @@
     "email" : "Madalin_Diaconu@hotmail.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 283.0,
+      "balance" : 173.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
@@ -43,7 +43,7 @@
     "email" : "Iulia_Stoica@hotmail.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 513.0,
+      "balance" : 623.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"

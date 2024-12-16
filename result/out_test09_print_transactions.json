@@ -43,7 +43,7 @@
     "email" : "Laurie_Johnson@gmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 3500.0,
+      "balance" : 3283.0,
       "currency" : "USD",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
@@ -54,7 +54,7 @@
     "email" : "Alicia_Stafford@gmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 813.0,
+      "balance" : 922.0,
       "currency" : "USD",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -71,7 +71,7 @@
       "IBAN" : "RO90POOB5450777208072365"
     }, {
       "type" : "savings",
-      "balance" : 197.0,
+      "balance" : 283.4,
       "currency" : "EUR",
       "cards" : [ ],
       "interestRate" : 0.3,

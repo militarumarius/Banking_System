@@ -1,9 +1,6 @@
 [ {
   "command" : "deleteAccount",
-  "output" : {
-    "success" : "Account deleted",
-    "timestamp" : 10
-  },
+  "output" : { },
   "timestamp" : 10
 }, {
   "command" : "deleteAccount",
@@ -17,7 +14,7 @@
     "email" : "Marinela_Puscasu@hotmail.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2389.0,
+      "balance" : 1350.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
@@ -26,14 +23,20 @@
     "firstName" : "Alice",
     "lastName" : "Dima",
     "email" : "Alice_Dima@hotmail.ro",
-    "accounts" : [ ]
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 956.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
   }, {
     "firstName" : "Jan",
     "lastName" : "Ababe",
     "email" : "Jan_Ababe@outlook.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 670.0,
+      "balance" : 753.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
@@ -44,7 +47,7 @@
     "email" : "Andre_Martin@gmail.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 842.0,
+      "balance" : 495.3333333333333,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -54,4 +57,11 @@
     } ]
   } ],
   "timestamp" : 22
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 26,
+    "description" : "Card not found"
+  },
+  "timestamp" : 26
 } ]

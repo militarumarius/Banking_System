@@ -6,9 +6,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.bank.cards.Card;
+import org.poo.fileio.CommandInput;
+import org.poo.transaction.Transaction;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Setter
 public abstract class Account {
@@ -18,6 +22,8 @@ public abstract class Account {
     private  double balance = 0.0;
     private final String currency;
     private List<Card> cards = new ArrayList<>();
+    private List<Transaction> transactions = new ArrayList<>();
+
 
     protected Account(String IBAN, String type, String currency) {
         this.IBAN = IBAN;
@@ -50,7 +56,15 @@ public abstract class Account {
     }
 
     @JsonIgnore
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    @JsonIgnore
     public String getIBAN() {
         return IBAN;
     }
+
+    public void payOnline(CommandInput commandInput, double exchangeRate){};
+
 }

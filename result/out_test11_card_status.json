@@ -6,7 +6,7 @@
     "email" : "David_Rogers@gmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1775.0,
+      "balance" : 1140.5,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -20,7 +20,7 @@
     "email" : "Olivia_Suciu@yahoo.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 58.0,
+      "balance" : 3.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -31,7 +31,7 @@
     "email" : "Carla_Valencia@yahoo.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 323.0,
+      "balance" : 506.33333333333337,
       "currency" : "USD",
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"

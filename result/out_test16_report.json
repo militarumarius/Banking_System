@@ -44,7 +44,7 @@
     "email" : "Emanuel_Dumitrescu@gmail.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 838.0,
+      "balance" : 272.5,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -53,7 +53,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
-      "balance" : 216.0,
+      "balance" : 497.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -77,4 +77,18 @@
     } ]
   } ],
   "timestamp" : 14
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 23,
+    "description" : "Card not found"
+  },
+  "timestamp" : 23
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 24,
+    "description" : "Card not found"
+  },
+  "timestamp" : 24
 } ]

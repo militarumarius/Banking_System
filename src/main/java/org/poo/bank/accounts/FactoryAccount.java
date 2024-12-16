@@ -5,7 +5,7 @@ import org.poo.fileio.CommandInput;
 import static org.poo.utils.Utils.generateIBAN;
 
 public class FactoryAccount {
-        public static Account createAcoount(CommandInput input){
+        public static Account createAccount(CommandInput input){
             switch(input.getAccountType()){
                 case "classic" -> {
                     return new BasicAccount(generateIBAN(), input.getAccountType(), input.getCurrency());

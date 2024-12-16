@@ -6,7 +6,7 @@
     "email" : "Brian_Price@hotmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1430.0,
+      "balance" : 1180.0,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -61,7 +61,7 @@
     "email" : "Brian_Price@hotmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1430.0,
+      "balance" : 1141.3,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -78,7 +78,7 @@
     "email" : "Guillaume_Duval@gmail.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 164.0,
+      "balance" : 161.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
@@ -121,11 +121,15 @@
   } ],
   "timestamp" : 24
 }, {
-  "command" : "deleteAccount",
+  "command" : "payOnline",
   "output" : {
-    "success" : "Account deleted",
-    "timestamp" : 37
+    "timestamp" : 30,
+    "description" : "Card not found"
   },
+  "timestamp" : 30
+}, {
+  "command" : "deleteAccount",
+  "output" : { },
   "timestamp" : 37
 }, {
   "command" : "deleteAccount",
@@ -139,7 +143,7 @@
     "email" : "Brian_Price@hotmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 6520.0,
+      "balance" : 5919.3,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -156,7 +160,7 @@
     "email" : "Guillaume_Duval@gmail.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 164.0,
+      "balance" : 161.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
@@ -185,7 +189,13 @@
     "firstName" : "James",
     "lastName" : "Pace",
     "email" : "James_Pace@gmail.us",
-    "accounts" : [ ]
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 242.0,
+      "currency" : "USD",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
   }, {
     "firstName" : "Ivona",
     "lastName" : "Aane",

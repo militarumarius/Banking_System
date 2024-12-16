@@ -46,7 +46,7 @@
     "email" : "Patrick_Cabrera@hotmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 557.0,
+      "balance" : 75.0,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -60,7 +60,7 @@
     "email" : "Leslie_Thomas@yahoo.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 6630.0,
+      "balance" : 7011.0,
       "currency" : "USD",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -71,7 +71,7 @@
     "email" : "Elise_Devaux@outlook.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 6900.0,
+      "balance" : 6980.8,
       "currency" : "EUR",
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
@@ -86,7 +86,7 @@
     "email" : "Patrick_Cabrera@hotmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 557.0,
+      "balance" : 1729.0,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -100,7 +100,7 @@
     "email" : "Leslie_Thomas@yahoo.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 13109.0,
+      "balance" : 11836.0,
       "currency" : "USD",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -111,7 +111,7 @@
     "email" : "Elise_Devaux@outlook.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 6900.0,
+      "balance" : 6980.8,
       "currency" : "EUR",
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
