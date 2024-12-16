@@ -10,20 +10,26 @@
     "account" : "RO58POOB7344468893732422",
     "card" : "8207906978464446"
   }, {
+    "timestamp" : 3,
+    "description" : "You have reached the minimum amount of funds, the card will be frozen"
+  }, {
     "timestamp" : 7,
-    "description" : "Card payment",
-    "amount" : 622.0,
-    "commerciant" : "Amazon"
+    "description" : "The card is frozen"
   }, {
     "timestamp" : 8,
-    "description" : "Insufficient funds"
+    "description" : "The card is frozen"
   }, {
     "timestamp" : 9,
-    "description" : "Card payment",
-    "amount" : 12.5,
-    "commerciant" : "KFC"
+    "description" : "The card is frozen"
   } ],
   "timestamp" : 11
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 20,
+    "description" : "Card not found"
+  },
+  "timestamp" : 20
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -32,11 +38,11 @@
     "email" : "David_Rogers@gmail.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1140.5,
+      "balance" : 1775.0,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "active"
+        "status" : "frozen"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]

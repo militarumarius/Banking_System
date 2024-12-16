@@ -24,7 +24,9 @@ public abstract class Account {
     private List<Card> cards = new ArrayList<>();
     private List<Transaction> transactions = new ArrayList<>();
     @JsonIgnore
-    private double minAmount ;
+    private double interestRate;
+    @JsonIgnore
+    private double minAmount = 0.0;
 
     @JsonIgnore
     public double getMinAmount() {
@@ -35,6 +37,7 @@ public abstract class Account {
         this.IBAN = IBAN;
         this.type = type;
         this.currency = currency;
+        this.interestRate = 0;
     }
     // Copy constructor
     protected Account(Account account) {
@@ -71,13 +74,23 @@ public abstract class Account {
         return IBAN;
     }
 
-    public void payOnline(CommandInput commandInput, double exchangeRate){}
-
+    public void payOnline(CommandInput commandInput, double exchangeRate){
+        this.setBalance(this.getBalance() - commandInput.getAmount() * exchangeRate);
+    }
     public List<Transaction> copyTransaction(){
-        return null;
-    };
+        List<Transaction> copy = new ArrayList<>();
+        for(Transaction transaction : this.getTransactions())
+            copy.add(new Transaction(transaction));
+        return copy;
+    }
     public boolean validatePayment(CommandInput commandInput, double exchangeRate){
-        return false;
-    };
+        return this.getBalance() >= commandInput.getAmount() * exchangeRate
+                && this.getBalance() > this.getMinAmount();
+    }
+
+    @JsonIgnore
+    public double getInterestRate() {
+        return interestRate;
+    }
 
     }

@@ -1,6 +1,7 @@
 package org.poo.bank;
 
 import org.poo.bank.accounts.Account;
+import org.poo.bank.cards.Card;
 import org.poo.fileio.ExchangeInput;
 import org.poo.fileio.ObjectInput;
 import org.poo.fileio.UserInput;
@@ -89,4 +90,12 @@ public class BankDatabase {
         return aliasMap;
     }
 
+    public Card findCard(String cardNumber){
+        for (User user : users){
+            Card card = user.findCard(cardNumber);
+            if(card != null)
+                return card;
+        }
+        return null;
+    }
 }

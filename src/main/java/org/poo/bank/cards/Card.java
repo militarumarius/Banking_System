@@ -8,7 +8,7 @@ import org.poo.bank.accounts.Account;
 @Getter @Setter
 public abstract class Card {
     private final String cardNumber;
-    private final String status;
+    private String status;
     @JsonIgnore
     private final int type;
     @JsonIgnore

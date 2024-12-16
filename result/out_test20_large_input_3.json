@@ -429,15 +429,24 @@
   "timestamp" : 269
 }, {
   "command" : "printTransactions",
-  "output" : null,
+  "output" : [ {
+    "timestamp" : 26,
+    "description" : "New account created"
+  } ],
   "timestamp" : 371
 }, {
   "command" : "printTransactions",
-  "output" : null,
+  "output" : [ {
+    "timestamp" : 27,
+    "description" : "New account created"
+  } ],
   "timestamp" : 372
 }, {
   "command" : "printTransactions",
-  "output" : null,
+  "output" : [ {
+    "timestamp" : 50,
+    "description" : "New account created"
+  } ],
   "timestamp" : 373
 }, {
   "command" : "printUsers",
@@ -456,7 +465,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "savings",
-      "balance" : 2697.0,
+      "balance" : 2671.04,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1733018068262537",
@@ -479,7 +488,7 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "savings",
-      "balance" : 88163.0,
+      "balance" : 87863.8,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1952612794872207",
@@ -502,7 +511,7 @@
       "IBAN" : "RO90POOB5450777208072365"
     }, {
       "type" : "savings",
-      "balance" : 68581.0,
+      "balance" : 68550.35714285714,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "6988686155235949",
@@ -525,7 +534,7 @@
       "IBAN" : "RO65POOB8944016386845896"
     }, {
       "type" : "savings",
-      "balance" : 54330.0,
+      "balance" : 54152.8125,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "0084627535411906",
@@ -548,7 +557,7 @@
       "IBAN" : "RO58POOB2721178218599590"
     }, {
       "type" : "savings",
-      "balance" : 2590.909090909091,
+      "balance" : 2147.909090909091,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "5254952026068544",
@@ -571,7 +580,7 @@
       "IBAN" : "RO76POOB4035116042454483"
     }, {
       "type" : "savings",
-      "balance" : 80034.0,
+      "balance" : 79418.61538461539,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "8509650399173661",
@@ -594,7 +603,7 @@
       "IBAN" : "RO37POOB7013767509830666"
     }, {
       "type" : "savings",
-      "balance" : 4262.636363636364,
+      "balance" : 3791.261363636364,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "2912280039644439",
@@ -617,7 +626,7 @@
       "IBAN" : "RO19POOB4981055641668812"
     }, {
       "type" : "savings",
-      "balance" : 14434.0,
+      "balance" : 14387.0,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "4069340791718491",
@@ -640,7 +649,7 @@
       "IBAN" : "RO30POOB9523423715747796"
     }, {
       "type" : "savings",
-      "balance" : 10171.0,
+      "balance" : 10027.0,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4729060187716142",
@@ -663,7 +672,7 @@
       "IBAN" : "RO79POOB3616857825600958"
     }, {
       "type" : "savings",
-      "balance" : 3212.0,
+      "balance" : 2729.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "6592968050400705",
@@ -686,7 +695,7 @@
       "IBAN" : "RO00POOB5687892910835215"
     }, {
       "type" : "savings",
-      "balance" : 3107.0,
+      "balance" : 2532.909090909091,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2803408755782048",
@@ -709,7 +718,7 @@
       "IBAN" : "RO96POOB6738272785416988"
     }, {
       "type" : "savings",
-      "balance" : 2422.0,
+      "balance" : 2379.1428571428573,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "6467982927008637",
@@ -732,7 +741,7 @@
       "IBAN" : "RO33POOB4049920806186500"
     }, {
       "type" : "savings",
-      "balance" : 20407.0,
+      "balance" : 20395.85714285714,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "0692077318511511",
@@ -755,7 +764,7 @@
       "IBAN" : "RO69POOB9846198978826791"
     }, {
       "type" : "savings",
-      "balance" : 9304.0,
+      "balance" : 8862.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8686098479595515",
@@ -778,7 +787,7 @@
       "IBAN" : "RO98POOB8412955460158769"
     }, {
       "type" : "savings",
-      "balance" : 22958.0,
+      "balance" : 22588.23076923077,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4435533800578624",
@@ -801,7 +810,7 @@
       "IBAN" : "RO32POOB0130532963818359"
     }, {
       "type" : "savings",
-      "balance" : 2661.0,
+      "balance" : 2471.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8916302128573242",
@@ -824,7 +833,7 @@
       "IBAN" : "RO68POOB1848616931405475"
     }, {
       "type" : "savings",
-      "balance" : 102142.72727272728,
+      "balance" : 102132.87227272728,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "9295697829422937",
@@ -847,7 +856,7 @@
       "IBAN" : "RO10POOB4354933866366881"
     }, {
       "type" : "savings",
-      "balance" : 2372.0,
+      "balance" : 1072.0,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8696843716078966",
@@ -870,7 +879,7 @@
       "IBAN" : "RO33POOB9999273999620457"
     }, {
       "type" : "savings",
-      "balance" : 20439.0,
+      "balance" : 20327.571428571428,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8145060794847555",
@@ -893,7 +902,7 @@
       "IBAN" : "RO38POOB0964823730995794"
     }, {
       "type" : "savings",
-      "balance" : 2941.0,
+      "balance" : 2491.5454545454545,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "4097439592846732",
@@ -916,7 +925,7 @@
       "IBAN" : "RO53POOB7122855990652257"
     }, {
       "type" : "savings",
-      "balance" : 4494.454545454546,
+      "balance" : 4271.454545454546,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "2107645074675430",
@@ -939,7 +948,7 @@
       "IBAN" : "RO71POOB1634969878734749"
     }, {
       "type" : "savings",
-      "balance" : 3482.0,
+      "balance" : 3479.5014285714287,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "2289183361654620",
@@ -962,7 +971,7 @@
       "IBAN" : "RO09POOB4346339013848470"
     }, {
       "type" : "savings",
-      "balance" : 2743.0,
+      "balance" : 2375.0,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2578053935040541",
@@ -985,7 +994,7 @@
       "IBAN" : "RO50POOB3913194831046423"
     }, {
       "type" : "savings",
-      "balance" : 2290.181818181818,
+      "balance" : 2234.4262626262625,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "5069598921863529",
@@ -1008,7 +1017,7 @@
       "IBAN" : "RO89POOB4455583483378897"
     }, {
       "type" : "savings",
-      "balance" : 3209.0,
+      "balance" : 3176.0,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7678041819946354",
@@ -1018,6 +1027,13 @@
     } ]
   } ],
   "timestamp" : 474
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 480,
+    "description" : "Card not found"
+  },
+  "timestamp" : 480
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1035,7 +1051,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "savings",
-      "balance" : 3210.0,
+      "balance" : 3184.04,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1733018068262537",
@@ -1058,7 +1074,7 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "savings",
-      "balance" : 89933.0,
+      "balance" : 89633.8,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1952612794872207",
@@ -1081,7 +1097,7 @@
       "IBAN" : "RO90POOB5450777208072365"
     }, {
       "type" : "savings",
-      "balance" : 65945.0,
+      "balance" : 65914.35714285714,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "6988686155235949",
@@ -1104,7 +1120,7 @@
       "IBAN" : "RO65POOB8944016386845896"
     }, {
       "type" : "savings",
-      "balance" : 55788.0,
+      "balance" : 55610.8125,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "0084627535411906",
@@ -1127,7 +1143,7 @@
       "IBAN" : "RO58POOB2721178218599590"
     }, {
       "type" : "savings",
-      "balance" : 3444.909090909091,
+      "balance" : 3001.909090909091,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "5254952026068544",
@@ -1150,7 +1166,7 @@
       "IBAN" : "RO76POOB4035116042454483"
     }, {
       "type" : "savings",
-      "balance" : 80873.0,
+      "balance" : 80257.61538461539,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "8509650399173661",
@@ -1173,7 +1189,7 @@
       "IBAN" : "RO37POOB7013767509830666"
     }, {
       "type" : "savings",
-      "balance" : 4934.636363636364,
+      "balance" : 4463.261363636364,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "2912280039644439",
@@ -1196,7 +1212,7 @@
       "IBAN" : "RO19POOB4981055641668812"
     }, {
       "type" : "savings",
-      "balance" : 17857.545454545456,
+      "balance" : 17810.545454545456,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "4069340791718491",
@@ -1219,7 +1235,7 @@
       "IBAN" : "RO30POOB9523423715747796"
     }, {
       "type" : "savings",
-      "balance" : 12811.0,
+      "balance" : 12667.0,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4729060187716142",
@@ -1242,7 +1258,7 @@
       "IBAN" : "RO79POOB3616857825600958"
     }, {
       "type" : "savings",
-      "balance" : 15147.0,
+      "balance" : 14664.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "6592968050400705",
@@ -1265,7 +1281,7 @@
       "IBAN" : "RO00POOB5687892910835215"
     }, {
       "type" : "savings",
-      "balance" : 5133.666666666667,
+      "balance" : 4559.575757575758,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2803408755782048",
@@ -1288,7 +1304,7 @@
       "IBAN" : "RO96POOB6738272785416988"
     }, {
       "type" : "savings",
-      "balance" : 16309.090909090908,
+      "balance" : 16266.233766233765,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "6467982927008637",
@@ -1311,7 +1327,7 @@
       "IBAN" : "RO33POOB4049920806186500"
     }, {
       "type" : "savings",
-      "balance" : 20949.0,
+      "balance" : 20937.85714285714,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "0692077318511511",
@@ -1334,7 +1350,7 @@
       "IBAN" : "RO69POOB9846198978826791"
     }, {
       "type" : "savings",
-      "balance" : 10642.0,
+      "balance" : 10200.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8686098479595515",
@@ -1357,7 +1373,7 @@
       "IBAN" : "RO98POOB8412955460158769"
     }, {
       "type" : "savings",
-      "balance" : 23356.0,
+      "balance" : 22986.23076923077,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4435533800578624",
@@ -1380,7 +1396,7 @@
       "IBAN" : "RO32POOB0130532963818359"
     }, {
       "type" : "savings",
-      "balance" : 2979.0,
+      "balance" : 2789.0,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "8916302128573242",
@@ -1403,7 +1419,7 @@
       "IBAN" : "RO68POOB1848616931405475"
     }, {
       "type" : "savings",
-      "balance" : 102894.72727272728,
+      "balance" : 102884.87227272728,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "9295697829422937",
@@ -1426,7 +1442,7 @@
       "IBAN" : "RO10POOB4354933866366881"
     }, {
       "type" : "savings",
-      "balance" : 3123.0,
+      "balance" : 1823.0,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8696843716078966",
@@ -1449,7 +1465,7 @@
       "IBAN" : "RO33POOB9999273999620457"
     }, {
       "type" : "savings",
-      "balance" : 21933.0,
+      "balance" : 21821.571428571428,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8145060794847555",
@@ -1472,7 +1488,7 @@
       "IBAN" : "RO38POOB0964823730995794"
     }, {
       "type" : "savings",
-      "balance" : 4036.0,
+      "balance" : 3586.5454545454545,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "4097439592846732",
@@ -1495,7 +1511,7 @@
       "IBAN" : "RO53POOB7122855990652257"
     }, {
       "type" : "savings",
-      "balance" : 6295.454545454546,
+      "balance" : 6072.454545454546,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "2107645074675430",
@@ -1518,7 +1534,7 @@
       "IBAN" : "RO71POOB1634969878734749"
     }, {
       "type" : "savings",
-      "balance" : 4775.0,
+      "balance" : 4772.501428571429,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "2289183361654620",
@@ -1541,7 +1557,7 @@
       "IBAN" : "RO09POOB4346339013848470"
     }, {
       "type" : "savings",
-      "balance" : 4410.0,
+      "balance" : 4042.0,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2578053935040541",
@@ -1564,7 +1580,7 @@
       "IBAN" : "RO50POOB3913194831046423"
     }, {
       "type" : "savings",
-      "balance" : 3685.181818181818,
+      "balance" : 3629.4262626262625,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "5069598921863529",
@@ -1587,7 +1603,7 @@
       "IBAN" : "RO89POOB4455583483378897"
     }, {
       "type" : "savings",
-      "balance" : 4705.0,
+      "balance" : 4672.0,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7678041819946354",

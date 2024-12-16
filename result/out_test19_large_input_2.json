@@ -102,7 +102,7 @@
     "email" : "Estera_Nistor@gmx.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 1282.0,
+      "balance" : 1190.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
@@ -116,7 +116,7 @@
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 8575.444444444445,
+      "balance" : 8303.626262626263,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
@@ -379,7 +379,7 @@
     "email" : "Estera_Nistor@gmx.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 1987.0,
+      "balance" : 1125.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
@@ -393,7 +393,7 @@
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 8629.444444444445,
+      "balance" : 7886.515151515152,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
@@ -546,6 +546,104 @@
     } ]
   } ],
   "timestamp" : 92
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 99,
+    "description" : "Card not found"
+  },
+  "timestamp" : 99
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 100,
+    "description" : "Card not found"
+  },
+  "timestamp" : 100
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 101,
+    "description" : "Card not found"
+  },
+  "timestamp" : 101
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 102,
+    "description" : "Card not found"
+  },
+  "timestamp" : 102
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 103,
+    "description" : "Card not found"
+  },
+  "timestamp" : 103
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 104,
+    "description" : "Card not found"
+  },
+  "timestamp" : 104
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 105,
+    "description" : "Card not found"
+  },
+  "timestamp" : 105
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 106,
+    "description" : "Card not found"
+  },
+  "timestamp" : 106
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 107,
+    "description" : "Card not found"
+  },
+  "timestamp" : 107
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 108,
+    "description" : "Card not found"
+  },
+  "timestamp" : 108
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 109,
+    "description" : "Card not found"
+  },
+  "timestamp" : 109
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 110,
+    "description" : "Card not found"
+  },
+  "timestamp" : 110
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 111,
+    "description" : "Card not found"
+  },
+  "timestamp" : 111
+}, {
+  "command" : "checkCardStatus",
+  "output" : {
+    "timestamp" : 112,
+    "description" : "Card not found"
+  },
+  "timestamp" : 112
 }, {
   "command" : "printTransactions",
   "output" : [ {
@@ -706,6 +804,9 @@
   "output" : [ {
     "timestamp" : 34,
     "description" : "New account created"
+  }, {
+    "timestamp" : 37,
+    "description" : "Insufficient funds"
   } ],
   "timestamp" : 173
 }, {
@@ -808,7 +909,7 @@
     "email" : "Estera_Nistor@gmx.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 2663.464285714286,
+      "balance" : 1390.8392857142858,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
@@ -822,7 +923,7 @@
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 11655.444444444445,
+      "balance" : 10897.515151515152,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "0466992784477761",

@@ -6,7 +6,7 @@
     "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 1452.0,
+      "balance" : 1160.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -52,7 +52,7 @@
     "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 161.0,
+      "balance" : 1160.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -66,7 +66,7 @@
     "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 1383.642857142857,
+      "balance" : 678.0,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -105,7 +105,7 @@
     "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 161.0,
+      "balance" : 1160.0,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -119,7 +119,7 @@
     "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 1383.642857142857,
+      "balance" : 678.0,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "7901879264253296",

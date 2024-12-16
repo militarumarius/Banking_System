@@ -125,11 +125,19 @@ public class Action {
                             output.addPOJO(objectNode);
                             break;
                         }
+                        Card card = user.findCard(commandInput.getCardNumber());
+                        if(card == null)
+                            break;
+                        if(card.getStatus().equals("frozen")){
+                            Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "The card is frozen")
+                                    .build();
+                            card.getAccount().getTransactions().add(transaction);
+                            break;
+                        }
                         List <String> visited = new ArrayList<>();
                         double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
                         if (exchangeRate > 0 && account.validatePayment(commandInput, exchangeRate)) {
                             account.payOnline(commandInput, exchangeRate);
-//                            String amount = String.valueOf(exchangeRate * commandInput.getAmount());
                             Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "Card payment")
                                     .amount(exchangeRate * commandInput.getAmount())
                                     .commerciant(commandInput.getCommerciant())
@@ -154,11 +162,15 @@ public class Action {
                         break;
                     if(!sender.getIBAN().startsWith("RO"))
                         break;
-                    if(sender.getBalance() < commandInput.getAmount())
-                        break;
                     List <String> visited = new ArrayList<>();
                     double exchangeRate = bank.findExchangeRate(sender.getCurrency(), receiver.getCurrency(), visited);
                     visited.clear();
+                    if(sender.getBalance() < commandInput.getAmount()){
+                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "Insufficient funds")
+                                .build();
+                        sender.getTransactions().add(transaction);
+                        break;
+                    }
                     if (exchangeRate > 0 && sender.getBalance() > commandInput.getAmount()) {
                         sender.setBalance(sender.getBalance() - commandInput.getAmount());
                         receiver.setBalance(receiver.getBalance() + exchangeRate * commandInput.getAmount());
@@ -187,9 +199,35 @@ public class Action {
                     bank.getAliasMap().put(commandInput.getAlias(), account);
                 }
                 case "checkCardStatus"->{
+                    Card card = bank.findCard(commandInput.getCardNumber());
+                    if(card == null){
+                        ObjectNode node = JsonNodeFactory.instance.objectNode();
+                        objectNode.put("command", "checkCardStatus");
+                        node.put("timestamp", commandInput.getTimestamp());
+                        node.put("description", "Card not found");
+                        objectNode.putPOJO("output", node);
+                        objectNode.put("timestamp", commandInput.getTimestamp());
+                        output.addPOJO(objectNode);
+                        break;
+                    }
+                    if(card.getAccount().getMinAmount() >= card.getAccount().getBalance() && card.getStatus().equals("active")){
+                        card.setStatus("frozen");
+                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "You have reached the minimum amount of funds, the card will be frozen")
+                                .build();
+                        card.getAccount().getTransactions().add(transaction);
+                    }
+                }
+                case "setMinimumBalance"->{
+                    Account account = bank.findUser(commandInput.getAccount());
+                    account.setMinAmount(commandInput.getMinBalance());
+                }
+                case "changeInterestRate"->{
+                    Account account = bank.findUser(commandInput.getAccount());
+                    account.setInterestRate(commandInput.getInterestRate());
+                }
+                case "splitPayment"->{
 
                 }
-                case "setMinimumBalance"->{}
             }
         }
     }
