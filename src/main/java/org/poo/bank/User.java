@@ -65,13 +65,17 @@ public class User {
                 return account;
         return null;
     }
-    public void removeCard(String numberCard){
+    public Account removeCard(String numberCard){
         for (Account account : accounts) {
             if (account.getType().equals("classic")) {
-                account.getCards().removeIf(card -> card.getCardNumber().equals(numberCard));
-                cardAccountMap.remove(numberCard);
+                boolean check = account.getCards().removeIf(card -> card.getCardNumber().equals(numberCard));
+                if(check) {
+                    cardAccountMap.remove(numberCard);
+                    return account;
+                }
                 }
         }
+        return null;
     }
 
     public void addCard(Account account, Card card){

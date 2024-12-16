@@ -23,7 +23,13 @@ public abstract class Account {
     private final String currency;
     private List<Card> cards = new ArrayList<>();
     private List<Transaction> transactions = new ArrayList<>();
+    @JsonIgnore
+    private double minAmount ;
 
+    @JsonIgnore
+    public double getMinAmount() {
+        return minAmount;
+    }
 
     protected Account(String IBAN, String type, String currency) {
         this.IBAN = IBAN;
@@ -65,6 +71,13 @@ public abstract class Account {
         return IBAN;
     }
 
-    public void payOnline(CommandInput commandInput, double exchangeRate){};
+    public void payOnline(CommandInput commandInput, double exchangeRate){}
 
-}
+    public List<Transaction> copyTransaction(){
+        return null;
+    };
+    public boolean validatePayment(CommandInput commandInput, double exchangeRate){
+        return false;
+    };
+
+    }

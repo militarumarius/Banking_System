@@ -101,4 +101,11 @@
     } ]
   } ],
   "timestamp" : 16
+}, {
+  "command" : "printTransactions",
+  "output" : [ {
+    "timestamp" : 1,
+    "description" : "New account created"
+  } ],
+  "timestamp" : 19
 } ]

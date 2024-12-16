@@ -12,7 +12,6 @@
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "interestRate" : 0.7,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -27,7 +26,6 @@
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "interestRate" : 0.16,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -42,7 +40,6 @@
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "interestRate" : 0.39,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],
@@ -61,7 +58,6 @@
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "interestRate" : 0.7,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -76,7 +72,6 @@
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "interestRate" : 0.16,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -91,14 +86,16 @@
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "interestRate" : 0.39,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],
   "timestamp" : 18
 }, {
   "command" : "deleteAccount",
-  "output" : { },
+  "output" : {
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "timestamp" : 19
+  },
   "timestamp" : 19
 }, {
   "command" : "printUsers",
@@ -114,7 +111,6 @@
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "interestRate" : 0.7,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -129,7 +125,6 @@
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "interestRate" : 0.16,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -144,7 +139,6 @@
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "interestRate" : 0.39,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],

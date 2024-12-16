@@ -1,5 +1,6 @@
 package org.poo.transaction;
 
-public class NewAccountTransaction{
+public class NewAccountTransaction   {
+
 
 }

@@ -15,7 +15,6 @@
       "balance" : 2030.0,
       "currency" : "CHF",
       "cards" : [ ],
-      "interestRate" : 0.28,
       "IBAN" : "RO36POOB6500477412147025"
     } ]
   }, {
@@ -33,7 +32,6 @@
       "balance" : 87133.0,
       "currency" : "CHF",
       "cards" : [ ],
-      "interestRate" : 0.04,
       "IBAN" : "RO46POOB9051076190383154"
     } ]
   }, {
@@ -51,7 +49,6 @@
       "balance" : 1234.0,
       "currency" : "CHF",
       "cards" : [ ],
-      "interestRate" : 0.74,
       "IBAN" : "RO45POOB0388148432759748"
     } ]
   }, {
@@ -69,7 +66,6 @@
       "balance" : 52962.0,
       "currency" : "AUD",
       "cards" : [ ],
-      "interestRate" : 0.41,
       "IBAN" : "RO52POOB6271107854467609"
     } ]
   }, {
@@ -87,7 +83,6 @@
       "balance" : 2052.909090909091,
       "currency" : "USD",
       "cards" : [ ],
-      "interestRate" : 0.52,
       "IBAN" : "RO98POOB7190609943699593"
     } ]
   }, {
@@ -105,7 +100,6 @@
       "balance" : 1388.0,
       "currency" : "NZD",
       "cards" : [ ],
-      "interestRate" : 0.38,
       "IBAN" : "RO50POOB3359236199018963"
     } ]
   }, {
@@ -123,7 +117,6 @@
       "balance" : 2650.6363636363635,
       "currency" : "EUR",
       "cards" : [ ],
-      "interestRate" : 0.32,
       "IBAN" : "RO75POOB8279679254660818"
     } ]
   }, {
@@ -141,7 +134,6 @@
       "balance" : 13536.0,
       "currency" : "NZD",
       "cards" : [ ],
-      "interestRate" : 0.39,
       "IBAN" : "RO37POOB8653914479106806"
     } ]
   }, {
@@ -159,7 +151,6 @@
       "balance" : 9454.0,
       "currency" : "CHF",
       "cards" : [ ],
-      "interestRate" : 0.56,
       "IBAN" : "RO73POOB0363118755441573"
     } ]
   }, {
@@ -177,7 +168,6 @@
       "balance" : 2166.0,
       "currency" : "RON",
       "cards" : [ ],
-      "interestRate" : 0.45,
       "IBAN" : "RO40POOB2135483650246268"
     } ]
   }, {
@@ -195,7 +185,6 @@
       "balance" : 1912.0,
       "currency" : "AUD",
       "cards" : [ ],
-      "interestRate" : 0.57,
       "IBAN" : "RO75POOB1098983729823992"
     } ]
   }, {
@@ -213,7 +202,6 @@
       "balance" : 1311.0,
       "currency" : "MXN",
       "cards" : [ ],
-      "interestRate" : 0.42,
       "IBAN" : "RO15POOB0048706387164463"
     } ]
   }, {
@@ -231,7 +219,6 @@
       "balance" : 19910.0,
       "currency" : "CAD",
       "cards" : [ ],
-      "interestRate" : 0.88,
       "IBAN" : "RO97POOB5006417983475785"
     } ]
   }, {
@@ -249,7 +236,6 @@
       "balance" : 8949.0,
       "currency" : "EUR",
       "cards" : [ ],
-      "interestRate" : 0.96,
       "IBAN" : "RO93POOB6760303931698665"
     } ]
   }, {
@@ -267,7 +253,6 @@
       "balance" : 21514.0,
       "currency" : "CHF",
       "cards" : [ ],
-      "interestRate" : 0.36,
       "IBAN" : "RO47POOB5866490978033060"
     } ]
   }, {
@@ -285,7 +270,6 @@
       "balance" : 2260.0,
       "currency" : "EUR",
       "cards" : [ ],
-      "interestRate" : 0.16,
       "IBAN" : "RO45POOB6505529013808948"
     } ]
   }, {
@@ -303,7 +287,6 @@
       "balance" : 1499.7272727272725,
       "currency" : "EUR",
       "cards" : [ ],
-      "interestRate" : 0.87,
       "IBAN" : "RO01POOB3925326637526572"
     } ]
   }, {
@@ -321,7 +304,6 @@
       "balance" : 1472.0,
       "currency" : "MXN",
       "cards" : [ ],
-      "interestRate" : 0.48,
       "IBAN" : "RO04POOB3492426980939341"
     } ]
   }, {
@@ -339,7 +321,6 @@
       "balance" : 19402.0,
       "currency" : "MXN",
       "cards" : [ ],
-      "interestRate" : 0.05,
       "IBAN" : "RO66POOB1088683052483887"
     } ]
   }, {
@@ -357,7 +338,6 @@
       "balance" : 2199.0,
       "currency" : "NZD",
       "cards" : [ ],
-      "interestRate" : 0.37,
       "IBAN" : "RO19POOB5993192794373940"
     } ]
   }, {
@@ -375,7 +355,6 @@
       "balance" : 2951.4545454545455,
       "currency" : "RON",
       "cards" : [ ],
-      "interestRate" : 0.27,
       "IBAN" : "RO49POOB4985907300499418"
     } ]
   }, {
@@ -393,7 +372,6 @@
       "balance" : 1643.0,
       "currency" : "CHF",
       "cards" : [ ],
-      "interestRate" : 0.93,
       "IBAN" : "RO69POOB2312919212921100"
     } ]
   }, {
@@ -411,7 +389,6 @@
       "balance" : 1559.0,
       "currency" : "AUD",
       "cards" : [ ],
-      "interestRate" : 0.76,
       "IBAN" : "RO24POOB6002156322256357"
     } ]
   }, {
@@ -429,7 +406,6 @@
       "balance" : 1968.1818181818182,
       "currency" : "CAD",
       "cards" : [ ],
-      "interestRate" : 0.14,
       "IBAN" : "RO66POOB5231566576817248"
     } ]
   }, {
@@ -447,11 +423,22 @@
       "balance" : 2610.0,
       "currency" : "CHF",
       "cards" : [ ],
-      "interestRate" : 0.78,
       "IBAN" : "RO01POOB9893132718323396"
     } ]
   } ],
   "timestamp" : 269
+}, {
+  "command" : "printTransactions",
+  "output" : null,
+  "timestamp" : 371
+}, {
+  "command" : "printTransactions",
+  "output" : null,
+  "timestamp" : 372
+}, {
+  "command" : "printTransactions",
+  "output" : null,
+  "timestamp" : 373
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -475,7 +462,6 @@
         "cardNumber" : "1733018068262537",
         "status" : "active"
       } ],
-      "interestRate" : 0.28,
       "IBAN" : "RO36POOB6500477412147025"
     } ]
   }, {
@@ -499,7 +485,6 @@
         "cardNumber" : "1952612794872207",
         "status" : "active"
       } ],
-      "interestRate" : 0.04,
       "IBAN" : "RO46POOB9051076190383154"
     } ]
   }, {
@@ -523,7 +508,6 @@
         "cardNumber" : "6988686155235949",
         "status" : "active"
       } ],
-      "interestRate" : 0.74,
       "IBAN" : "RO45POOB0388148432759748"
     } ]
   }, {
@@ -547,7 +531,6 @@
         "cardNumber" : "0084627535411906",
         "status" : "active"
       } ],
-      "interestRate" : 0.41,
       "IBAN" : "RO52POOB6271107854467609"
     } ]
   }, {
@@ -571,7 +554,6 @@
         "cardNumber" : "5254952026068544",
         "status" : "active"
       } ],
-      "interestRate" : 0.52,
       "IBAN" : "RO98POOB7190609943699593"
     } ]
   }, {
@@ -595,7 +577,6 @@
         "cardNumber" : "8509650399173661",
         "status" : "active"
       } ],
-      "interestRate" : 0.38,
       "IBAN" : "RO50POOB3359236199018963"
     } ]
   }, {
@@ -619,7 +600,6 @@
         "cardNumber" : "2912280039644439",
         "status" : "active"
       } ],
-      "interestRate" : 0.32,
       "IBAN" : "RO75POOB8279679254660818"
     } ]
   }, {
@@ -643,7 +623,6 @@
         "cardNumber" : "4069340791718491",
         "status" : "active"
       } ],
-      "interestRate" : 0.39,
       "IBAN" : "RO37POOB8653914479106806"
     } ]
   }, {
@@ -667,7 +646,6 @@
         "cardNumber" : "4729060187716142",
         "status" : "active"
       } ],
-      "interestRate" : 0.56,
       "IBAN" : "RO73POOB0363118755441573"
     } ]
   }, {
@@ -691,7 +669,6 @@
         "cardNumber" : "6592968050400705",
         "status" : "active"
       } ],
-      "interestRate" : 0.45,
       "IBAN" : "RO40POOB2135483650246268"
     } ]
   }, {
@@ -715,7 +692,6 @@
         "cardNumber" : "2803408755782048",
         "status" : "active"
       } ],
-      "interestRate" : 0.57,
       "IBAN" : "RO75POOB1098983729823992"
     } ]
   }, {
@@ -739,7 +715,6 @@
         "cardNumber" : "6467982927008637",
         "status" : "active"
       } ],
-      "interestRate" : 0.42,
       "IBAN" : "RO15POOB0048706387164463"
     } ]
   }, {
@@ -763,7 +738,6 @@
         "cardNumber" : "0692077318511511",
         "status" : "active"
       } ],
-      "interestRate" : 0.88,
       "IBAN" : "RO97POOB5006417983475785"
     } ]
   }, {
@@ -787,7 +761,6 @@
         "cardNumber" : "8686098479595515",
         "status" : "active"
       } ],
-      "interestRate" : 0.96,
       "IBAN" : "RO93POOB6760303931698665"
     } ]
   }, {
@@ -811,7 +784,6 @@
         "cardNumber" : "4435533800578624",
         "status" : "active"
       } ],
-      "interestRate" : 0.36,
       "IBAN" : "RO47POOB5866490978033060"
     } ]
   }, {
@@ -835,7 +807,6 @@
         "cardNumber" : "8916302128573242",
         "status" : "active"
       } ],
-      "interestRate" : 0.16,
       "IBAN" : "RO45POOB6505529013808948"
     } ]
   }, {
@@ -859,7 +830,6 @@
         "cardNumber" : "9295697829422937",
         "status" : "active"
       } ],
-      "interestRate" : 0.87,
       "IBAN" : "RO01POOB3925326637526572"
     } ]
   }, {
@@ -883,7 +853,6 @@
         "cardNumber" : "8696843716078966",
         "status" : "active"
       } ],
-      "interestRate" : 0.48,
       "IBAN" : "RO04POOB3492426980939341"
     } ]
   }, {
@@ -907,7 +876,6 @@
         "cardNumber" : "8145060794847555",
         "status" : "active"
       } ],
-      "interestRate" : 0.05,
       "IBAN" : "RO66POOB1088683052483887"
     } ]
   }, {
@@ -931,7 +899,6 @@
         "cardNumber" : "4097439592846732",
         "status" : "active"
       } ],
-      "interestRate" : 0.37,
       "IBAN" : "RO19POOB5993192794373940"
     } ]
   }, {
@@ -955,7 +922,6 @@
         "cardNumber" : "2107645074675430",
         "status" : "active"
       } ],
-      "interestRate" : 0.27,
       "IBAN" : "RO49POOB4985907300499418"
     } ]
   }, {
@@ -979,7 +945,6 @@
         "cardNumber" : "2289183361654620",
         "status" : "active"
       } ],
-      "interestRate" : 0.93,
       "IBAN" : "RO69POOB2312919212921100"
     } ]
   }, {
@@ -1003,7 +968,6 @@
         "cardNumber" : "2578053935040541",
         "status" : "active"
       } ],
-      "interestRate" : 0.76,
       "IBAN" : "RO24POOB6002156322256357"
     } ]
   }, {
@@ -1027,7 +991,6 @@
         "cardNumber" : "5069598921863529",
         "status" : "active"
       } ],
-      "interestRate" : 0.14,
       "IBAN" : "RO66POOB5231566576817248"
     } ]
   }, {
@@ -1051,7 +1014,6 @@
         "cardNumber" : "7678041819946354",
         "status" : "active"
       } ],
-      "interestRate" : 0.78,
       "IBAN" : "RO01POOB9893132718323396"
     } ]
   } ],
@@ -1079,7 +1041,6 @@
         "cardNumber" : "1733018068262537",
         "status" : "active"
       } ],
-      "interestRate" : 0.28,
       "IBAN" : "RO36POOB6500477412147025"
     } ]
   }, {
@@ -1103,7 +1064,6 @@
         "cardNumber" : "1952612794872207",
         "status" : "active"
       } ],
-      "interestRate" : 0.04,
       "IBAN" : "RO46POOB9051076190383154"
     } ]
   }, {
@@ -1127,7 +1087,6 @@
         "cardNumber" : "6988686155235949",
         "status" : "active"
       } ],
-      "interestRate" : 0.74,
       "IBAN" : "RO45POOB0388148432759748"
     } ]
   }, {
@@ -1151,7 +1110,6 @@
         "cardNumber" : "0084627535411906",
         "status" : "active"
       } ],
-      "interestRate" : 0.41,
       "IBAN" : "RO52POOB6271107854467609"
     } ]
   }, {
@@ -1175,7 +1133,6 @@
         "cardNumber" : "5254952026068544",
         "status" : "active"
       } ],
-      "interestRate" : 0.52,
       "IBAN" : "RO98POOB7190609943699593"
     } ]
   }, {
@@ -1199,7 +1156,6 @@
         "cardNumber" : "8509650399173661",
         "status" : "active"
       } ],
-      "interestRate" : 0.38,
       "IBAN" : "RO50POOB3359236199018963"
     } ]
   }, {
@@ -1223,7 +1179,6 @@
         "cardNumber" : "2912280039644439",
         "status" : "active"
       } ],
-      "interestRate" : 0.32,
       "IBAN" : "RO75POOB8279679254660818"
     } ]
   }, {
@@ -1247,7 +1202,6 @@
         "cardNumber" : "4069340791718491",
         "status" : "active"
       } ],
-      "interestRate" : 0.39,
       "IBAN" : "RO37POOB8653914479106806"
     } ]
   }, {
@@ -1271,7 +1225,6 @@
         "cardNumber" : "4729060187716142",
         "status" : "active"
       } ],
-      "interestRate" : 0.56,
       "IBAN" : "RO73POOB0363118755441573"
     } ]
   }, {
@@ -1295,7 +1248,6 @@
         "cardNumber" : "6592968050400705",
         "status" : "active"
       } ],
-      "interestRate" : 0.45,
       "IBAN" : "RO40POOB2135483650246268"
     } ]
   }, {
@@ -1319,7 +1271,6 @@
         "cardNumber" : "2803408755782048",
         "status" : "active"
       } ],
-      "interestRate" : 0.57,
       "IBAN" : "RO75POOB1098983729823992"
     } ]
   }, {
@@ -1343,7 +1294,6 @@
         "cardNumber" : "6467982927008637",
         "status" : "active"
       } ],
-      "interestRate" : 0.42,
       "IBAN" : "RO15POOB0048706387164463"
     } ]
   }, {
@@ -1367,7 +1317,6 @@
         "cardNumber" : "0692077318511511",
         "status" : "active"
       } ],
-      "interestRate" : 0.88,
       "IBAN" : "RO97POOB5006417983475785"
     } ]
   }, {
@@ -1391,7 +1340,6 @@
         "cardNumber" : "8686098479595515",
         "status" : "active"
       } ],
-      "interestRate" : 0.96,
       "IBAN" : "RO93POOB6760303931698665"
     } ]
   }, {
@@ -1415,7 +1363,6 @@
         "cardNumber" : "4435533800578624",
         "status" : "active"
       } ],
-      "interestRate" : 0.36,
       "IBAN" : "RO47POOB5866490978033060"
     } ]
   }, {
@@ -1439,7 +1386,6 @@
         "cardNumber" : "8916302128573242",
         "status" : "active"
       } ],
-      "interestRate" : 0.16,
       "IBAN" : "RO45POOB6505529013808948"
     } ]
   }, {
@@ -1463,7 +1409,6 @@
         "cardNumber" : "9295697829422937",
         "status" : "active"
       } ],
-      "interestRate" : 0.87,
       "IBAN" : "RO01POOB3925326637526572"
     } ]
   }, {
@@ -1487,7 +1432,6 @@
         "cardNumber" : "8696843716078966",
         "status" : "active"
       } ],
-      "interestRate" : 0.48,
       "IBAN" : "RO04POOB3492426980939341"
     } ]
   }, {
@@ -1511,7 +1455,6 @@
         "cardNumber" : "8145060794847555",
         "status" : "active"
       } ],
-      "interestRate" : 0.05,
       "IBAN" : "RO66POOB1088683052483887"
     } ]
   }, {
@@ -1535,7 +1478,6 @@
         "cardNumber" : "4097439592846732",
         "status" : "active"
       } ],
-      "interestRate" : 0.37,
       "IBAN" : "RO19POOB5993192794373940"
     } ]
   }, {
@@ -1559,7 +1501,6 @@
         "cardNumber" : "2107645074675430",
         "status" : "active"
       } ],
-      "interestRate" : 0.27,
       "IBAN" : "RO49POOB4985907300499418"
     } ]
   }, {
@@ -1583,7 +1524,6 @@
         "cardNumber" : "2289183361654620",
         "status" : "active"
       } ],
-      "interestRate" : 0.93,
       "IBAN" : "RO69POOB2312919212921100"
     } ]
   }, {
@@ -1607,7 +1547,6 @@
         "cardNumber" : "2578053935040541",
         "status" : "active"
       } ],
-      "interestRate" : 0.76,
       "IBAN" : "RO24POOB6002156322256357"
     } ]
   }, {
@@ -1631,7 +1570,6 @@
         "cardNumber" : "5069598921863529",
         "status" : "active"
       } ],
-      "interestRate" : 0.14,
       "IBAN" : "RO66POOB5231566576817248"
     } ]
   }, {
@@ -1655,7 +1593,6 @@
         "cardNumber" : "7678041819946354",
         "status" : "active"
       } ],
-      "interestRate" : 0.78,
       "IBAN" : "RO01POOB9893132718323396"
     } ]
   } ],

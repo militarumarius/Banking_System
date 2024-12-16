@@ -16,6 +16,7 @@ public class BankDatabase {
     final private List<User> users;
     final private List<ExchangeRate> exchangeRates;
     final Map<String, User> userMap = new HashMap<>();
+    final Map<String, Account> aliasMap = new HashMap<>();
 
     public BankDatabase(ObjectInput input) {
         resetRandom();
@@ -83,4 +84,9 @@ public class BankDatabase {
         }
         return null;
     }
+
+    public Map<String, Account> getAliasMap() {
+        return aliasMap;
+    }
+
 }

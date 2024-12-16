@@ -1,10 +1,16 @@
 [ {
   "command" : "deleteAccount",
-  "output" : { },
+  "output" : {
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "timestamp" : 9
+  },
   "timestamp" : 9
 }, {
   "command" : "deleteAccount",
-  "output" : { },
+  "output" : {
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "timestamp" : 36
+  },
   "timestamp" : 36
 }, {
   "command" : "printUsers",
@@ -51,7 +57,6 @@
       "balance" : 23500.0,
       "currency" : "RON",
       "cards" : [ ],
-      "interestRate" : 0.97,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
@@ -103,7 +108,6 @@
         "cardNumber" : "1322658752653937",
         "status" : "active"
       } ],
-      "interestRate" : 0.4,
       "IBAN" : "RO37POOB7013767509830666"
     } ]
   }, {
@@ -118,7 +122,6 @@
         "cardNumber" : "0466992784477761",
         "status" : "active"
       } ],
-      "interestRate" : 0.03,
       "IBAN" : "RO19POOB4981055641668812"
     } ]
   }, {
@@ -331,7 +334,6 @@
       "balance" : 23500.0,
       "currency" : "RON",
       "cards" : [ ],
-      "interestRate" : 0.97,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
@@ -383,7 +385,6 @@
         "cardNumber" : "1322658752653937",
         "status" : "active"
       } ],
-      "interestRate" : 0.4,
       "IBAN" : "RO37POOB7013767509830666"
     } ]
   }, {
@@ -398,7 +399,6 @@
         "cardNumber" : "0466992784477761",
         "status" : "active"
       } ],
-      "interestRate" : 0.03,
       "IBAN" : "RO19POOB4981055641668812"
     } ]
   }, {
@@ -547,6 +547,35 @@
   } ],
   "timestamp" : 92
 }, {
+  "command" : "printTransactions",
+  "output" : [ {
+    "timestamp" : 5,
+    "description" : "New account created"
+  }, {
+    "timestamp" : 20,
+    "description" : "New card created",
+    "cardHolder" : "Leanne_Scott-Davies@yandex.nz",
+    "account" : "RO90POOB5450777208072365",
+    "card" : "7901879264253296"
+  }, {
+    "timestamp" : 27,
+    "description" : "Card payment",
+    "amount" : 16.000000000000004,
+    "commerciant" : "Microsoft"
+  }, {
+    "timestamp" : 72,
+    "description" : "Card payment",
+    "amount" : 152.88888888888889,
+    "commerciant" : "KFC"
+  }, {
+    "timestamp" : 113,
+    "description" : "New card created",
+    "cardHolder" : "Leanne_Scott-Davies@yandex.nz",
+    "account" : "RO90POOB5450777208072365",
+    "card" : "5088727507344799"
+  } ],
+  "timestamp" : 119
+}, {
   "command" : "payOnline",
   "output" : {
     "timestamp" : 151,
@@ -645,6 +674,48 @@
   },
   "timestamp" : 164
 }, {
+  "command" : "printTransactions",
+  "output" : [ {
+    "timestamp" : 6,
+    "description" : "New account created"
+  }, {
+    "timestamp" : 21,
+    "description" : "New card created",
+    "cardHolder" : "Georgel_Nistor@yandex.ro",
+    "account" : "RO65POOB8944016386845896",
+    "card" : "7004757825892043"
+  }, {
+    "timestamp" : 28,
+    "description" : "Card payment",
+    "amount" : 1915.0,
+    "commerciant" : "Gucci"
+  }, {
+    "timestamp" : 73,
+    "description" : "Card payment",
+    "amount" : 190.0,
+    "commerciant" : "Starbucks"
+  }, {
+    "timestamp" : 146,
+    "description" : "Card payment",
+    "amount" : 1608.75,
+    "commerciant" : "McDonalds"
+  } ],
+  "timestamp" : 172
+}, {
+  "command" : "printTransactions",
+  "output" : [ {
+    "timestamp" : 34,
+    "description" : "New account created"
+  } ],
+  "timestamp" : 173
+}, {
+  "command" : "printTransactions",
+  "output" : [ {
+    "timestamp" : 41,
+    "description" : "New account created"
+  } ],
+  "timestamp" : 174
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Selma",
@@ -692,7 +763,6 @@
       "balance" : 23500.0,
       "currency" : "RON",
       "cards" : [ ],
-      "interestRate" : 0.97,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
@@ -744,7 +814,6 @@
         "cardNumber" : "1322658752653937",
         "status" : "active"
       } ],
-      "interestRate" : 0.4,
       "IBAN" : "RO37POOB7013767509830666"
     } ]
   }, {
@@ -759,7 +828,6 @@
         "cardNumber" : "0466992784477761",
         "status" : "active"
       } ],
-      "interestRate" : 0.03,
       "IBAN" : "RO19POOB4981055641668812"
     } ]
   }, {
