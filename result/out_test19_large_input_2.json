@@ -755,25 +755,28 @@
     "description" : "Split payment of 5500.00 CAD",
     "amount" : 275.0,
     "currency" : "CAD",
+    "error" : "Account RO32POOB0130532963818359 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO76POOB4035116042454483", "RO79POOB3616857825600958", "RO53POOB7122855990652257", "RO10POOB4354933866366881", "RO71POOB1634969878734749", "RO58POOB2721178218599590", "RO38POOB0964823730995794", "RO19POOB4981055641668812", "RO69POOB9846198978826791", "RO33POOB4049920806186500", "RO96POOB6738272785416988", "RO30POOB9523423715747796", "RO00POOB5687892910835215", "RO37POOB7013767509830666", "RO33POOB9999273999620457", "RO90POOB5450777208072365", "RO98POOB8412955460158769", "RO32POOB0130532963818359", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
   }, {
     "timestamp" : 117,
     "description" : "Split payment of 4720.00 GBP",
     "amount" : 236.0,
     "currency" : "GBP",
+    "error" : "Account RO33POOB4049920806186500 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO00POOB5687892910835215", "RO90POOB5450777208072365", "RO38POOB0964823730995794", "RO76POOB4035116042454483", "RO69POOB9846198978826791", "RO79POOB3616857825600958", "RO37POOB7013767509830666", "RO98POOB8412955460158769", "RO65POOB8944016386845896", "RO32POOB0130532963818359", "RO58POOB2721178218599590", "RO10POOB4354933866366881", "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO33POOB9999273999620457", "RO53POOB7122855990652257", "RO68POOB1848616931405475", "RO96POOB6738272785416988", "RO33POOB4049920806186500", "RO71POOB1634969878734749" ]
   }, {
     "timestamp" : 118,
     "description" : "Split payment of 5473.00 CHF",
     "amount" : 273.65,
     "currency" : "CHF",
+    "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO96POOB6738272785416988", "RO69POOB9846198978826791", "RO38POOB0964823730995794", "RO53POOB7122855990652257", "RO00POOB5687892910835215", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO19POOB4981055641668812", "RO33POOB4049920806186500", "RO71POOB1634969878734749", "RO33POOB9999273999620457", "RO37POOB7013767509830666", "RO68POOB1848616931405475", "RO32POOB0130532963818359", "RO98POOB8412955460158769", "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO76POOB4035116042454483" ]
   } ],
   "timestamp" : 119
 }, {
   "command" : "report",
   "output" : {
-    "balance" : 940.5020979020978,
+    "balance" : 2149.0,
     "currency" : "NZD",
     "IBAN" : "RO90POOB5450777208072365",
     "transactions" : [ {
@@ -787,18 +790,21 @@
       "description" : "Split payment of 5500.00 CAD",
       "amount" : 275.0,
       "currency" : "CAD",
+      "error" : "Account RO32POOB0130532963818359 has insufficient funds for a split payment.",
       "involvedAccounts" : [ "RO76POOB4035116042454483", "RO79POOB3616857825600958", "RO53POOB7122855990652257", "RO10POOB4354933866366881", "RO71POOB1634969878734749", "RO58POOB2721178218599590", "RO38POOB0964823730995794", "RO19POOB4981055641668812", "RO69POOB9846198978826791", "RO33POOB4049920806186500", "RO96POOB6738272785416988", "RO30POOB9523423715747796", "RO00POOB5687892910835215", "RO37POOB7013767509830666", "RO33POOB9999273999620457", "RO90POOB5450777208072365", "RO98POOB8412955460158769", "RO32POOB0130532963818359", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
     }, {
       "timestamp" : 117,
       "description" : "Split payment of 4720.00 GBP",
       "amount" : 236.0,
       "currency" : "GBP",
+      "error" : "Account RO33POOB4049920806186500 has insufficient funds for a split payment.",
       "involvedAccounts" : [ "RO00POOB5687892910835215", "RO90POOB5450777208072365", "RO38POOB0964823730995794", "RO76POOB4035116042454483", "RO69POOB9846198978826791", "RO79POOB3616857825600958", "RO37POOB7013767509830666", "RO98POOB8412955460158769", "RO65POOB8944016386845896", "RO32POOB0130532963818359", "RO58POOB2721178218599590", "RO10POOB4354933866366881", "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO33POOB9999273999620457", "RO53POOB7122855990652257", "RO68POOB1848616931405475", "RO96POOB6738272785416988", "RO33POOB4049920806186500", "RO71POOB1634969878734749" ]
     }, {
       "timestamp" : 118,
       "description" : "Split payment of 5473.00 CHF",
       "amount" : 273.65,
       "currency" : "CHF",
+      "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment.",
       "involvedAccounts" : [ "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO96POOB6738272785416988", "RO69POOB9846198978826791", "RO38POOB0964823730995794", "RO53POOB7122855990652257", "RO00POOB5687892910835215", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO19POOB4981055641668812", "RO33POOB4049920806186500", "RO71POOB1634969878734749", "RO33POOB9999273999620457", "RO37POOB7013767509830666", "RO68POOB1848616931405475", "RO32POOB0130532963818359", "RO98POOB8412955460158769", "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO76POOB4035116042454483" ]
     } ]
   },
@@ -964,18 +970,21 @@
     "description" : "Split payment of 5500.00 CAD",
     "amount" : 275.0,
     "currency" : "CAD",
+    "error" : "Account RO32POOB0130532963818359 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO76POOB4035116042454483", "RO79POOB3616857825600958", "RO53POOB7122855990652257", "RO10POOB4354933866366881", "RO71POOB1634969878734749", "RO58POOB2721178218599590", "RO38POOB0964823730995794", "RO19POOB4981055641668812", "RO69POOB9846198978826791", "RO33POOB4049920806186500", "RO96POOB6738272785416988", "RO30POOB9523423715747796", "RO00POOB5687892910835215", "RO37POOB7013767509830666", "RO33POOB9999273999620457", "RO90POOB5450777208072365", "RO98POOB8412955460158769", "RO32POOB0130532963818359", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
   }, {
     "timestamp" : 117,
     "description" : "Split payment of 4720.00 GBP",
     "amount" : 236.0,
     "currency" : "GBP",
+    "error" : "Account RO33POOB4049920806186500 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO00POOB5687892910835215", "RO90POOB5450777208072365", "RO38POOB0964823730995794", "RO76POOB4035116042454483", "RO69POOB9846198978826791", "RO79POOB3616857825600958", "RO37POOB7013767509830666", "RO98POOB8412955460158769", "RO65POOB8944016386845896", "RO32POOB0130532963818359", "RO58POOB2721178218599590", "RO10POOB4354933866366881", "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO33POOB9999273999620457", "RO53POOB7122855990652257", "RO68POOB1848616931405475", "RO96POOB6738272785416988", "RO33POOB4049920806186500", "RO71POOB1634969878734749" ]
   }, {
     "timestamp" : 118,
     "description" : "Split payment of 5473.00 CHF",
     "amount" : 273.65,
     "currency" : "CHF",
+    "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO96POOB6738272785416988", "RO69POOB9846198978826791", "RO38POOB0964823730995794", "RO53POOB7122855990652257", "RO00POOB5687892910835215", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO19POOB4981055641668812", "RO33POOB4049920806186500", "RO71POOB1634969878734749", "RO33POOB9999273999620457", "RO37POOB7013767509830666", "RO68POOB1848616931405475", "RO32POOB0130532963818359", "RO98POOB8412955460158769", "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO76POOB4035116042454483" ]
   }, {
     "timestamp" : 123,
@@ -983,6 +992,13 @@
     "amount" : 348.25,
     "currency" : "EUR",
     "involvedAccounts" : [ "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
+  }, {
+    "timestamp" : 171,
+    "description" : "Repayment for a personal loan",
+    "senderIBAN" : "RO98POOB8412955460158769",
+    "receiverIBAN" : "RO65POOB8944016386845896",
+    "amount" : "23.625 RON",
+    "transferType" : "received"
   } ],
   "timestamp" : 172
 }, {
@@ -991,6 +1007,13 @@
     "timestamp" : 34,
     "description" : "New account created"
   }, {
+    "timestamp" : 35,
+    "description" : "Booking a trip to the Bavarian Alps",
+    "senderIBAN" : "RO69POOB6209498372540635",
+    "receiverIBAN" : "RO30POOB9523423715747796",
+    "amount" : "74.0 EUR",
+    "transferType" : "received"
+  }, {
     "timestamp" : 37,
     "description" : "Insufficient funds"
   }, {
@@ -998,18 +1021,21 @@
     "description" : "Split payment of 5500.00 CAD",
     "amount" : 275.0,
     "currency" : "CAD",
+    "error" : "Account RO32POOB0130532963818359 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO76POOB4035116042454483", "RO79POOB3616857825600958", "RO53POOB7122855990652257", "RO10POOB4354933866366881", "RO71POOB1634969878734749", "RO58POOB2721178218599590", "RO38POOB0964823730995794", "RO19POOB4981055641668812", "RO69POOB9846198978826791", "RO33POOB4049920806186500", "RO96POOB6738272785416988", "RO30POOB9523423715747796", "RO00POOB5687892910835215", "RO37POOB7013767509830666", "RO33POOB9999273999620457", "RO90POOB5450777208072365", "RO98POOB8412955460158769", "RO32POOB0130532963818359", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
   }, {
     "timestamp" : 117,
     "description" : "Split payment of 4720.00 GBP",
     "amount" : 236.0,
     "currency" : "GBP",
+    "error" : "Account RO33POOB4049920806186500 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO00POOB5687892910835215", "RO90POOB5450777208072365", "RO38POOB0964823730995794", "RO76POOB4035116042454483", "RO69POOB9846198978826791", "RO79POOB3616857825600958", "RO37POOB7013767509830666", "RO98POOB8412955460158769", "RO65POOB8944016386845896", "RO32POOB0130532963818359", "RO58POOB2721178218599590", "RO10POOB4354933866366881", "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO33POOB9999273999620457", "RO53POOB7122855990652257", "RO68POOB1848616931405475", "RO96POOB6738272785416988", "RO33POOB4049920806186500", "RO71POOB1634969878734749" ]
   }, {
     "timestamp" : 118,
     "description" : "Split payment of 5473.00 CHF",
     "amount" : 273.65,
     "currency" : "CHF",
+    "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO96POOB6738272785416988", "RO69POOB9846198978826791", "RO38POOB0964823730995794", "RO53POOB7122855990652257", "RO00POOB5687892910835215", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO19POOB4981055641668812", "RO33POOB4049920806186500", "RO71POOB1634969878734749", "RO33POOB9999273999620457", "RO37POOB7013767509830666", "RO68POOB1848616931405475", "RO32POOB0130532963818359", "RO98POOB8412955460158769", "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO76POOB4035116042454483" ]
   }, {
     "timestamp" : 123,
@@ -1029,18 +1055,21 @@
     "description" : "Split payment of 5500.00 CAD",
     "amount" : 275.0,
     "currency" : "CAD",
+    "error" : "Account RO32POOB0130532963818359 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO76POOB4035116042454483", "RO79POOB3616857825600958", "RO53POOB7122855990652257", "RO10POOB4354933866366881", "RO71POOB1634969878734749", "RO58POOB2721178218599590", "RO38POOB0964823730995794", "RO19POOB4981055641668812", "RO69POOB9846198978826791", "RO33POOB4049920806186500", "RO96POOB6738272785416988", "RO30POOB9523423715747796", "RO00POOB5687892910835215", "RO37POOB7013767509830666", "RO33POOB9999273999620457", "RO90POOB5450777208072365", "RO98POOB8412955460158769", "RO32POOB0130532963818359", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
   }, {
     "timestamp" : 117,
     "description" : "Split payment of 4720.00 GBP",
     "amount" : 236.0,
     "currency" : "GBP",
+    "error" : "Account RO33POOB4049920806186500 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO00POOB5687892910835215", "RO90POOB5450777208072365", "RO38POOB0964823730995794", "RO76POOB4035116042454483", "RO69POOB9846198978826791", "RO79POOB3616857825600958", "RO37POOB7013767509830666", "RO98POOB8412955460158769", "RO65POOB8944016386845896", "RO32POOB0130532963818359", "RO58POOB2721178218599590", "RO10POOB4354933866366881", "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO33POOB9999273999620457", "RO53POOB7122855990652257", "RO68POOB1848616931405475", "RO96POOB6738272785416988", "RO33POOB4049920806186500", "RO71POOB1634969878734749" ]
   }, {
     "timestamp" : 118,
     "description" : "Split payment of 5473.00 CHF",
     "amount" : 273.65,
     "currency" : "CHF",
+    "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment.",
     "involvedAccounts" : [ "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO96POOB6738272785416988", "RO69POOB9846198978826791", "RO38POOB0964823730995794", "RO53POOB7122855990652257", "RO00POOB5687892910835215", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO19POOB4981055641668812", "RO33POOB4049920806186500", "RO71POOB1634969878734749", "RO33POOB9999273999620457", "RO37POOB7013767509830666", "RO68POOB1848616931405475", "RO32POOB0130532963818359", "RO98POOB8412955460158769", "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO76POOB4035116042454483" ]
   } ],
   "timestamp" : 174
@@ -1061,7 +1090,7 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "classic",
-      "balance" : 1610.9699300699301,
+      "balance" : 2290.75,
       "currency" : "EUR",
       "cards" : [ ],
       "IBAN" : "RO30POOB9523423715747796"
@@ -1072,7 +1101,7 @@
     "email" : "Leanne_Scott-Davies@yandex.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1268.5020979020978,
+      "balance" : 2498.2,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "7317745095154687",
@@ -1095,7 +1124,7 @@
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "classic",
-      "balance" : 2504.8496503496503,
+      "balance" : 5927.375,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "3951521356076921",
@@ -1109,7 +1138,7 @@
     "email" : "Gina_Johnson@mail.com.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 6251.696153846155,
+      "balance" : 7336.913461538462,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "8431794639822740",
@@ -1123,7 +1152,7 @@
     "email" : "Zachary_Martin@aol.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1381.7621212121212,
+      "balance" : 2363.6666666666665,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "7746115164990298",
@@ -1137,7 +1166,7 @@
     "email" : "Estera_Nistor@gmx.ro",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : -841.9003496503492,
+      "balance" : 2571.464285714286,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "5779026319169555",
@@ -1151,7 +1180,7 @@
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
       "type" : "savings",
-      "balance" : 10241.370629370631,
+      "balance" : 10996.68181818182,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "1952612794872207",
@@ -1165,7 +1194,7 @@
     "email" : "Adrian_Jones-Fuller@zoho.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : -202.49790209790217,
+      "balance" : 1006.0,
       "currency" : "NZD",
       "cards" : [ ],
       "IBAN" : "RO79POOB3616857825600958"
@@ -1176,7 +1205,7 @@
     "email" : "Fiona_Jones@icloud.gb",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 138.75104895104892,
+      "balance" : 558.0,
       "currency" : "GBP",
       "cards" : [ ],
       "IBAN" : "RO00POOB5687892910835215"
@@ -1187,7 +1216,7 @@
     "email" : "Frederique_Laflamme@zoho.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 125.09545454545457,
+      "balance" : 1107.0,
       "currency" : "CAD",
       "cards" : [ ],
       "IBAN" : "RO96POOB6738272785416988"
@@ -1198,7 +1227,7 @@
     "email" : "Chaaya_Goswam@mail.com.in",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : -45170.78321678321,
+      "balance" : 7476.0,
       "currency" : "INR",
       "cards" : [ ],
       "IBAN" : "RO33POOB4049920806186500"
@@ -1209,7 +1238,7 @@
     "email" : "Eva_Stancu@icloud.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : -1598.9003496503492,
+      "balance" : 1800.0,
       "currency" : "RON",
       "cards" : [ ],
       "IBAN" : "RO69POOB9846198978826791"
@@ -1220,7 +1249,7 @@
     "email" : "Lorenzo_Mora_Quiroz@hotmail.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : -10009.58741258741,
+      "balance" : 4991.636363636363,
       "currency" : "MXN",
       "cards" : [ ],
       "IBAN" : "RO98POOB8412955460158769"
@@ -1231,7 +1260,7 @@
     "email" : "Arya_Kumer@zoho.in",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : -52659.78321678321,
+      "balance" : 212.0,
       "currency" : "INR",
       "cards" : [ ],
       "IBAN" : "RO32POOB0130532963818359"
@@ -1242,7 +1271,7 @@
     "email" : "Tyler_Moore@yandex.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 5096.067676767676,
+      "balance" : 6077.972222222223,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "4069340791718491",
@@ -1256,7 +1285,7 @@
     "email" : "Berta_Yuste_Arellano@protonmail.es",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 118.21993006993014,
+      "balance" : 798.0,
       "currency" : "EUR",
       "cards" : [ ],
       "IBAN" : "RO10POOB4354933866366881"
@@ -1267,7 +1296,7 @@
     "email" : "Mercedes_Godoy@gmx.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : -14652.223776223775,
+      "balance" : 189.0,
       "currency" : "MXN",
       "cards" : [ ],
       "IBAN" : "RO33POOB9999273999620457"
@@ -1278,7 +1307,7 @@
     "email" : "Nicole_Sansonnens-Vallelian@gmx.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 10477.157692307692,
+      "balance" : 11308.0,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "8509650399173661",
@@ -1292,7 +1321,7 @@
     "email" : "Eugene_Harper@gmx.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 193.1576923076924,
+      "balance" : 1024.0,
       "currency" : "CHF",
       "cards" : [ ],
       "IBAN" : "RO53POOB7122855990652257"
@@ -1303,7 +1332,7 @@
     "email" : "Roland_Bovet@zoho.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2120.1576923076923,
+      "balance" : 2951.0,
       "currency" : "CHF",
       "cards" : [ ],
       "IBAN" : "RO71POOB1634969878734749"
@@ -1314,7 +1343,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 1268.5020979020978,
+    "balance" : 2498.2,
     "currency" : "NZD",
     "IBAN" : "RO90POOB5450777208072365",
     "transactions" : [ ]
@@ -1327,7 +1356,7 @@
       "commerciant" : "Gucci",
       "total" : 1915.0
     } ],
-    "balance" : 2504.8496503496503,
+    "balance" : 5927.375,
     "currency" : "RON",
     "IBAN" : "RO65POOB8944016386845896",
     "transactions" : [ {
@@ -1342,7 +1371,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 6251.696153846155,
+    "balance" : 7336.913461538462,
     "currency" : "CHF",
     "IBAN" : "RO58POOB2721178218599590",
     "transactions" : [ ]
@@ -1352,7 +1381,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 1381.7621212121212,
+    "balance" : 2363.6666666666665,
     "currency" : "CAD",
     "IBAN" : "RO76POOB4035116042454483",
     "transactions" : [ ]
@@ -1362,7 +1391,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : -841.9003496503492,
+    "balance" : 2571.464285714286,
     "currency" : "RON",
     "IBAN" : "RO37POOB7013767509830666",
     "transactions" : [ ]
@@ -1372,7 +1401,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 10241.370629370631,
+    "balance" : 10996.68181818182,
     "currency" : "USD",
     "IBAN" : "RO19POOB4981055641668812",
     "transactions" : [ ]
@@ -1382,7 +1411,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 1610.9699300699301,
+    "balance" : 2290.75,
     "currency" : "EUR",
     "IBAN" : "RO30POOB9523423715747796",
     "transactions" : [ ]
@@ -1392,7 +1421,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : -202.49790209790217,
+    "balance" : 1006.0,
     "currency" : "NZD",
     "IBAN" : "RO79POOB3616857825600958",
     "transactions" : [ ]
@@ -1402,7 +1431,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 138.75104895104892,
+    "balance" : 558.0,
     "currency" : "GBP",
     "IBAN" : "RO00POOB5687892910835215",
     "transactions" : [ ]
@@ -1412,7 +1441,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 125.09545454545457,
+    "balance" : 1107.0,
     "currency" : "CAD",
     "IBAN" : "RO96POOB6738272785416988",
     "transactions" : [ ]
@@ -1422,7 +1451,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : -45170.78321678321,
+    "balance" : 7476.0,
     "currency" : "INR",
     "IBAN" : "RO33POOB4049920806186500",
     "transactions" : [ ]
@@ -1432,7 +1461,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : -1598.9003496503492,
+    "balance" : 1800.0,
     "currency" : "RON",
     "IBAN" : "RO69POOB9846198978826791",
     "transactions" : [ ]
@@ -1442,7 +1471,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : -10009.58741258741,
+    "balance" : 4991.636363636363,
     "currency" : "MXN",
     "IBAN" : "RO98POOB8412955460158769",
     "transactions" : [ ]
@@ -1452,7 +1481,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : -52659.78321678321,
+    "balance" : 212.0,
     "currency" : "INR",
     "IBAN" : "RO32POOB0130532963818359",
     "transactions" : [ ]
@@ -1462,7 +1491,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 5096.067676767676,
+    "balance" : 6077.972222222223,
     "currency" : "CAD",
     "IBAN" : "RO68POOB1848616931405475",
     "transactions" : [ ]
@@ -1472,7 +1501,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 118.21993006993014,
+    "balance" : 798.0,
     "currency" : "EUR",
     "IBAN" : "RO10POOB4354933866366881",
     "transactions" : [ ]
@@ -1482,7 +1511,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : -14652.223776223775,
+    "balance" : 189.0,
     "currency" : "MXN",
     "IBAN" : "RO33POOB9999273999620457",
     "transactions" : [ ]
@@ -1492,7 +1521,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 10477.157692307692,
+    "balance" : 11308.0,
     "currency" : "CHF",
     "IBAN" : "RO38POOB0964823730995794",
     "transactions" : [ ]
@@ -1502,7 +1531,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 193.1576923076924,
+    "balance" : 1024.0,
     "currency" : "CHF",
     "IBAN" : "RO53POOB7122855990652257",
     "transactions" : [ ]
@@ -1512,7 +1541,7 @@
   "command" : "spendingsReport",
   "output" : {
     "commerciants" : [ ],
-    "balance" : 2120.1576923076923,
+    "balance" : 2951.0,
     "currency" : "CHF",
     "IBAN" : "RO71POOB1634969878734749",
     "transactions" : [ ]

@@ -3,23 +3,30 @@ package org.poo.actionHandler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.poo.bank.User;
+import org.poo.bank.accounts.Account;
 
-public class PrintCommands {
+public class PrintOutput {
     private Object object;
     private String principalComand;
     private int timestamp;
-    private String error;
+    private User user;
 
-    public PrintCommands(final String command, final Object object, final int timestamp) {
+    public PrintOutput(final String command, final Object object, final int timestamp) {
         this.principalComand = command;
         this.object = object;
         this.timestamp = timestamp;
+    }
+    public PrintOutput(final String command, final int timestamp, final User user) {
+        this.principalComand = command;
+        this.timestamp = timestamp;
+        this.user = user;
     }
     /**
      * method that make an JSON object for getPlayerIdx command
      * @param output array node to display the object
      */
-    public void printUsers(final ArrayNode output) {
+    public void printCommand(final ArrayNode output) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode objectNode = mapper.createObjectNode();
         objectNode.put("command", principalComand);
@@ -27,11 +34,13 @@ public class PrintCommands {
         objectNode.put("timestamp", timestamp);
         output.addPOJO(objectNode);
     }
-    public void cardNotFound(final ArrayNode output){
+
+    public void printTransaction(final ArrayNode output){
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode objectNode = mapper.createObjectNode();
-        objectNode.put("command", principalComand);
-        objectNode.putPOJO("output", object);
+        objectNode.put("command", "printTransactions");
+        for (Account account : user.getAccounts())
+            objectNode.putPOJO("output", account.copyTransaction(account.getTransactions()));
         objectNode.put("timestamp", timestamp);
         output.addPOJO(objectNode);
     }

@@ -21,6 +21,7 @@ public class TransactionBuilder {
     private String card;
     private String commerciant;
     private String currency;
+    private String error;
     private List<String> involvedAccounts = new ArrayList<>();
 
     public TransactionBuilder(int timestamp, String description) {
@@ -65,6 +66,10 @@ public class TransactionBuilder {
     }
     public TransactionBuilder currency(String currency){
         this.currency = currency;
+        return this;
+    }
+    public TransactionBuilder error(String error){
+        this.error = error;
         return this;
     }
     public Transaction build(){

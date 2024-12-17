@@ -2,6 +2,7 @@ package org.poo.bank;
 
 import org.poo.bank.accounts.Account;
 import org.poo.bank.cards.Card;
+import org.poo.fileio.CommandInput;
 import org.poo.fileio.ExchangeInput;
 import org.poo.fileio.ObjectInput;
 import org.poo.fileio.UserInput;
@@ -97,5 +98,27 @@ public class BankDatabase {
                 return card;
         }
         return null;
+    }
+
+    public boolean checkSaving(Account account){
+        return account.getType().equals("savings");
+    }
+    public Account checkSplitPayment(List<Account> accounts, BankDatabase bank, CommandInput commandInput, double amountToPay){
+        for(Account account: accounts.reversed()){
+            List <String> visited = new ArrayList<>();
+            double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
+            visited.clear();
+            double amountToPayThisAccount = amountToPay * exchangeRate;
+            if (account.getBalance() < amountToPayThisAccount)
+                return account;
+        }
+        return null;
+    }
+    public List<Account> convertAccountfromString(List<String> ibans){
+        List <Account> accounts = new ArrayList<>();
+        for(String iban : ibans){
+            accounts.add(this.findUser(iban));
+        }
+        return accounts;
     }
 }

@@ -1,0 +1,22 @@
+package org.poo.commands;
+
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import org.poo.actionHandler.PrintOutput;
+import org.poo.bank.BankDatabase;
+import org.poo.fileio.CommandInput;
+
+public class PrintUsers implements Commands{
+    private final BankDatabase bank;
+    private final CommandInput commandInput;
+    private final ArrayNode output;
+    public PrintUsers(BankDatabase bank, CommandInput commandInput, ArrayNode output){
+        this.bank = bank;
+        this.commandInput = commandInput;
+        this.output = output;
+    }
+    @Override
+    public void execute() {
+        PrintOutput printUsers = new PrintOutput("printUsers", bank.copyUsers(), commandInput.getTimestamp());
+        printUsers.printCommand(output);
+    }
+}

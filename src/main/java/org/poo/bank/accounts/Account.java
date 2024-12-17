@@ -3,30 +3,36 @@ package org.poo.bank.accounts;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.Getter;
 import lombok.Setter;
 import org.poo.bank.cards.Card;
 import org.poo.fileio.CommandInput;
 import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
+import org.poo.transaction.TransactionBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Setter
+
 public abstract class Account {
     @JsonProperty("IBAN")
     private final String IBAN;
     private final String type;
-    private  double balance = 0.0;
+    private double balance = 0.0;
     private final String currency;
+    @Setter
     private List<Card> cards = new ArrayList<>();
+    @Setter
     private List<Transaction> transactions = new ArrayList<>();
-    @JsonIgnore
+    @JsonIgnore @Setter
     private double interestRate;
-    @JsonIgnore
+    @JsonIgnore @Setter
     private double minAmount = 0.0;
 
     @JsonIgnore
@@ -40,7 +46,7 @@ public abstract class Account {
         this.currency = currency;
         this.interestRate = 0;
     }
-    // Copy constructor
+
     protected Account(Account account) {
         this.IBAN = account.IBAN;
         this.type = account.type;
@@ -55,6 +61,13 @@ public abstract class Account {
 
     public double getBalance() {
         return balance;
+    }
+
+    public void setBalance(final double amount) {
+        balance = amount;
+        if (amount < 0) {
+            throw new RuntimeException("error");
+        }
     }
 
     public String getCurrency() {
@@ -75,9 +88,6 @@ public abstract class Account {
         return IBAN;
     }
 
-    public void payOnline(double amount, double exchangeRate){
-        this.setBalance(this.getBalance() - amount * exchangeRate);
-    }
     public List<Transaction> copyTransaction(List<Transaction> transactions){
         List<Transaction> copy = new ArrayList<>();
         for(Transaction transaction : transactions)
@@ -87,6 +97,16 @@ public abstract class Account {
     public boolean validatePayment(double amount, double exchangeRate){
         return this.getBalance() >= amount * exchangeRate
                 && this.getBalance() > this.getMinAmount();
+    }
+
+    public void subBalance(double amount){
+        balance -= amount;
+        if(balance < 0)
+            throw new RuntimeException("error at payment");
+    }
+
+    public void addBalance(double amount){
+        balance += amount;
     }
     @JsonIgnore
     public double getInterestRate() {
@@ -120,4 +140,26 @@ public abstract class Account {
         }
         return commerciants;
     }
+
+    public ObjectNode createOutputTransactionObject(List<Transaction> filteredTransactions){
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode node = mapper.createObjectNode();
+        node.put("balance", this.getBalance());
+        node.put("currency", this.getCurrency());
+        node.put("IBAN", this.getIBAN());
+        node.putPOJO("transactions", filteredTransactions);
+        return node;
+    }
+
+    public ObjectNode createOutputSpendingTransactionObject(List<Transaction> filteredTransactions, List<Commerciant> commerciants){
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode node = mapper.createObjectNode();
+        node.putPOJO("commerciants", commerciants);
+        node.put("balance", this.getBalance());
+        node.put("currency", this.getCurrency());
+        node.put("IBAN", this.getIBAN());
+        node.putPOJO("transactions", filteredTransactions);
+        return node;
+    }
+
 }

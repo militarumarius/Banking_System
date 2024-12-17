@@ -21,6 +21,7 @@ public  class Transaction {
     private String card;
     private String commerciant;
     private String currency;
+    private String error;
     private List<String> involvedAccounts = new ArrayList<>();
 
     public Transaction(TransactionBuilder builder) {
@@ -36,6 +37,7 @@ public  class Transaction {
         this.commerciant = builder.getCommerciant();
         this.involvedAccounts = builder.getInvolvedAccounts();
         this.currency = builder.getCurrency();
+        this.error = builder.getError();
     }
 
     public Transaction(Transaction transaction){
@@ -51,6 +53,7 @@ public  class Transaction {
         this.commerciant = transaction.getCommerciant();
         this.involvedAccounts = transaction.getInvolvedAccounts();
         this.currency = transaction.getCurrency();
+        this.error = transaction.getError();
     }
 
 }

@@ -7,16 +7,15 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.poo.bank.BankDatabase;
 import org.poo.bank.User;
 import org.poo.bank.accounts.Account;
-import org.poo.bank.accounts.FactoryAccount;
 import org.poo.bank.cards.Card;
-import org.poo.bank.cards.DebitCard;
 import org.poo.bank.cards.OneTImeUseCard;
+import org.poo.commands.*;
 import org.poo.fileio.CommandInput;
 import org.poo.fileio.ObjectInput;
 import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
 import org.poo.transaction.TransactionBuilder;
-
+import org.poo.transaction.TransactionDescription;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -31,53 +30,24 @@ public class Action {
             ObjectNode objectNode = mapper.createObjectNode();
             switch (commandInput.getCommand()) {
                 case "printUsers" -> {
-                    PrintCommands printUsers = new PrintCommands("printUsers", bank.copyUsers(), commandInput.getTimestamp());
-                    printUsers.printUsers(output);
+                    PrintUsers command = new PrintUsers(bank, commandInput, output);
+                    command.execute();
                 }
                 case "addAccount" -> {
-                    User user = bank.getUserMap().get(commandInput.getEmail());
-                    if(user == null)
-                        break;
-                    Account account = FactoryAccount.createAccount(commandInput);
-                    user.getAccounts().add(account);
-                    Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "New account created")
-                            .build();
-                    account.getTransactions().add(transaction);
+                    AddAccount command = new AddAccount(bank, commandInput, output);
+                    command.execute();
                 }
                 case "createCard" ->{
-                    User user = bank.getUserMap().get(commandInput.getEmail());
-                    if(user == null)
-                        break;
-                    Account account = user.findAccount(commandInput.getAccount());
-                    Card newCard = new DebitCard(generateCardNumber(), 0, account);
-                    user.addCard(account,newCard );
-                    Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "New card created")
-                            .account(account.getIBAN())
-                            .cardHolder(user.getEmail())
-                            .card(newCard.getCardNumber())
-                            .build();
-                    account.getTransactions().add(transaction);
+                    CreateCard command = new CreateCard(bank,commandInput, output);
+                    command.execute();
                 }
                 case "addFunds" ->{
-                    for(User user : bank.getUsers()) {
-                        Account account = user.findAccount(commandInput.getAccount());
-                        if(account != null)
-                            account.setBalance(account.getBalance() + commandInput.getAmount());
-                    }
+                    AddFunds command = new AddFunds(bank, commandInput, output);
+                    command.execute();
                 }
                 case "createOneTimeCard" ->{
-                    User user = bank.getUserMap().get(commandInput.getEmail());
-                    if(user != null) {
-                        Account account = user.findAccount(commandInput.getAccount());
-                        Card newCard = new OneTImeUseCard(generateCardNumber(), 1, account);
-                        user.addCard(account, newCard);
-                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "New card created")
-                                .account(account.getIBAN())
-                                .cardHolder(user.getEmail())
-                                .card(newCard.getCardNumber())
-                                .build();
-                        account.getTransactions().add(transaction);
-                    }
+                    CreateOneTimeCard command = new CreateOneTimeCard(bank, commandInput, output);
+                    command.execute();
                 }
                 case "deleteCard" -> {
                     User user = bank.getUserMap().get(commandInput.getEmail());
@@ -86,7 +56,7 @@ public class Action {
                     Account account = user.removeCard(commandInput.getCardNumber());
                     if(account ==  null)
                         break;
-                    Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "The card has been destroyed")
+                    Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.CARD_DESTROYED.getMessage())
                             .account(account.getIBAN())
                             .cardHolder(user.getEmail())
                             .card(commandInput.getCardNumber())
@@ -107,6 +77,10 @@ public class Action {
                     } else {
                         node.put("error", "Account couldn't be deleted - see org.poo.transactions for details");
                         node.put("timestamp", commandInput.getTimestamp());
+                        Account account = bank.findUser(commandInput.getAccount());
+                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.INVALID_DELETE_ACCOUNT.getMessage())
+                                .build();
+                        account.getTransactions().add(transaction);
                     }
                     objectNode.putPOJO("output", node);
                     objectNode.put("timestamp", commandInput.getTimestamp());
@@ -115,47 +89,46 @@ public class Action {
                 }
                 case "payOnline" ->{
                     User user = bank.getUserMap().get(commandInput.getEmail());
-                    if(user != null) {
-                        Account account = user.getCardAccountMap().get(commandInput.getCardNumber());
-                        if(account == null){
-                            ObjectNode node = JsonNodeFactory.instance.objectNode();
-                            objectNode.put("command", "payOnline");
-                            node.put("timestamp", commandInput.getTimestamp());
-                            node.put("description", "Card not found");
-                            objectNode.putPOJO("output", node);
-                            objectNode.put("timestamp", commandInput.getTimestamp());
-                            output.addPOJO(objectNode);
-                            break;
+                    if(user == null)
+                        break;
+                    Account account = user.getCardAccountMap().get(commandInput.getCardNumber());
+                    if(account == null){
+                        ErrorOutput errorOutput = new ErrorOutput("Card not found", commandInput.getTimestamp());
+                        ObjectNode node = errorOutput.toObjectNode();
+                        PrintOutput payOnline = new PrintOutput("payOnline", node, commandInput.getTimestamp());
+                        payOnline.printCommand(output);
+                        break;
                         }
-                        Card card = user.findCard(commandInput.getCardNumber());
-                        if(card == null)
-                            break;
-                        if(card.getStatus().equals("frozen")){
-                            Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "The card is frozen")
-                                    .build();
-                            card.getAccount().getTransactions().add(transaction);
-                            break;
-                        }
-                        List <String> visited = new ArrayList<>();
-                        double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
-                        if (exchangeRate > 0 && account.validatePayment(commandInput.getAmount(), exchangeRate)) {
-                            account.payOnline(commandInput.getAmount(), exchangeRate);
-                            Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "Card payment")
-                                    .amount(exchangeRate * commandInput.getAmount())
-                                    .commerciant(commandInput.getCommerciant())
-                                    .build();
-                            account.getTransactions().add(transaction);
-                            if(card.getType() == 1) {
-                                account.getCards().remove(card);
-                                user.getCardAccountMap().remove(card.getCardNumber());
-                                Card newCard = new OneTImeUseCard(generateCardNumber(), 1, account);
-                                user.addCard(account,newCard );
-                            }
-                        } else if(!account.validatePayment(commandInput.getAmount(), exchangeRate)){
-                            Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "Insufficient funds")
-                                    .build();
-                            account.getTransactions().add(transaction);
-                        }
+                    Card card = user.findCard(commandInput.getCardNumber());
+                    if(card == null)
+                        break;
+                    if(card.getStatus().equals("frozen")){
+                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.CARD_FROZEN.getMessage())
+                                .build();
+                        card.getAccount().getTransactions().add(transaction);
+                        break;
+                    }
+                    List <String> visited = new ArrayList<>();
+                    double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
+                    if(!account.validatePayment(commandInput.getAmount(), exchangeRate)){
+                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.INSUFFICIENT_FUNDS.getMessage())
+                                .build();
+                        account.getTransactions().add(transaction);
+                        break;
+                    }
+                    if (exchangeRate <= 0)
+                        break;
+                    account.setBalance(account.getBalance() - commandInput.getAmount() * exchangeRate);
+                    Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.CARD_PAYMENT.getMessage())
+                            .amount(exchangeRate * commandInput.getAmount())
+                            .commerciant(commandInput.getCommerciant())
+                            .build();
+                    account.getTransactions().add(transaction);
+                    if(card.getType() == 1) {
+                        account.getCards().remove(card);
+                        user.getCardAccountMap().remove(card.getCardNumber());
+                        Card newCard = new OneTImeUseCard(generateCardNumber(), 1, account);
+                        user.addCard(account,newCard );
                     }
                 }
                 case "sendMoney"->{
@@ -174,32 +147,36 @@ public class Action {
                     double exchangeRate = bank.findExchangeRate(sender.getCurrency(), receiver.getCurrency(), visited);
                     visited.clear();
                     if(sender.getBalance() < commandInput.getAmount()){
-                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "Insufficient funds")
+                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.INSUFFICIENT_FUNDS.getMessage())
                                 .build();
                         sender.getTransactions().add(transaction);
                         break;
                     }
-                    if (exchangeRate > 0 && sender.getBalance() > commandInput.getAmount()) {
-                        sender.setBalance(sender.getBalance() - commandInput.getAmount());
-                        receiver.setBalance(receiver.getBalance() + exchangeRate * commandInput.getAmount());
-                        String amount = String.valueOf(commandInput.getAmount()) + " " + sender.getCurrency();
-                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), commandInput.getDescription())
-                                .senderIBAN(commandInput.getAccount())
-                                .receiverIBAN(commandInput.getReceiver())
-                                .amount(amount)
-                                .transferType("sent")
-                                .build();
-                        sender.getTransactions().add(transaction);
-                    }
+                    if (exchangeRate <= 0)
+                        break;
+                    sender.setBalance(sender.getBalance() - commandInput.getAmount());
+                    receiver.setBalance(receiver.getBalance() + exchangeRate * commandInput.getAmount());
+                    String amountSender = String.valueOf(commandInput.getAmount()) + " " + sender.getCurrency();
+                    Transaction transactionSender = new TransactionBuilder(commandInput.getTimestamp(), commandInput.getDescription())
+                            .senderIBAN(commandInput.getAccount())
+                            .receiverIBAN(commandInput.getReceiver())
+                            .amount(amountSender)
+                            .transferType("sent")
+                            .build();
+                    sender.getTransactions().add(transactionSender);
+                    String amountReceiver = String.valueOf(exchangeRate * commandInput.getAmount()) + " " + receiver.getCurrency();
+                    Transaction transactionReceiver = new TransactionBuilder(commandInput.getTimestamp(), commandInput.getDescription())
+                            .senderIBAN(commandInput.getAccount())
+                            .receiverIBAN(commandInput.getReceiver())
+                            .amount(amountReceiver)
+                            .transferType("received")
+                            .build();
+                    receiver.getTransactions().add(transactionReceiver);
                 }
                 case "printTransactions" ->{
                     User user = bank.getUserMap().get(commandInput.getEmail());
-                    objectNode.put("command", "printTransactions");
-                    for (Account account : user.getAccounts())
-                        objectNode.putPOJO("output", account.copyTransaction(account.getTransactions()));
-                    objectNode.put("timestamp", commandInput.getTimestamp());
-                    output.addPOJO(objectNode);
-
+                    PrintOutput printTransactions = new PrintOutput("printTransactions", commandInput.getTimestamp(), user);
+                    printTransactions.printTransaction(output);
                 }
                 case "setAlias" -> {
                     User user = bank.getUserMap().get(commandInput.getEmail());
@@ -209,18 +186,15 @@ public class Action {
                 case "checkCardStatus"->{
                     Card card = bank.findCard(commandInput.getCardNumber());
                     if(card == null){
-                        ObjectNode node = JsonNodeFactory.instance.objectNode();
-                        objectNode.put("command", "checkCardStatus");
-                        node.put("timestamp", commandInput.getTimestamp());
-                        node.put("description", "Card not found");
-                        objectNode.putPOJO("output", node);
-                        objectNode.put("timestamp", commandInput.getTimestamp());
-                        output.addPOJO(objectNode);
+                        ErrorOutput errorOutput = new ErrorOutput("Card not found", commandInput.getTimestamp());
+                        ObjectNode node = errorOutput.toObjectNode();
+                        PrintOutput checkCardStatus = new PrintOutput("checkCardStatus", node, commandInput.getTimestamp());
+                        checkCardStatus.printCommand(output);
                         break;
                     }
                     if(card.getAccount().getMinAmount() >= card.getAccount().getBalance() && card.getStatus().equals("active")){
                         card.setStatus("frozen");
-                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), "You have reached the minimum amount of funds, the card will be frozen")
+                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),  TransactionDescription.MINIMUM_FUNDS_REACHED.getMessage())
                                 .build();
                         card.getAccount().getTransactions().add(transaction);
                     }
@@ -231,84 +205,42 @@ public class Action {
                 }
                 case "changeInterestRate"->{
                     Account account = bank.findUser(commandInput.getAccount());
+                    if(!bank.checkSaving(account)){
+                        objectNode.put("command", "changeInterestRate");
+                        ErrorOutput errorOutput = new ErrorOutput("This is not a savings account", commandInput.getTimestamp());
+                        ObjectNode node = errorOutput.toObjectNode();
+                        PrintOutput changeInterestRate = new PrintOutput("changeInterestRate", node, commandInput.getTimestamp());
+                        changeInterestRate.printCommand(output);
+                    }
                     account.setInterestRate(commandInput.getInterestRate());
                 }
+                case "addInterest" ->{
+                    Account account = bank.findUser(commandInput.getAccount());
+                    if(!bank.checkSaving(account)){
+                        objectNode.put("command", "addInterest");
+                        ErrorOutput errorOutput = new ErrorOutput("This is not a savings account", commandInput.getTimestamp());
+                        ObjectNode node = errorOutput.toObjectNode();
+                        PrintOutput addInterest = new PrintOutput("addInterest", node, commandInput.getTimestamp());
+                        addInterest.printCommand(output);
+                    }
+                    double newSum = account.getBalance() * commandInput.getInterestRate();
+                    account.setBalance(newSum);
+                }
                 case "splitPayment"->{
-                    double amount = commandInput.getAmount();
-                    int nrAccounts = commandInput.getAccounts().size();
-                    double amountToPay = amount / nrAccounts;
-                    List <Account> accounts = new ArrayList<>();
-                    for(String iban : commandInput.getAccounts()){
-                        accounts.add(bank.findUser(iban));
-                    }
-                    for(Account account: accounts){
-                        List <String> visited = new ArrayList<>();
-                        double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
-                        visited.clear();
-                        boolean check = account.validatePayment(amountToPay, exchangeRate);
-                        if (!check)
-                            break;
-                    }
-                    for(Account account: accounts){
-                        List <String> visited = new ArrayList<>();
-                        double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
-                        visited.clear();
-                        account.payOnline(amountToPay, exchangeRate);
-                        String description = "Split payment of " + String.format("%.2f", amount) + " " + commandInput.getCurrency();
-                        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),description)
-                                .involvedAccounts(commandInput.getAccounts())
-                                .amount(amountToPay)
-                                .currency(commandInput.getCurrency())
-                                .build();
-                        account.getTransactions().add(transaction);
-                    }
+                    SplitPayment command = new SplitPayment(bank, commandInput, output);
+                    command.execute();
                 }
                 case "report"->{
-                    Account account = bank.findUser(commandInput.getAccount());
-                    objectNode.put("command", "report");
-                    if(account == null){
-                        ObjectNode node = JsonNodeFactory.instance.objectNode();
-                        node.put("description", "Account not found");
-                        node.put("timestamp", commandInput.getTimestamp());
-                        objectNode.putPOJO("output", node);
-                        objectNode.put("timestamp", commandInput.getTimestamp());
-                        output.addPOJO(objectNode);
-                        break;
-                    }
-
-                    List<Transaction> filteredTransactions = account.
-                            getTransactionsInInterval(commandInput.getStartTimestamp(), commandInput.getEndTimestamp());
-                   ObjectNode node = JsonNodeFactory.instance.objectNode();
-                   node.put("balance", account.getBalance());
-                   node.put("currency", account.getCurrency());
-                   node.put("IBAN", account.getIBAN());
-                   node.putPOJO("transactions", filteredTransactions);
-                   objectNode.putPOJO("output", node);
-                   objectNode.put("timestamp", commandInput.getTimestamp());
-                   output.addPOJO(objectNode);
+                   Report report = new Report(bank, commandInput, output);
+                   report.execute();
                 }
-                case "spendingsReport"->{
-                    Account account = bank.findUser(commandInput.getAccount());
-                    if(account == null)
-                        break;
-                    List<Transaction> filteredTransactions = account.
-                            getSpendingTransaction(commandInput.getStartTimestamp(), commandInput.getEndTimestamp());
-                    ObjectNode node = JsonNodeFactory.instance.objectNode();
-                    objectNode.put("command", "spendingsReport");
-                    List<Commerciant> commerciants = account.
-                            getCommerciants(filteredTransactions);
-                    commerciants.sort(Comparator.comparing(Commerciant::getCommerciant));
-                    node.putPOJO("commerciants", commerciants);
-                    node.put("balance", account.getBalance());
-                    node.put("currency", account.getCurrency());
-                    node.put("IBAN", account.getIBAN());
-                    node.putPOJO("transactions", filteredTransactions);
-                    objectNode.putPOJO("output", node);
-                    objectNode.put("timestamp", commandInput.getTimestamp());
-                    output.addPOJO(objectNode);
+                case "spendingsReport"-> {
+                    SpendingsReport command = new SpendingsReport(bank, commandInput, output);
+                    command.execute();
                 }
             }
         }
     }
+
 }
 
