@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.poo.bank.cards.Card;
 import org.poo.fileio.CommandInput;
+import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
 
 import java.util.ArrayList;
@@ -74,23 +75,49 @@ public abstract class Account {
         return IBAN;
     }
 
-    public void payOnline(CommandInput commandInput, double exchangeRate){
-        this.setBalance(this.getBalance() - commandInput.getAmount() * exchangeRate);
+    public void payOnline(double amount, double exchangeRate){
+        this.setBalance(this.getBalance() - amount * exchangeRate);
     }
-    public List<Transaction> copyTransaction(){
+    public List<Transaction> copyTransaction(List<Transaction> transactions){
         List<Transaction> copy = new ArrayList<>();
-        for(Transaction transaction : this.getTransactions())
+        for(Transaction transaction : transactions)
             copy.add(new Transaction(transaction));
         return copy;
     }
-    public boolean validatePayment(CommandInput commandInput, double exchangeRate){
-        return this.getBalance() >= commandInput.getAmount() * exchangeRate
+    public boolean validatePayment(double amount, double exchangeRate){
+        return this.getBalance() >= amount * exchangeRate
                 && this.getBalance() > this.getMinAmount();
     }
-
     @JsonIgnore
     public double getInterestRate() {
         return interestRate;
     }
-
+    public List<Transaction> getTransactionsInInterval(int startTimestamp, int endTimestamp) {
+        List<Transaction> filteredTransactions = new ArrayList<>();
+        for (Transaction transaction : transactions) {
+            if (transaction.getTimestamp() >= startTimestamp && transaction.getTimestamp() <= endTimestamp) {
+                filteredTransactions.add(transaction);
+            }
+        }
+        return filteredTransactions;
     }
+    public List<Transaction> getSpendingTransaction(int startTimestamp, int endTimestamp) {
+        List<Transaction> filteredTransactions = new ArrayList<>();
+        for (Transaction transaction : transactions) {
+            if (transaction.getTimestamp() >= startTimestamp &&
+                    transaction.getTimestamp() <= endTimestamp && transaction.getDescription().equals("Card payment")) {
+                filteredTransactions.add(transaction);
+            }
+        }
+        return filteredTransactions;
+    }
+
+    public List<Commerciant> getCommerciants(List<Transaction> transactions) {
+        List<Commerciant> commerciants = new ArrayList<>();
+        for (Transaction transaction : transactions) {
+            Commerciant commerciant = new Commerciant(transaction.getCommerciant(), (Double) transaction.getAmount());
+                commerciants.add(commerciant);
+        }
+        return commerciants;
+    }
+}

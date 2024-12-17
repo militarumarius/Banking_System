@@ -432,6 +432,12 @@
   "output" : [ {
     "timestamp" : 26,
     "description" : "New account created"
+  }, {
+    "timestamp" : 370,
+    "description" : "Split payment of 68481.00 EUR",
+    "amount" : 1369.62,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO75POOB8279679254660818", "RO98POOB8412955460158769", "RO37POOB8653914479106806", "RO53POOB7122855990652257", "RO19POOB4981055641668812", "RO04POOB3492426980939341", "RO38POOB0964823730995794", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO45POOB6505529013808948", "RO46POOB9051076190383154", "RO68POOB1848616931405475", "RO49POOB4985907300499418", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO50POOB3913194831046423", "RO24POOB6002156322256357", "RO96POOB6738272785416988", "RO65POOB8944016386845896", "RO00POOB5687892910835215", "RO76POOB4035116042454483", "RO15POOB0048706387164463", "RO52POOB6271107854467609", "RO75POOB1098983729823992", "RO30POOB9523423715747796", "RO97POOB5006417983475785", "RO47POOB5866490978033060", "RO19POOB5993192794373940", "RO32POOB0130532963818359", "RO66POOB1088683052483887", "RO71POOB1634969878734749", "RO50POOB3359236199018963", "RO90POOB5450777208072365", "RO37POOB7013767509830666", "RO98POOB7190609943699593", "RO69POOB2312919212921100", "RO73POOB0363118755441573", "RO69POOB9846198978826791", "RO45POOB0388148432759748", "RO66POOB5231566576817248", "RO01POOB3925326637526572", "RO33POOB9999273999620457", "RO01POOB9893132718323396", "RO89POOB4455583483378897", "RO93POOB6760303931698665", "RO36POOB6500477412147025", "RO09POOB4346339013848470", "RO58POOB2721178218599590", "RO40POOB2135483650246268", "RO33POOB4049920806186500" ]
   } ],
   "timestamp" : 371
 }, {
@@ -439,6 +445,12 @@
   "output" : [ {
     "timestamp" : 27,
     "description" : "New account created"
+  }, {
+    "timestamp" : 370,
+    "description" : "Split payment of 68481.00 EUR",
+    "amount" : 1369.62,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO75POOB8279679254660818", "RO98POOB8412955460158769", "RO37POOB8653914479106806", "RO53POOB7122855990652257", "RO19POOB4981055641668812", "RO04POOB3492426980939341", "RO38POOB0964823730995794", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO45POOB6505529013808948", "RO46POOB9051076190383154", "RO68POOB1848616931405475", "RO49POOB4985907300499418", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO50POOB3913194831046423", "RO24POOB6002156322256357", "RO96POOB6738272785416988", "RO65POOB8944016386845896", "RO00POOB5687892910835215", "RO76POOB4035116042454483", "RO15POOB0048706387164463", "RO52POOB6271107854467609", "RO75POOB1098983729823992", "RO30POOB9523423715747796", "RO97POOB5006417983475785", "RO47POOB5866490978033060", "RO19POOB5993192794373940", "RO32POOB0130532963818359", "RO66POOB1088683052483887", "RO71POOB1634969878734749", "RO50POOB3359236199018963", "RO90POOB5450777208072365", "RO37POOB7013767509830666", "RO98POOB7190609943699593", "RO69POOB2312919212921100", "RO73POOB0363118755441573", "RO69POOB9846198978826791", "RO45POOB0388148432759748", "RO66POOB5231566576817248", "RO01POOB3925326637526572", "RO33POOB9999273999620457", "RO01POOB9893132718323396", "RO89POOB4455583483378897", "RO93POOB6760303931698665", "RO36POOB6500477412147025", "RO09POOB4346339013848470", "RO58POOB2721178218599590", "RO40POOB2135483650246268", "RO33POOB4049920806186500" ]
   } ],
   "timestamp" : 372
 }, {
@@ -446,6 +458,12 @@
   "output" : [ {
     "timestamp" : 50,
     "description" : "New account created"
+  }, {
+    "timestamp" : 370,
+    "description" : "Split payment of 68481.00 EUR",
+    "amount" : 1369.62,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO75POOB8279679254660818", "RO98POOB8412955460158769", "RO37POOB8653914479106806", "RO53POOB7122855990652257", "RO19POOB4981055641668812", "RO04POOB3492426980939341", "RO38POOB0964823730995794", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO45POOB6505529013808948", "RO46POOB9051076190383154", "RO68POOB1848616931405475", "RO49POOB4985907300499418", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO50POOB3913194831046423", "RO24POOB6002156322256357", "RO96POOB6738272785416988", "RO65POOB8944016386845896", "RO00POOB5687892910835215", "RO76POOB4035116042454483", "RO15POOB0048706387164463", "RO52POOB6271107854467609", "RO75POOB1098983729823992", "RO30POOB9523423715747796", "RO97POOB5006417983475785", "RO47POOB5866490978033060", "RO19POOB5993192794373940", "RO32POOB0130532963818359", "RO66POOB1088683052483887", "RO71POOB1634969878734749", "RO50POOB3359236199018963", "RO90POOB5450777208072365", "RO37POOB7013767509830666", "RO98POOB7190609943699593", "RO69POOB2312919212921100", "RO73POOB0363118755441573", "RO69POOB9846198978826791", "RO45POOB0388148432759748", "RO66POOB5231566576817248", "RO01POOB3925326637526572", "RO33POOB9999273999620457", "RO01POOB9893132718323396", "RO89POOB4455583483378897", "RO93POOB6760303931698665", "RO36POOB6500477412147025", "RO09POOB4346339013848470", "RO58POOB2721178218599590", "RO40POOB2135483650246268", "RO33POOB4049920806186500" ]
   } ],
   "timestamp" : 373
 }, {
@@ -456,16 +474,16 @@
     "email" : "Gabor_Hasler@hotmail.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 91084.795,
+      "balance" : 89410.815,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "8207906978464446",
+        "cardNumber" : "4090756032993928",
         "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "savings",
-      "balance" : 2671.04,
+      "balance" : 997.06,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1733018068262537",
@@ -479,7 +497,7 @@
     "email" : "John_Schmidt@gmx.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7072.95,
+      "balance" : 5398.97,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1851641428290185",
@@ -488,10 +506,10 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "savings",
-      "balance" : 87863.8,
+      "balance" : 86189.82,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "1952612794872207",
+        "cardNumber" : "1072507746506832",
         "status" : "active"
       } ],
       "IBAN" : "RO46POOB9051076190383154"
@@ -502,7 +520,7 @@
     "email" : "Victoria_Rice@icloud.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1168.375,
+      "balance" : 76.01999999999998,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -511,7 +529,7 @@
       "IBAN" : "RO90POOB5450777208072365"
     }, {
       "type" : "savings",
-      "balance" : 68550.35714285714,
+      "balance" : 66876.37714285715,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "6988686155235949",
@@ -525,7 +543,7 @@
     "email" : "Luke_Jones@outlook.au",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 141126.0,
+      "balance" : 138843.3,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "9281102140265301",
@@ -534,10 +552,10 @@
       "IBAN" : "RO65POOB8944016386845896"
     }, {
       "type" : "savings",
-      "balance" : 54152.8125,
+      "balance" : 51870.1125,
       "currency" : "AUD",
       "cards" : [ {
-        "cardNumber" : "0084627535411906",
+        "cardNumber" : "1763070802548095",
         "status" : "active"
       } ],
       "IBAN" : "RO52POOB6271107854467609"
@@ -548,16 +566,16 @@
     "email" : "Ryan_Waters@gmx.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 36674.666666666664,
+      "balance" : 35152.86666666666,
       "currency" : "USD",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "2995112048162719",
         "status" : "active"
       } ],
       "IBAN" : "RO58POOB2721178218599590"
     }, {
       "type" : "savings",
-      "balance" : 2147.909090909091,
+      "balance" : 626.109090909091,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "5254952026068544",
@@ -571,7 +589,7 @@
     "email" : "David_Gill@protonmail.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 56069.27272727273,
+      "balance" : 53634.39272727273,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "8221841196640096",
@@ -580,10 +598,10 @@
       "IBAN" : "RO76POOB4035116042454483"
     }, {
       "type" : "savings",
-      "balance" : 79418.61538461539,
+      "balance" : 76983.73538461539,
       "currency" : "NZD",
       "cards" : [ {
-        "cardNumber" : "8509650399173661",
+        "cardNumber" : "9003691654595226",
         "status" : "active"
       } ],
       "IBAN" : "RO50POOB3359236199018963"
@@ -594,16 +612,16 @@
     "email" : "Arne_Kobelt_B.A.@icloud.de",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1889.0,
+      "balance" : 519.3800000000001,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "6796819982034243",
+        "cardNumber" : "8188712199558265",
         "status" : "active"
       } ],
       "IBAN" : "RO37POOB7013767509830666"
     }, {
       "type" : "savings",
-      "balance" : 3791.261363636364,
+      "balance" : 2421.641363636364,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "2912280039644439",
@@ -617,7 +635,7 @@
     "email" : "Liam_Guthrie@hushmail.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 50433.534545454546,
+      "balance" : 47998.65454545455,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "6052309891235892",
@@ -626,10 +644,10 @@
       "IBAN" : "RO19POOB4981055641668812"
     }, {
       "type" : "savings",
-      "balance" : 14387.0,
+      "balance" : 11952.119999999999,
       "currency" : "NZD",
       "cards" : [ {
-        "cardNumber" : "4069340791718491",
+        "cardNumber" : "4197210476387198",
         "status" : "active"
       } ],
       "IBAN" : "RO37POOB8653914479106806"
@@ -640,16 +658,16 @@
     "email" : "Nicolas_Robert-Grojean@zoho.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1991.0,
+      "balance" : 317.02,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "4686471658318359",
+        "cardNumber" : "8889483284080840",
         "status" : "active"
       } ],
       "IBAN" : "RO30POOB9523423715747796"
     }, {
       "type" : "savings",
-      "balance" : 10027.0,
+      "balance" : 8353.02,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4729060187716142",
@@ -663,7 +681,7 @@
     "email" : "Roberta_Mocanu@aol.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 5798.0,
+      "balance" : -660.0999999999995,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "3892114815135845",
@@ -672,7 +690,7 @@
       "IBAN" : "RO79POOB3616857825600958"
     }, {
       "type" : "savings",
-      "balance" : 2729.0,
+      "balance" : -3636.0999999999995,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "6592968050400705",
@@ -686,16 +704,16 @@
     "email" : "Jennifer_Watson@zoho.au",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 51285.5,
+      "balance" : 49002.8,
       "currency" : "AUD",
       "cards" : [ {
-        "cardNumber" : "1322658752653937",
+        "cardNumber" : "2134768742021642",
         "status" : "active"
       } ],
       "IBAN" : "RO00POOB5687892910835215"
     }, {
       "type" : "savings",
-      "balance" : 2532.909090909091,
+      "balance" : 250.20909090909117,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2803408755782048",
@@ -709,7 +727,7 @@
     "email" : "Rocio_Saldana_Concepcion@hotmail.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1646.0,
+      "balance" : -28789.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "9224211293357459",
@@ -718,7 +736,7 @@
       "IBAN" : "RO96POOB6738272785416988"
     }, {
       "type" : "savings",
-      "balance" : 2379.1428571428573,
+      "balance" : -28013.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "6467982927008637",
@@ -732,16 +750,16 @@
     "email" : "Claude_Tremblay@hotmail.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 90934.41428571429,
+      "balance" : 88956.07428571429,
       "currency" : "CAD",
       "cards" : [ {
-        "cardNumber" : "0466992784477761",
+        "cardNumber" : "0687036602426775",
         "status" : "active"
       } ],
       "IBAN" : "RO33POOB4049920806186500"
     }, {
       "type" : "savings",
-      "balance" : 20395.85714285714,
+      "balance" : 18417.51714285714,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "0692077318511511",
@@ -755,7 +773,7 @@
     "email" : "Anouk_'s_Gravensande@hushmail.nl",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2021.625,
+      "balance" : 652.0050000000001,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "6825942525318055",
@@ -764,10 +782,10 @@
       "IBAN" : "RO69POOB9846198978826791"
     }, {
       "type" : "savings",
-      "balance" : 8862.0,
+      "balance" : 7492.38,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "9845444067695487",
         "status" : "active"
       } ],
       "IBAN" : "RO93POOB6760303931698665"
@@ -778,16 +796,16 @@
     "email" : "Christophe_Chopard@yahoo.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7699.0,
+      "balance" : 6025.02,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "5088727507344799",
+        "cardNumber" : "2060252995835471",
         "status" : "active"
       } ],
       "IBAN" : "RO98POOB8412955460158769"
     }, {
       "type" : "savings",
-      "balance" : 22588.23076923077,
+      "balance" : 20914.25076923077,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4435533800578624",
@@ -801,7 +819,7 @@
     "email" : "Renee_Carre@protonmail.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 10517.42857142857,
+      "balance" : 9147.808571428572,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "1388131156990910",
@@ -810,10 +828,10 @@
       "IBAN" : "RO32POOB0130532963818359"
     }, {
       "type" : "savings",
-      "balance" : 2471.0,
+      "balance" : 1101.38,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "8916302128573242",
+        "cardNumber" : "3323341870145976",
         "status" : "active"
       } ],
       "IBAN" : "RO45POOB6505529013808948"
@@ -824,16 +842,16 @@
     "email" : "Amadeo_Bacos@zoho.it",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 4883.495,
+      "balance" : 3513.875,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "7317745095154687",
+        "cardNumber" : "2116922623332784",
         "status" : "active"
       } ],
       "IBAN" : "RO68POOB1848616931405475"
     }, {
       "type" : "savings",
-      "balance" : 102132.87227272728,
+      "balance" : 100763.25227272729,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "9295697829422937",
@@ -847,7 +865,7 @@
     "email" : "Mtro._Oswaldo_Rael@zoho.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2793.0,
+      "balance" : -27642.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "0755790623339451",
@@ -856,7 +874,7 @@
       "IBAN" : "RO10POOB4354933866366881"
     }, {
       "type" : "savings",
-      "balance" : 1072.0,
+      "balance" : -28063.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8696843716078966",
@@ -870,16 +888,16 @@
     "email" : "Ernesto_Marcos_Mojica_Viera@hotmail.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 130164.11111111111,
+      "balance" : 99728.11111111111,
       "currency" : "MXN",
       "cards" : [ {
-        "cardNumber" : "3951521356076921",
+        "cardNumber" : "8659888037017942",
         "status" : "active"
       } ],
       "IBAN" : "RO33POOB9999273999620457"
     }, {
       "type" : "savings",
-      "balance" : 20327.571428571428,
+      "balance" : -9996.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8145060794847555",
@@ -893,7 +911,7 @@
     "email" : "Justin_Laing@hotmail.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 18179.0,
+      "balance" : 15744.119999999999,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "2394479558596255",
@@ -902,10 +920,10 @@
       "IBAN" : "RO38POOB0964823730995794"
     }, {
       "type" : "savings",
-      "balance" : 2491.5454545454545,
+      "balance" : 56.66545454545445,
       "currency" : "NZD",
       "cards" : [ {
-        "cardNumber" : "4097439592846732",
+        "cardNumber" : "2105131557909283",
         "status" : "active"
       } ],
       "IBAN" : "RO19POOB5993192794373940"
@@ -916,16 +934,16 @@
     "email" : "Emanuil_Dima@outlook.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 41835.4375,
+      "balance" : 34987.3375,
       "currency" : "RON",
       "cards" : [ {
-        "cardNumber" : "8431794639822740",
+        "cardNumber" : "6356969797057098",
         "status" : "active"
       } ],
       "IBAN" : "RO53POOB7122855990652257"
     }, {
       "type" : "savings",
-      "balance" : 4271.454545454546,
+      "balance" : -2353.6454545454535,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "2107645074675430",
@@ -939,7 +957,7 @@
     "email" : "Loic_Rey@protonmail.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 12063.107142857143,
+      "balance" : 10389.127142857144,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7644059707106503",
@@ -948,10 +966,10 @@
       "IBAN" : "RO71POOB1634969878734749"
     }, {
       "type" : "savings",
-      "balance" : 3479.5014285714287,
+      "balance" : 1805.5214285714285,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "2289183361654620",
+        "cardNumber" : "1350474532114313",
         "status" : "active"
       } ],
       "IBAN" : "RO69POOB2312919212921100"
@@ -962,16 +980,16 @@
     "email" : "Rodney_George@zoho.au",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2489.0,
+      "balance" : 206.30000000000018,
       "currency" : "AUD",
       "cards" : [ {
-        "cardNumber" : "7746115164990298",
+        "cardNumber" : "9196593486666481",
         "status" : "active"
       } ],
       "IBAN" : "RO09POOB4346339013848470"
     }, {
       "type" : "savings",
-      "balance" : 2375.0,
+      "balance" : 92.30000000000018,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2578053935040541",
@@ -985,7 +1003,7 @@
     "email" : "Alfred_Bell@gmail.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1951.0,
+      "balance" : 354.65999999999985,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "4766425843993312",
@@ -994,10 +1012,10 @@
       "IBAN" : "RO50POOB3913194831046423"
     }, {
       "type" : "savings",
-      "balance" : 2234.4262626262625,
+      "balance" : 256.0862626262623,
       "currency" : "CAD",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "5715851832459605",
         "status" : "active"
       } ],
       "IBAN" : "RO66POOB5231566576817248"
@@ -1008,7 +1026,7 @@
     "email" : "Ronnie_White@yahoo.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 1609.111111111111,
+      "balance" : 39.01999999999998,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "5779026319169555",
@@ -1017,7 +1035,7 @@
       "IBAN" : "RO89POOB4455583483378897"
     }, {
       "type" : "savings",
-      "balance" : 3176.0,
+      "balance" : 1502.02,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7678041819946354",
@@ -1027,6 +1045,121 @@
     } ]
   } ],
   "timestamp" : 474
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 89410.815,
+    "currency" : "CHF",
+    "IBAN" : "RO58POOB7344468893732422",
+    "transactions" : [ ]
+  },
+  "timestamp" : 475
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 5398.97,
+    "currency" : "CHF",
+    "IBAN" : "RO69POOB6209498372540635",
+    "transactions" : [ {
+      "timestamp" : 256,
+      "description" : "Medical checkup at a private clinic",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "receiverIBAN" : "RO19POOB4981055641668812",
+      "amount" : "474.0 CHF",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 257,
+      "description" : "Tickets for a Swiss football match",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "receiverIBAN" : "RO98POOB7190609943699593",
+      "amount" : "155.0 CHF",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 258,
+      "description" : "Repayment for a mortgage",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "receiverIBAN" : "RO45POOB6505529013808948",
+      "amount" : "572.0 CHF",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 259,
+      "description" : "Tickets for a Swiss football match",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "receiverIBAN" : "RO19POOB5993192794373940",
+      "amount" : "748.0 CHF",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 260,
+      "description" : "Renewal of a Swisscom subscription",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "receiverIBAN" : "RO98POOB8412955460158769",
+      "amount" : "90.0 CHF",
+      "transferType" : "sent"
+    } ]
+  },
+  "timestamp" : 476
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 76.01999999999998,
+    "currency" : "CHF",
+    "IBAN" : "RO90POOB5450777208072365",
+    "transactions" : [ {
+      "timestamp" : 261,
+      "description" : "Booking a holiday in the Swiss Alps",
+      "senderIBAN" : "RO90POOB5450777208072365",
+      "receiverIBAN" : "RO01POOB3925326637526572",
+      "amount" : "909.0 CHF",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 262,
+      "description" : "Insufficient funds"
+    }, {
+      "timestamp" : 263,
+      "description" : "Insufficient funds"
+    }, {
+      "timestamp" : 264,
+      "description" : "Buying clothes at Manor",
+      "senderIBAN" : "RO90POOB5450777208072365",
+      "receiverIBAN" : "RO79POOB3616857825600958",
+      "amount" : "407.0 CHF",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 265,
+      "description" : "Insufficient funds"
+    }, {
+      "timestamp" : 370,
+      "description" : "Split payment of 68481.00 EUR",
+      "amount" : 1369.62,
+      "currency" : "EUR",
+      "involvedAccounts" : [ "RO75POOB8279679254660818", "RO98POOB8412955460158769", "RO37POOB8653914479106806", "RO53POOB7122855990652257", "RO19POOB4981055641668812", "RO04POOB3492426980939341", "RO38POOB0964823730995794", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO45POOB6505529013808948", "RO46POOB9051076190383154", "RO68POOB1848616931405475", "RO49POOB4985907300499418", "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO50POOB3913194831046423", "RO24POOB6002156322256357", "RO96POOB6738272785416988", "RO65POOB8944016386845896", "RO00POOB5687892910835215", "RO76POOB4035116042454483", "RO15POOB0048706387164463", "RO52POOB6271107854467609", "RO75POOB1098983729823992", "RO30POOB9523423715747796", "RO97POOB5006417983475785", "RO47POOB5866490978033060", "RO19POOB5993192794373940", "RO32POOB0130532963818359", "RO66POOB1088683052483887", "RO71POOB1634969878734749", "RO50POOB3359236199018963", "RO90POOB5450777208072365", "RO37POOB7013767509830666", "RO98POOB7190609943699593", "RO69POOB2312919212921100", "RO73POOB0363118755441573", "RO69POOB9846198978826791", "RO45POOB0388148432759748", "RO66POOB5231566576817248", "RO01POOB3925326637526572", "RO33POOB9999273999620457", "RO01POOB9893132718323396", "RO89POOB4455583483378897", "RO93POOB6760303931698665", "RO36POOB6500477412147025", "RO09POOB4346339013848470", "RO58POOB2721178218599590", "RO40POOB2135483650246268", "RO33POOB4049920806186500" ]
+    }, {
+      "timestamp" : 375,
+      "description" : "New card created",
+      "cardHolder" : "Victoria_Rice@icloud.ch",
+      "account" : "RO90POOB5450777208072365",
+      "card" : "7901879264253296"
+    } ]
+  },
+  "timestamp" : 477
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 138843.3,
+    "currency" : "AUD",
+    "IBAN" : "RO65POOB8944016386845896",
+    "transactions" : [ ]
+  },
+  "timestamp" : 478
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 35152.86666666666,
+    "currency" : "USD",
+    "IBAN" : "RO58POOB2721178218599590",
+    "transactions" : [ ]
+  },
+  "timestamp" : 479
 }, {
   "command" : "checkCardStatus",
   "output" : {
@@ -1042,16 +1175,16 @@
     "email" : "Gabor_Hasler@hotmail.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 92443.795,
+      "balance" : 90769.815,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "8207906978464446",
+        "cardNumber" : "4090756032993928",
         "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
       "type" : "savings",
-      "balance" : 3184.04,
+      "balance" : 1510.06,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1733018068262537",
@@ -1065,7 +1198,7 @@
     "email" : "John_Schmidt@gmx.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7737.95,
+      "balance" : 6063.97,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "1851641428290185",
@@ -1074,10 +1207,10 @@
       "IBAN" : "RO69POOB6209498372540635"
     }, {
       "type" : "savings",
-      "balance" : 89633.8,
+      "balance" : 87959.82,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "1952612794872207",
+        "cardNumber" : "1072507746506832",
         "status" : "active"
       } ],
       "IBAN" : "RO46POOB9051076190383154"
@@ -1088,7 +1221,7 @@
     "email" : "Victoria_Rice@icloud.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2215.375,
+      "balance" : -410.98,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -1097,7 +1230,7 @@
       "IBAN" : "RO90POOB5450777208072365"
     }, {
       "type" : "savings",
-      "balance" : 65914.35714285714,
+      "balance" : 62725.636402116404,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "6988686155235949",
@@ -1111,7 +1244,7 @@
     "email" : "Luke_Jones@outlook.au",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 142106.0,
+      "balance" : 139823.3,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "9281102140265301",
@@ -1120,10 +1253,10 @@
       "IBAN" : "RO65POOB8944016386845896"
     }, {
       "type" : "savings",
-      "balance" : 55610.8125,
+      "balance" : 53328.1125,
       "currency" : "AUD",
       "cards" : [ {
-        "cardNumber" : "0084627535411906",
+        "cardNumber" : "1763070802548095",
         "status" : "active"
       } ],
       "IBAN" : "RO52POOB6271107854467609"
@@ -1134,16 +1267,16 @@
     "email" : "Ryan_Waters@gmx.us",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 39055.777777777774,
+      "balance" : 36840.86666666666,
       "currency" : "USD",
       "cards" : [ {
-        "cardNumber" : "7004757825892043",
+        "cardNumber" : "2995112048162719",
         "status" : "active"
       } ],
       "IBAN" : "RO58POOB2721178218599590"
     }, {
       "type" : "savings",
-      "balance" : 3001.909090909091,
+      "balance" : 1480.109090909091,
       "currency" : "USD",
       "cards" : [ {
         "cardNumber" : "5254952026068544",
@@ -1157,7 +1290,7 @@
     "email" : "David_Gill@protonmail.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 56779.27272727273,
+      "balance" : 54344.39272727273,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "8221841196640096",
@@ -1166,10 +1299,10 @@
       "IBAN" : "RO76POOB4035116042454483"
     }, {
       "type" : "savings",
-      "balance" : 80257.61538461539,
+      "balance" : 75619.47612535613,
       "currency" : "NZD",
       "cards" : [ {
-        "cardNumber" : "8509650399173661",
+        "cardNumber" : "9003691654595226",
         "status" : "active"
       } ],
       "IBAN" : "RO50POOB3359236199018963"
@@ -1180,16 +1313,16 @@
     "email" : "Arne_Kobelt_B.A.@icloud.de",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 49505.0,
+      "balance" : 48135.38,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "6796819982034243",
+        "cardNumber" : "8188712199558265",
         "status" : "active"
       } ],
       "IBAN" : "RO37POOB7013767509830666"
     }, {
       "type" : "savings",
-      "balance" : 4463.261363636364,
+      "balance" : 1469.0080303030309,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "2912280039644439",
@@ -1203,7 +1336,7 @@
     "email" : "Liam_Guthrie@hushmail.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 57123.534545454546,
+      "balance" : 51445.098989898994,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "6052309891235892",
@@ -1212,10 +1345,10 @@
       "IBAN" : "RO19POOB4981055641668812"
     }, {
       "type" : "savings",
-      "balance" : 17810.545454545456,
+      "balance" : 15375.665454545453,
       "currency" : "NZD",
       "cards" : [ {
-        "cardNumber" : "4069340791718491",
+        "cardNumber" : "4197210476387198",
         "status" : "active"
       } ],
       "IBAN" : "RO37POOB8653914479106806"
@@ -1226,16 +1359,16 @@
     "email" : "Nicolas_Robert-Grojean@zoho.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2659.0,
+      "balance" : 985.02,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "4686471658318359",
+        "cardNumber" : "8889483284080840",
         "status" : "active"
       } ],
       "IBAN" : "RO30POOB9523423715747796"
     }, {
       "type" : "savings",
-      "balance" : 12667.0,
+      "balance" : 10993.02,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4729060187716142",
@@ -1249,7 +1382,7 @@
     "email" : "Roberta_Mocanu@aol.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 11847.0,
+      "balance" : 3462.4000000000005,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "3892114815135845",
@@ -1258,7 +1391,7 @@
       "IBAN" : "RO79POOB3616857825600958"
     }, {
       "type" : "savings",
-      "balance" : 14664.0,
+      "balance" : -3980.0545454545427,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "6592968050400705",
@@ -1272,16 +1405,16 @@
     "email" : "Jennifer_Watson@zoho.au",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 53399.5,
+      "balance" : 51116.8,
       "currency" : "AUD",
       "cards" : [ {
-        "cardNumber" : "1322658752653937",
+        "cardNumber" : "2134768742021642",
         "status" : "active"
       } ],
       "IBAN" : "RO00POOB5687892910835215"
     }, {
       "type" : "savings",
-      "balance" : 4559.575757575758,
+      "balance" : 2276.875757575758,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2803408755782048",
@@ -1295,7 +1428,7 @@
     "email" : "Rocio_Saldana_Concepcion@hotmail.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 4374.0,
+      "balance" : -26061.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "9224211293357459",
@@ -1304,7 +1437,7 @@
       "IBAN" : "RO96POOB6738272785416988"
     }, {
       "type" : "savings",
-      "balance" : 16266.233766233765,
+      "balance" : -14126.909090909088,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "6467982927008637",
@@ -1318,16 +1451,16 @@
     "email" : "Claude_Tremblay@hotmail.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 94837.96984126985,
+      "balance" : 92859.62984126985,
       "currency" : "CAD",
       "cards" : [ {
-        "cardNumber" : "0466992784477761",
+        "cardNumber" : "0687036602426775",
         "status" : "active"
       } ],
       "IBAN" : "RO33POOB4049920806186500"
     }, {
       "type" : "savings",
-      "balance" : 20937.85714285714,
+      "balance" : 18959.51714285714,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "0692077318511511",
@@ -1341,7 +1474,7 @@
     "email" : "Anouk_'s_Gravensande@hushmail.nl",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 7234.625,
+      "balance" : 5865.005000000001,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "6825942525318055",
@@ -1350,10 +1483,10 @@
       "IBAN" : "RO69POOB9846198978826791"
     }, {
       "type" : "savings",
-      "balance" : 10200.0,
+      "balance" : 8830.380000000001,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "8686098479595515",
+        "cardNumber" : "9845444067695487",
         "status" : "active"
       } ],
       "IBAN" : "RO93POOB6760303931698665"
@@ -1364,16 +1497,16 @@
     "email" : "Christophe_Chopard@yahoo.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 8388.0,
+      "balance" : 5180.02,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "5088727507344799",
+        "cardNumber" : "2060252995835471",
         "status" : "active"
       } ],
       "IBAN" : "RO98POOB8412955460158769"
     }, {
       "type" : "savings",
-      "balance" : 22986.23076923077,
+      "balance" : 19778.25076923077,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "4435533800578624",
@@ -1387,7 +1520,7 @@
     "email" : "Renee_Carre@protonmail.fr",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 17458.428571428572,
+      "balance" : 16088.808571428572,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "1388131156990910",
@@ -1396,10 +1529,10 @@
       "IBAN" : "RO32POOB0130532963818359"
     }, {
       "type" : "savings",
-      "balance" : 2789.0,
+      "balance" : -405.1199999999999,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "8916302128573242",
+        "cardNumber" : "3323341870145976",
         "status" : "active"
       } ],
       "IBAN" : "RO45POOB6505529013808948"
@@ -1410,16 +1543,16 @@
     "email" : "Amadeo_Bacos@zoho.it",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 6736.495,
+      "balance" : 3542.375,
       "currency" : "EUR",
       "cards" : [ {
-        "cardNumber" : "7317745095154687",
+        "cardNumber" : "2116922623332784",
         "status" : "active"
       } ],
       "IBAN" : "RO68POOB1848616931405475"
     }, {
       "type" : "savings",
-      "balance" : 102884.87227272728,
+      "balance" : 101515.25227272729,
       "currency" : "EUR",
       "cards" : [ {
         "cardNumber" : "9295697829422937",
@@ -1433,7 +1566,7 @@
     "email" : "Mtro._Oswaldo_Rael@zoho.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 3229.0,
+      "balance" : -27206.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "0755790623339451",
@@ -1442,7 +1575,7 @@
       "IBAN" : "RO10POOB4354933866366881"
     }, {
       "type" : "savings",
-      "balance" : 1823.0,
+      "balance" : -27312.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8696843716078966",
@@ -1456,16 +1589,16 @@
     "email" : "Ernesto_Marcos_Mojica_Viera@hotmail.mx",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 131768.11111111112,
+      "balance" : 101332.11111111111,
       "currency" : "MXN",
       "cards" : [ {
-        "cardNumber" : "3951521356076921",
+        "cardNumber" : "8659888037017942",
         "status" : "active"
       } ],
       "IBAN" : "RO33POOB9999273999620457"
     }, {
       "type" : "savings",
-      "balance" : 21821.571428571428,
+      "balance" : -8502.999999999996,
       "currency" : "MXN",
       "cards" : [ {
         "cardNumber" : "8145060794847555",
@@ -1479,7 +1612,7 @@
     "email" : "Justin_Laing@hotmail.nz",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 19004.0,
+      "balance" : 16569.12,
       "currency" : "NZD",
       "cards" : [ {
         "cardNumber" : "2394479558596255",
@@ -1488,10 +1621,10 @@
       "IBAN" : "RO38POOB0964823730995794"
     }, {
       "type" : "savings",
-      "balance" : 3586.5454545454545,
+      "balance" : 1151.6654545454544,
       "currency" : "NZD",
       "cards" : [ {
-        "cardNumber" : "4097439592846732",
+        "cardNumber" : "2105131557909283",
         "status" : "active"
       } ],
       "IBAN" : "RO19POOB5993192794373940"
@@ -1502,16 +1635,16 @@
     "email" : "Emanuil_Dima@outlook.ro",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 42833.4375,
+      "balance" : 35985.3375,
       "currency" : "RON",
       "cards" : [ {
-        "cardNumber" : "8431794639822740",
+        "cardNumber" : "6356969797057098",
         "status" : "active"
       } ],
       "IBAN" : "RO53POOB7122855990652257"
     }, {
       "type" : "savings",
-      "balance" : 6072.454545454546,
+      "balance" : -552.6454545454535,
       "currency" : "RON",
       "cards" : [ {
         "cardNumber" : "2107645074675430",
@@ -1525,7 +1658,7 @@
     "email" : "Loic_Rey@protonmail.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 12496.107142857143,
+      "balance" : 10822.127142857144,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7644059707106503",
@@ -1534,10 +1667,10 @@
       "IBAN" : "RO71POOB1634969878734749"
     }, {
       "type" : "savings",
-      "balance" : 4772.501428571429,
+      "balance" : 3098.5214285714283,
       "currency" : "CHF",
       "cards" : [ {
-        "cardNumber" : "2289183361654620",
+        "cardNumber" : "1350474532114313",
         "status" : "active"
       } ],
       "IBAN" : "RO69POOB2312919212921100"
@@ -1548,16 +1681,16 @@
     "email" : "Rodney_George@zoho.au",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 3257.0,
+      "balance" : 974.3000000000002,
       "currency" : "AUD",
       "cards" : [ {
-        "cardNumber" : "7746115164990298",
+        "cardNumber" : "9196593486666481",
         "status" : "active"
       } ],
       "IBAN" : "RO09POOB4346339013848470"
     }, {
       "type" : "savings",
-      "balance" : 4042.0,
+      "balance" : 1759.3000000000002,
       "currency" : "AUD",
       "cards" : [ {
         "cardNumber" : "2578053935040541",
@@ -1571,7 +1704,7 @@
     "email" : "Alfred_Bell@gmail.ca",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2664.0,
+      "balance" : -745.2490909090911,
       "currency" : "CAD",
       "cards" : [ {
         "cardNumber" : "4766425843993312",
@@ -1580,10 +1713,10 @@
       "IBAN" : "RO50POOB3913194831046423"
     }, {
       "type" : "savings",
-      "balance" : 3629.4262626262625,
+      "balance" : 1651.0862626262624,
       "currency" : "CAD",
       "cards" : [ {
-        "cardNumber" : "5069598921863529",
+        "cardNumber" : "5715851832459605",
         "status" : "active"
       } ],
       "IBAN" : "RO66POOB5231566576817248"
@@ -1594,7 +1727,7 @@
     "email" : "Ronnie_White@yahoo.ch",
     "accounts" : [ {
       "type" : "classic",
-      "balance" : 2741.1111111111113,
+      "balance" : 1171.02,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "5779026319169555",
@@ -1603,7 +1736,7 @@
       "IBAN" : "RO89POOB4455583483378897"
     }, {
       "type" : "savings",
-      "balance" : 4672.0,
+      "balance" : 2998.02,
       "currency" : "CHF",
       "cards" : [ {
         "cardNumber" : "7678041819946354",
@@ -1613,4 +1746,640 @@
     } ]
   } ],
   "timestamp" : 642
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Chipotle",
+      "total" : 18.205000000000002
+    } ],
+    "balance" : 90769.815,
+    "currency" : "CHF",
+    "IBAN" : "RO58POOB7344468893732422",
+    "transactions" : [ {
+      "timestamp" : 424,
+      "description" : "Card payment",
+      "amount" : 18.205000000000002,
+      "commerciant" : "Chipotle"
+    } ]
+  },
+  "timestamp" : 643
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "H&M",
+      "total" : 6.050000000000001
+    } ],
+    "balance" : 6063.97,
+    "currency" : "CHF",
+    "IBAN" : "RO69POOB6209498372540635",
+    "transactions" : [ {
+      "timestamp" : 425,
+      "description" : "Card payment",
+      "amount" : 6.050000000000001,
+      "commerciant" : "H&M"
+    } ]
+  },
+  "timestamp" : 644
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -410.98,
+    "currency" : "CHF",
+    "IBAN" : "RO90POOB5450777208072365",
+    "transactions" : [ ]
+  },
+  "timestamp" : 645
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Chipotle",
+      "total" : 335.0
+    } ],
+    "balance" : 139823.3,
+    "currency" : "AUD",
+    "IBAN" : "RO65POOB8944016386845896",
+    "transactions" : [ {
+      "timestamp" : 427,
+      "description" : "Card payment",
+      "amount" : 335.0,
+      "commerciant" : "Chipotle"
+    } ]
+  },
+  "timestamp" : 646
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "HP",
+      "total" : 25.333333333333332
+    } ],
+    "balance" : 36840.86666666666,
+    "currency" : "USD",
+    "IBAN" : "RO58POOB2721178218599590",
+    "transactions" : [ {
+      "timestamp" : 428,
+      "description" : "Card payment",
+      "amount" : 25.333333333333332,
+      "commerciant" : "HP"
+    } ]
+  },
+  "timestamp" : 647
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 54344.39272727273,
+    "currency" : "NZD",
+    "IBAN" : "RO76POOB4035116042454483",
+    "transactions" : [ ]
+  },
+  "timestamp" : 648
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 48135.38,
+    "currency" : "EUR",
+    "IBAN" : "RO37POOB7013767509830666",
+    "transactions" : [ ]
+  },
+  "timestamp" : 649
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 51445.098989898994,
+    "currency" : "NZD",
+    "IBAN" : "RO19POOB4981055641668812",
+    "transactions" : [ ]
+  },
+  "timestamp" : 650
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 985.02,
+    "currency" : "CHF",
+    "IBAN" : "RO30POOB9523423715747796",
+    "transactions" : [ ]
+  },
+  "timestamp" : 651
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 3462.4000000000005,
+    "currency" : "RON",
+    "IBAN" : "RO79POOB3616857825600958",
+    "transactions" : [ ]
+  },
+  "timestamp" : 652
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Dunkin'",
+      "total" : 121.5
+    } ],
+    "balance" : 51116.8,
+    "currency" : "AUD",
+    "IBAN" : "RO00POOB5687892910835215",
+    "transactions" : [ {
+      "timestamp" : 434,
+      "description" : "Card payment",
+      "amount" : 121.5,
+      "commerciant" : "Dunkin'"
+    } ]
+  },
+  "timestamp" : 653
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -26061.999999999996,
+    "currency" : "MXN",
+    "IBAN" : "RO96POOB6738272785416988",
+    "transactions" : [ ]
+  },
+  "timestamp" : 654
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 92859.62984126985,
+    "currency" : "CAD",
+    "IBAN" : "RO33POOB4049920806186500",
+    "transactions" : [ ]
+  },
+  "timestamp" : 655
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Pizza Hut",
+      "total" : 228.375
+    } ],
+    "balance" : 5865.005000000001,
+    "currency" : "EUR",
+    "IBAN" : "RO69POOB9846198978826791",
+    "transactions" : [ {
+      "timestamp" : 437,
+      "description" : "Card payment",
+      "amount" : 228.375,
+      "commerciant" : "Pizza Hut"
+    } ]
+  },
+  "timestamp" : 656
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Calvin Klein",
+      "total" : 456.0
+    } ],
+    "balance" : 5180.02,
+    "currency" : "CHF",
+    "IBAN" : "RO98POOB8412955460158769",
+    "transactions" : [ {
+      "timestamp" : 438,
+      "description" : "Card payment",
+      "amount" : 456.0,
+      "commerciant" : "Calvin Klein"
+    } ]
+  },
+  "timestamp" : 657
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 16088.808571428572,
+    "currency" : "EUR",
+    "IBAN" : "RO32POOB0130532963818359",
+    "transactions" : [ ]
+  },
+  "timestamp" : 658
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 3542.375,
+    "currency" : "EUR",
+    "IBAN" : "RO68POOB1848616931405475",
+    "transactions" : [ ]
+  },
+  "timestamp" : 659
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -27206.999999999996,
+    "currency" : "MXN",
+    "IBAN" : "RO10POOB4354933866366881",
+    "transactions" : [ ]
+  },
+  "timestamp" : 660
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 101332.11111111111,
+    "currency" : "MXN",
+    "IBAN" : "RO33POOB9999273999620457",
+    "transactions" : [ ]
+  },
+  "timestamp" : 661
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Burger King",
+      "total" : 112.0
+    } ],
+    "balance" : 16569.12,
+    "currency" : "NZD",
+    "IBAN" : "RO38POOB0964823730995794",
+    "transactions" : [ {
+      "timestamp" : 443,
+      "description" : "Card payment",
+      "amount" : 112.0,
+      "commerciant" : "Burger King"
+    } ]
+  },
+  "timestamp" : 662
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Wendy's",
+      "total" : 1341.5625
+    } ],
+    "balance" : 35985.3375,
+    "currency" : "RON",
+    "IBAN" : "RO53POOB7122855990652257",
+    "transactions" : [ {
+      "timestamp" : 444,
+      "description" : "Card payment",
+      "amount" : 1341.5625,
+      "commerciant" : "Wendy's"
+    } ]
+  },
+  "timestamp" : 663
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 10822.127142857144,
+    "currency" : "CHF",
+    "IBAN" : "RO71POOB1634969878734749",
+    "transactions" : [ ]
+  },
+  "timestamp" : 664
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 974.3000000000002,
+    "currency" : "AUD",
+    "IBAN" : "RO09POOB4346339013848470",
+    "transactions" : [ ]
+  },
+  "timestamp" : 665
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -745.2490909090911,
+    "currency" : "CAD",
+    "IBAN" : "RO50POOB3913194831046423",
+    "transactions" : [ ]
+  },
+  "timestamp" : 666
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 1171.02,
+    "currency" : "CHF",
+    "IBAN" : "RO89POOB4455583483378897",
+    "transactions" : [ ]
+  },
+  "timestamp" : 667
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Nike",
+      "total" : 25.960000000000004
+    } ],
+    "balance" : 1510.06,
+    "currency" : "CHF",
+    "IBAN" : "RO36POOB6500477412147025",
+    "transactions" : [ {
+      "timestamp" : 449,
+      "description" : "Card payment",
+      "amount" : 25.960000000000004,
+      "commerciant" : "Nike"
+    } ]
+  },
+  "timestamp" : 668
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Gucci",
+      "total" : 299.20000000000005
+    } ],
+    "balance" : 87959.82,
+    "currency" : "CHF",
+    "IBAN" : "RO46POOB9051076190383154",
+    "transactions" : [ {
+      "timestamp" : 450,
+      "description" : "Card payment",
+      "amount" : 299.20000000000005,
+      "commerciant" : "Gucci"
+    } ]
+  },
+  "timestamp" : 669
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Adidas",
+      "total" : 30.642857142857142
+    } ],
+    "balance" : 62725.636402116404,
+    "currency" : "CHF",
+    "IBAN" : "RO45POOB0388148432759748",
+    "transactions" : [ {
+      "timestamp" : 451,
+      "description" : "Card payment",
+      "amount" : 30.642857142857142,
+      "commerciant" : "Adidas"
+    } ]
+  },
+  "timestamp" : 670
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Google",
+      "total" : 177.1875
+    } ],
+    "balance" : 53328.1125,
+    "currency" : "AUD",
+    "IBAN" : "RO52POOB6271107854467609",
+    "transactions" : [ {
+      "timestamp" : 452,
+      "description" : "Card payment",
+      "amount" : 177.1875,
+      "commerciant" : "Google"
+    } ]
+  },
+  "timestamp" : 671
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 1480.109090909091,
+    "currency" : "USD",
+    "IBAN" : "RO98POOB7190609943699593",
+    "transactions" : [ ]
+  },
+  "timestamp" : 672
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 75619.47612535613,
+    "currency" : "NZD",
+    "IBAN" : "RO50POOB3359236199018963",
+    "transactions" : [ ]
+  },
+  "timestamp" : 673
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Zara",
+      "total" : 471.375
+    } ],
+    "balance" : 1469.0080303030309,
+    "currency" : "EUR",
+    "IBAN" : "RO75POOB8279679254660818",
+    "transactions" : [ {
+      "timestamp" : 455,
+      "description" : "Card payment",
+      "amount" : 471.375,
+      "commerciant" : "Zara"
+    } ]
+  },
+  "timestamp" : 674
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 15375.665454545453,
+    "currency" : "NZD",
+    "IBAN" : "RO37POOB8653914479106806",
+    "transactions" : [ ]
+  },
+  "timestamp" : 675
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Calvin Klein",
+      "total" : 144.0
+    } ],
+    "balance" : 10993.02,
+    "currency" : "CHF",
+    "IBAN" : "RO73POOB0363118755441573",
+    "transactions" : [ {
+      "timestamp" : 457,
+      "description" : "Card payment",
+      "amount" : 144.0,
+      "commerciant" : "Calvin Klein"
+    } ]
+  },
+  "timestamp" : 676
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -3980.0545454545427,
+    "currency" : "RON",
+    "IBAN" : "RO40POOB2135483650246268",
+    "transactions" : [ ]
+  },
+  "timestamp" : 677
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 2276.875757575758,
+    "currency" : "AUD",
+    "IBAN" : "RO75POOB1098983729823992",
+    "transactions" : [ ]
+  },
+  "timestamp" : 678
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -14126.909090909088,
+    "currency" : "MXN",
+    "IBAN" : "RO15POOB0048706387164463",
+    "transactions" : [ ]
+  },
+  "timestamp" : 679
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 18959.51714285714,
+    "currency" : "CAD",
+    "IBAN" : "RO97POOB5006417983475785",
+    "transactions" : [ ]
+  },
+  "timestamp" : 680
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 8830.380000000001,
+    "currency" : "EUR",
+    "IBAN" : "RO93POOB6760303931698665",
+    "transactions" : [ ]
+  },
+  "timestamp" : 681
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 19778.25076923077,
+    "currency" : "CHF",
+    "IBAN" : "RO47POOB5866490978033060",
+    "transactions" : [ ]
+  },
+  "timestamp" : 682
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -405.1199999999999,
+    "currency" : "EUR",
+    "IBAN" : "RO45POOB6505529013808948",
+    "transactions" : [ ]
+  },
+  "timestamp" : 683
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 101515.25227272729,
+    "currency" : "EUR",
+    "IBAN" : "RO01POOB3925326637526572",
+    "transactions" : [ ]
+  },
+  "timestamp" : 684
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -27312.999999999996,
+    "currency" : "MXN",
+    "IBAN" : "RO04POOB3492426980939341",
+    "transactions" : [ ]
+  },
+  "timestamp" : 685
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -8502.999999999996,
+    "currency" : "MXN",
+    "IBAN" : "RO66POOB1088683052483887",
+    "transactions" : [ ]
+  },
+  "timestamp" : 686
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Subway",
+      "total" : 449.45454545454544
+    } ],
+    "balance" : 1151.6654545454544,
+    "currency" : "NZD",
+    "IBAN" : "RO19POOB5993192794373940",
+    "transactions" : [ {
+      "timestamp" : 468,
+      "description" : "Card payment",
+      "amount" : 449.45454545454544,
+      "commerciant" : "Subway"
+    } ]
+  },
+  "timestamp" : 687
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : -552.6454545454535,
+    "currency" : "RON",
+    "IBAN" : "RO49POOB4985907300499418",
+    "transactions" : [ ]
+  },
+  "timestamp" : 688
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ {
+      "commerciant" : "Huawei",
+      "total" : 2.4985714285714287
+    } ],
+    "balance" : 3098.5214285714283,
+    "currency" : "CHF",
+    "IBAN" : "RO69POOB2312919212921100",
+    "transactions" : [ {
+      "timestamp" : 470,
+      "description" : "Card payment",
+      "amount" : 2.4985714285714287,
+      "commerciant" : "Huawei"
+    } ]
+  },
+  "timestamp" : 689
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 1759.3000000000002,
+    "currency" : "AUD",
+    "IBAN" : "RO24POOB6002156322256357",
+    "transactions" : [ ]
+  },
+  "timestamp" : 690
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 1651.0862626262624,
+    "currency" : "CAD",
+    "IBAN" : "RO66POOB5231566576817248",
+    "transactions" : [ ]
+  },
+  "timestamp" : 691
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "commerciants" : [ ],
+    "balance" : 2998.02,
+    "currency" : "CHF",
+    "IBAN" : "RO01POOB9893132718323396",
+    "transactions" : [ ]
+  },
+  "timestamp" : 692
 } ]

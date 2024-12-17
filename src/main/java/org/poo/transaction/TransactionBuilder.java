@@ -3,8 +3,12 @@ package org.poo.transaction;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
+import org.poo.bank.accounts.Account;
 
-@Getter @Setter @JsonInclude(JsonInclude.Include.NON_NULL)
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter @Setter @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class TransactionBuilder {
     private int timestamp;
     private String description;
@@ -16,6 +20,8 @@ public class TransactionBuilder {
     private String account;
     private String card;
     private String commerciant;
+    private String currency;
+    private List<String> involvedAccounts = new ArrayList<>();
 
     public TransactionBuilder(int timestamp, String description) {
         this.timestamp = timestamp;
@@ -51,6 +57,14 @@ public class TransactionBuilder {
     }
     public TransactionBuilder commerciant(String commerciant){
         this.commerciant = commerciant;
+        return this;
+    }
+    public TransactionBuilder involvedAccounts(List<String> involvedAccounts){
+        this.involvedAccounts = involvedAccounts;
+        return this;
+    }
+    public TransactionBuilder currency(String currency){
+        this.currency = currency;
         return this;
     }
     public Transaction build(){
