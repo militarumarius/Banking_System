@@ -28,12 +28,13 @@ public class SplitPayment implements Commands{
         double amountToPay = commandInput.getAmount() / commandInput.getAccounts().size();
         List<Account> accounts = bank.convertAccountfromString(commandInput.getAccounts());
         Account errorAccount = bank.checkSplitPayment(accounts, bank, commandInput, amountToPay);
-        if (errorAccount != null){
-            for (Account account : accounts) {
-                List<String> visited = new ArrayList<>();
-                double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), errorAccount.getCurrency(), visited);
-                visited.clear();
-                String description = "Split payment of " + String.format("%.2f", commandInput.getAmount()) + " " + commandInput.getCurrency();
+        for (Account account : accounts) {
+            List<String> visited = new ArrayList<>();
+            double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
+            visited.clear();
+            double amountToPayThisAccount = amountToPay * exchangeRate;
+            String description = "Split payment of " + String.format("%.2f", commandInput.getAmount()) + " " + commandInput.getCurrency();
+            if (errorAccount != null){
                 Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), description)
                         .involvedAccounts(commandInput.getAccounts())
                         .error("Account " + errorAccount.getIBAN() + " has insufficient funds for a split payment.")
@@ -41,22 +42,15 @@ public class SplitPayment implements Commands{
                         .currency(commandInput.getCurrency())
                         .build();
                 account.getTransactions().add(transaction);
+            } else {
+                account.subBalance(amountToPayThisAccount);
+                Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), description)
+                        .involvedAccounts(commandInput.getAccounts())
+                        .amount(amountToPay)
+                        .currency(commandInput.getCurrency())
+                        .build();
+                account.getTransactions().add(transaction);
             }
-            return;
-        }
-        for (Account account : accounts) {
-            List<String> visited = new ArrayList<>();
-            double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
-            visited.clear();
-            double amountToPayThisAccount = amountToPay * exchangeRate;
-            account.subBalance(amountToPayThisAccount);
-            String description = "Split payment of " + String.format("%.2f", commandInput.getAmount()) + " " + commandInput.getCurrency();
-            Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), description)
-                    .involvedAccounts(commandInput.getAccounts())
-                    .amount(amountToPay)
-                    .currency(commandInput.getCurrency())
-                    .build();
-            account.getTransactions().add(transaction);
         }
     }
 }

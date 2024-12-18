@@ -8,7 +8,8 @@ public enum TransactionDescription {
     CARD_PAYMENT("Card payment"),
     INSUFFICIENT_FUNDS("Insufficient funds"),
     INVALID_DELETE_ACCOUNT("Account couldn't be deleted - there are funds remaining"),
-    MINIMUM_FUNDS_REACHED("You have reached the minimum amount of funds, the card will be frozen");
+    MINIMUM_FUNDS_REACHED("You have reached the minimum amount of funds, the card will be frozen"),
+    INTEREST_RATE_CHANGE("Interest rate of the account changed to ");
 
     private final String message;
 

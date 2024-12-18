@@ -5,6 +5,12 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.poo.bank.User;
 import org.poo.bank.accounts.Account;
+import org.poo.transaction.Transaction;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PrintOutput {
     private Object object;
@@ -39,8 +45,11 @@ public class PrintOutput {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode objectNode = mapper.createObjectNode();
         objectNode.put("command", "printTransactions");
+        List<Transaction> copyTransactions = new ArrayList<>();
         for (Account account : user.getAccounts())
-            objectNode.putPOJO("output", account.copyTransaction(account.getTransactions()));
+            copyTransactions.addAll(account.getTransactions());
+        Collections.sort(copyTransactions, Comparator.comparing(Transaction :: getTimestamp));
+        objectNode.putPOJO("output", copyTransactions);
         objectNode.put("timestamp", timestamp);
         output.addPOJO(objectNode);
     }

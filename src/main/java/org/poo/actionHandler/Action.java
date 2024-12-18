@@ -12,15 +12,14 @@ import org.poo.bank.cards.OneTImeUseCard;
 import org.poo.commands.*;
 import org.poo.fileio.CommandInput;
 import org.poo.fileio.ObjectInput;
-import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
 import org.poo.transaction.TransactionBuilder;
 import org.poo.transaction.TransactionDescription;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
+import static java.lang.System.exit;
 import static org.poo.utils.Utils.generateCardNumber;
 
 public class Action {
@@ -46,7 +45,7 @@ public class Action {
                     command.execute();
                 }
                 case "createOneTimeCard" ->{
-                    CreateOneTimeCard command = new CreateOneTimeCard(bank, commandInput, output);
+                    CreateOneTimeCard command = new CreateOneTimeCard(bank, commandInput, output, commandInput.getAccount());
                     command.execute();
                 }
                 case "deleteCard" -> {
@@ -125,10 +124,16 @@ public class Action {
                             .build();
                     account.getTransactions().add(transaction);
                     if(card.getType() == 1) {
+                        Transaction transaction1 = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.CARD_DESTROYED.getMessage())
+                                .account(account.getIBAN())
+                                .cardHolder(user.getEmail())
+                                .card(card.getCardNumber())
+                                .build();
+                        account.getTransactions().add(transaction1);
                         account.getCards().remove(card);
                         user.getCardAccountMap().remove(card.getCardNumber());
-                        Card newCard = new OneTImeUseCard(generateCardNumber(), 1, account);
-                        user.addCard(account,newCard );
+                        CreateOneTimeCard command = new CreateOneTimeCard(bank, commandInput, output, account.getIBAN());
+                        command.execute();
                     }
                 }
                 case "sendMoney"->{
@@ -212,7 +217,12 @@ public class Action {
                         PrintOutput changeInterestRate = new PrintOutput("changeInterestRate", node, commandInput.getTimestamp());
                         changeInterestRate.printCommand(output);
                     }
+                    Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
+                            TransactionDescription.INTEREST_RATE_CHANGE.getMessage()
+                                    + commandInput.getInterestRate())
+                            .build();
                     account.setInterestRate(commandInput.getInterestRate());
+                    account.getTransactions().add(transaction);
                 }
                 case "addInterest" ->{
                     Account account = bank.findUser(commandInput.getAccount());

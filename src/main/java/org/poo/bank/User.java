@@ -7,6 +7,7 @@ import org.poo.bank.cards.Card;
 import org.poo.bank.cards.DebitCard;
 import org.poo.fileio.CommandInput;
 import org.poo.fileio.UserInput;
+import org.poo.transaction.Transaction;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -89,6 +90,9 @@ public class User {
                 if(card.getCardNumber().equals(cardNumber))
                     return card;
         return null;
+    }
+    public void addAccount(Account account){
+        this.accounts.add(account);
     }
 
 }

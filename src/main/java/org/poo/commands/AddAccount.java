@@ -10,6 +10,8 @@ import org.poo.transaction.Transaction;
 import org.poo.transaction.TransactionBuilder;
 import org.poo.transaction.TransactionDescription;
 
+import static java.lang.System.exit;
+
 public class AddAccount implements Commands{
     private final BankDatabase bank;
     private final CommandInput commandInput;
@@ -26,9 +28,11 @@ public class AddAccount implements Commands{
         if(user == null)
             return;
         Account account = FactoryAccount.createAccount(commandInput);
-        user.getAccounts().add(account);
+        user.addAccount(account);
         Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.ACCOUNT_CREATION_SUCCESS.getMessage())
                 .build();
-        account.getTransactions().add(transaction);
+
+//        System.out.println(transaction.getTimestamp() + " " + transaction.getDescription());
+        account.addTransaction(transaction);
     }
 }

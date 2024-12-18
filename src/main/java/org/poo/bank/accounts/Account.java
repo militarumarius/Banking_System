@@ -14,10 +14,7 @@ import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
 import org.poo.transaction.TransactionBuilder;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public abstract class Account {
@@ -92,8 +89,10 @@ public abstract class Account {
         List<Transaction> copy = new ArrayList<>();
         for(Transaction transaction : transactions)
             copy.add(new Transaction(transaction));
+        Collections.sort(copy, Comparator.comparing(Transaction :: getTimestamp));
         return copy;
     }
+
     public boolean validatePayment(double amount, double exchangeRate){
         return this.getBalance() >= amount * exchangeRate
                 && this.getBalance() > this.getMinAmount();
@@ -160,6 +159,9 @@ public abstract class Account {
         node.put("IBAN", this.getIBAN());
         node.putPOJO("transactions", filteredTransactions);
         return node;
+    }
+    public void addTransaction(Transaction transaction){
+        this.getTransactions().add(transaction);
     }
 
 }

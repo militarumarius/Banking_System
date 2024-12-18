@@ -19,17 +19,19 @@ public class CreateOneTimeCard implements Commands{
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
-    public CreateOneTimeCard(BankDatabase bank, CommandInput commandInput, ArrayNode output){
+    private final String iban;
+    public CreateOneTimeCard(BankDatabase bank, CommandInput commandInput, ArrayNode output, String iban){
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
+        this.iban = iban;
     }
     @Override
     public void execute() {
         User user = bank.getUserMap().get(commandInput.getEmail());
         if(user == null)
             return;
-        Account account = user.findAccount(commandInput.getAccount());
+        Account account = user.findAccount(iban);
         Card newCard = new OneTImeUseCard(generateCardNumber(), 1, account);
         user.addCard(account, newCard);
         Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), TransactionDescription.CARD_CREATION_SUCCESS.getMessage())

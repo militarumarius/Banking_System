@@ -1,6 +1,8 @@
 package org.poo.commands;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.poo.actionHandler.ErrorOutput;
 import org.poo.actionHandler.PrintOutput;
@@ -32,6 +34,17 @@ public class SpendingsReport implements Commands{
             ObjectNode node = errorOutput.toObjectNode();
             PrintOutput report = new PrintOutput("spendingsReport", node, commandInput.getTimestamp());
             report.printCommand(output);
+            return;
+        }
+        if(account.getType().equals("savings")) {
+            ObjectMapper mapper = new ObjectMapper();
+            ObjectNode objectNode = mapper.createObjectNode();
+            ObjectNode node = JsonNodeFactory.instance.objectNode();
+            objectNode.put("command", "spendingsReport");
+            node.put("error", "This kind of report is not supported for a saving account");
+            objectNode.putPOJO("output", node);
+            objectNode.put("timestamp", commandInput.getTimestamp());
+            output.addPOJO(objectNode);
             return;
         }
         List<Transaction> filteredTransactions = account.
