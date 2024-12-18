@@ -9,14 +9,16 @@ public class PrintUsers implements Commands{
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
-    public PrintUsers(BankDatabase bank, CommandInput commandInput, ArrayNode output){
+    public PrintUsers(final BankDatabase bank,
+                      final CommandInput commandInput, final ArrayNode output){
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
     }
     @Override
     public void execute() {
-        PrintOutput printUsers = new PrintOutput("printUsers", bank.copyUsers(), commandInput.getTimestamp());
+        PrintOutput printUsers = new PrintOutput("printUsers",
+                bank.copyUsers(), commandInput.getTimestamp());
         printUsers.printCommand(output);
     }
 }

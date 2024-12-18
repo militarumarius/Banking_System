@@ -1,13 +1,11 @@
 package org.poo.commands;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.poo.actionHandler.ErrorDescription;
 import org.poo.actionHandler.ErrorOutput;
 import org.poo.actionHandler.PrintOutput;
 import org.poo.bank.BankDatabase;
-import org.poo.bank.User;
 import org.poo.bank.accounts.Account;
 import org.poo.fileio.CommandInput;
 import org.poo.transaction.Commerciant;
@@ -20,7 +18,8 @@ public class SpendingsReport implements Commands{
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
-    public SpendingsReport(BankDatabase bank, CommandInput commandInput, ArrayNode output){
+    public SpendingsReport(final BankDatabase bank,
+                           final CommandInput commandInput, final ArrayNode output){
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
@@ -30,30 +29,31 @@ public class SpendingsReport implements Commands{
     public void execute() {
         Account account = bank.findUser(commandInput.getAccount());
         if(account == null){
-            ErrorOutput errorOutput = new ErrorOutput("Account not found", commandInput.getTimestamp());
-            ObjectNode node = errorOutput.toObjectNode();
-            PrintOutput report = new PrintOutput("spendingsReport", node, commandInput.getTimestamp());
+            ErrorOutput errorOutput = new ErrorOutput(ErrorDescription.ACCOUNT_NOT_FOUND.
+                    getMessage(), commandInput.getTimestamp());
+            ObjectNode node = errorOutput.toObjectNodeDescription();
+            PrintOutput report = new PrintOutput("spendingsReport",
+                    node, commandInput.getTimestamp());
             report.printCommand(output);
             return;
         }
-        if(account.getType().equals("savings")) {
-            ObjectMapper mapper = new ObjectMapper();
-            ObjectNode objectNode = mapper.createObjectNode();
-            ObjectNode node = JsonNodeFactory.instance.objectNode();
-            objectNode.put("command", "spendingsReport");
-            node.put("error", "This kind of report is not supported for a saving account");
-            objectNode.putPOJO("output", node);
-            objectNode.put("timestamp", commandInput.getTimestamp());
-            output.addPOJO(objectNode);
+        if(bank.checkSaving(account)) {
+            ErrorOutput errorOutput = new ErrorOutput(ErrorDescription.
+                    INVALID_SPENDING_REPORT.getMessage(), commandInput.getTimestamp());
+            ObjectNode node = errorOutput.toObjectNodeErrorWithoutTimestamp();
+            PrintOutput report = new PrintOutput("spendingsReport",
+                    node, commandInput.getTimestamp());
+            report.printCommand(output);
             return;
         }
         List<Transaction> filteredTransactions = account.
-                getSpendingTransaction(commandInput.getStartTimestamp(), commandInput.getEndTimestamp());
+                getSpendingTransaction(commandInput.getStartTimestamp(),
+                        commandInput.getEndTimestamp());
         List<Commerciant> commerciants = account.
                 getCommerciants(filteredTransactions);
         commerciants.sort(Comparator.comparing(Commerciant::getCommerciant));
         PrintOutput spendingsReport = new PrintOutput("spendingsReport",
-                account.createOutputSpendingTransactionObject(filteredTransactions, commerciants),
+                PrintOutput.createOutputSpendingTransactionObject(filteredTransactions, commerciants, account),
                 commandInput.getTimestamp());
         spendingsReport.printCommand(output);
     }

@@ -103,6 +103,7 @@ public class BankDatabase {
     public boolean checkSaving(Account account){
         return account.getType().equals("savings");
     }
+
     public Account checkSplitPayment(List<Account> accounts, BankDatabase bank, CommandInput commandInput, double amountToPay){
         for(Account account: accounts.reversed()){
             List <String> visited = new ArrayList<>();
@@ -114,6 +115,7 @@ public class BankDatabase {
         }
         return null;
     }
+
     public List<Account> convertAccountfromString(List<String> ibans){
         List <Account> accounts = new ArrayList<>();
         for(String iban : ibans){

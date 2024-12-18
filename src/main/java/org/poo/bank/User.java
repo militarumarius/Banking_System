@@ -91,6 +91,7 @@ public class User {
                     return card;
         return null;
     }
+
     public void addAccount(Account account){
         this.accounts.add(account);
     }

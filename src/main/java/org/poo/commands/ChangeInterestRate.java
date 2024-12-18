@@ -8,17 +8,15 @@ import org.poo.actionHandler.PrintOutput;
 import org.poo.bank.BankDatabase;
 import org.poo.bank.accounts.Account;
 import org.poo.fileio.CommandInput;
-import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
+import org.poo.transaction.TransactionBuilder;
+import org.poo.transaction.TransactionDescription;
 
-import java.util.Comparator;
-import java.util.List;
-
-public class Report implements Commands{
+public class ChangeInterestRate implements Commands{
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
-    public Report(final BankDatabase bank, final CommandInput commandInput, final ArrayNode output){
+    public ChangeInterestRate(final BankDatabase bank, final CommandInput commandInput, final ArrayNode output){
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
@@ -27,19 +25,19 @@ public class Report implements Commands{
     @Override
     public void execute() {
         Account account = bank.findUser(commandInput.getAccount());
-        if(account == null){
+        if(!bank.checkSaving(account)){
             ErrorOutput errorOutput = new ErrorOutput(ErrorDescription
-                    .ACCOUNT_NOT_FOUND.getMessage(), commandInput.getTimestamp());
+                    .INVALID_ACCOUNT.getMessage(), commandInput.getTimestamp());
             ObjectNode node = errorOutput.toObjectNodeDescription();
-            PrintOutput report = new PrintOutput("report", node, commandInput.getTimestamp());
-            report.printCommand(output);
+            PrintOutput changeInterestRate = new PrintOutput("changeInterestRate", node, commandInput.getTimestamp());
+            changeInterestRate.printCommand(output);
             return;
         }
-        List<Transaction> filteredTransactions = account.
-                getTransactionsInInterval(commandInput.getStartTimestamp(), commandInput.getEndTimestamp());
-        PrintOutput report = new PrintOutput("report",
-                PrintOutput.createOutputTransactionObject(filteredTransactions, account),
-                commandInput.getTimestamp());
-        report.printCommand(output);
+        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
+                TransactionDescription.INTEREST_RATE_CHANGE.getMessage()
+                        + commandInput.getInterestRate())
+                .build();
+        account.setInterestRate(commandInput.getInterestRate());
+        account.addTransaction(transaction);
     }
 }

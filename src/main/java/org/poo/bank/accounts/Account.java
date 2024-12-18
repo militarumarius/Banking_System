@@ -85,14 +85,6 @@ public abstract class Account {
         return IBAN;
     }
 
-    public List<Transaction> copyTransaction(List<Transaction> transactions){
-        List<Transaction> copy = new ArrayList<>();
-        for(Transaction transaction : transactions)
-            copy.add(new Transaction(transaction));
-        Collections.sort(copy, Comparator.comparing(Transaction :: getTimestamp));
-        return copy;
-    }
-
     public boolean validatePayment(double amount, double exchangeRate){
         return this.getBalance() >= amount * exchangeRate
                 && this.getBalance() > this.getMinAmount();
@@ -111,6 +103,7 @@ public abstract class Account {
     public double getInterestRate() {
         return interestRate;
     }
+
     public List<Transaction> getTransactionsInInterval(int startTimestamp, int endTimestamp) {
         List<Transaction> filteredTransactions = new ArrayList<>();
         for (Transaction transaction : transactions) {
@@ -120,6 +113,7 @@ public abstract class Account {
         }
         return filteredTransactions;
     }
+
     public List<Transaction> getSpendingTransaction(int startTimestamp, int endTimestamp) {
         List<Transaction> filteredTransactions = new ArrayList<>();
         for (Transaction transaction : transactions) {
@@ -140,26 +134,6 @@ public abstract class Account {
         return commerciants;
     }
 
-    public ObjectNode createOutputTransactionObject(List<Transaction> filteredTransactions){
-        ObjectMapper mapper = new ObjectMapper();
-        ObjectNode node = mapper.createObjectNode();
-        node.put("balance", this.getBalance());
-        node.put("currency", this.getCurrency());
-        node.put("IBAN", this.getIBAN());
-        node.putPOJO("transactions", filteredTransactions);
-        return node;
-    }
-
-    public ObjectNode createOutputSpendingTransactionObject(List<Transaction> filteredTransactions, List<Commerciant> commerciants){
-        ObjectMapper mapper = new ObjectMapper();
-        ObjectNode node = mapper.createObjectNode();
-        node.putPOJO("commerciants", commerciants);
-        node.put("balance", this.getBalance());
-        node.put("currency", this.getCurrency());
-        node.put("IBAN", this.getIBAN());
-        node.putPOJO("transactions", filteredTransactions);
-        return node;
-    }
     public void addTransaction(Transaction transaction){
         this.getTransactions().add(transaction);
     }

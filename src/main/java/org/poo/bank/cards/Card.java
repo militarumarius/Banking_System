@@ -10,10 +10,10 @@ public abstract class Card {
     private final String cardNumber;
     private String status;
     @JsonIgnore
-    private final int type;
+    private final String type;
     @JsonIgnore
     private final Account account;
-    public Card(String cardNumber, int type, Account account) {
+    public Card(String cardNumber, String type, Account account) {
         this.cardNumber = cardNumber;
         this.status = "active";
         this.type = type;

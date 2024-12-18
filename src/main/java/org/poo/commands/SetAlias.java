@@ -1,5 +1,6 @@
 package org.poo.commands;
 
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.bank.BankDatabase;
 import org.poo.bank.User;
 import org.poo.bank.accounts.Account;
@@ -9,10 +10,10 @@ import org.poo.transaction.Transaction;
 import org.poo.transaction.TransactionBuilder;
 import org.poo.transaction.TransactionDescription;
 
-public class AddAccount implements Commands{
+public class SetAlias implements Commands{
     private final BankDatabase bank;
     private final CommandInput commandInput;
-    public AddAccount(BankDatabase bank, CommandInput commandInput){
+    public SetAlias(BankDatabase bank, CommandInput commandInput){
         this.bank = bank;
         this.commandInput = commandInput;
     }
@@ -20,15 +21,7 @@ public class AddAccount implements Commands{
     @Override
     public void execute() {
         User user = bank.getUserMap().get(commandInput.getEmail());
-        if(user == null)
-            return;
-        Account account = FactoryAccount.createAccount(commandInput);
-        if (account == null)
-            return;
-        user.addAccount(account);
-        Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
-                TransactionDescription.ACCOUNT_CREATION_SUCCESS.getMessage())
-                .build();
-        account.addTransaction(transaction);
+        Account account = user.findAccount(commandInput.getAccount());
+        bank.getAliasMap().put(commandInput.getAlias(), account);
     }
 }

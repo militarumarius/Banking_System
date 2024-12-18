@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.poo.bank.User;
 import org.poo.bank.accounts.Account;
+import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
 
 import java.util.ArrayList;
@@ -28,10 +29,7 @@ public class PrintOutput {
         this.timestamp = timestamp;
         this.user = user;
     }
-    /**
-     * method that make an JSON object for getPlayerIdx command
-     * @param output array node to display the object
-     */
+
     public void printCommand(final ArrayNode output) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode objectNode = mapper.createObjectNode();
@@ -48,10 +46,34 @@ public class PrintOutput {
         List<Transaction> copyTransactions = new ArrayList<>();
         for (Account account : user.getAccounts())
             copyTransactions.addAll(account.getTransactions());
-        Collections.sort(copyTransactions, Comparator.comparing(Transaction :: getTimestamp));
+        copyTransactions.sort(Comparator.comparing(Transaction::getTimestamp));
         objectNode.putPOJO("output", copyTransactions);
         objectNode.put("timestamp", timestamp);
         output.addPOJO(objectNode);
     }
+
+    public static ObjectNode createOutputTransactionObject(final List<Transaction> filteredTransactions,
+                                                           final Account account){
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode node = mapper.createObjectNode();
+        node.put("balance", account.getBalance());
+        node.put("currency", account.getCurrency());
+        node.put("IBAN", account.getIBAN());
+        node.putPOJO("transactions", filteredTransactions);
+        return node;
+    }
+    public static ObjectNode createOutputSpendingTransactionObject(final List<Transaction> filteredTransactions,
+                                                            final List<Commerciant> commerciants,
+                                                            final Account account){
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode node = mapper.createObjectNode();
+        node.putPOJO("commerciants", commerciants);
+        node.put("balance", account.getBalance());
+        node.put("currency", account.getCurrency());
+        node.put("IBAN", account.getIBAN());
+        node.putPOJO("transactions", filteredTransactions);
+        return node;
+    }
+
 
 }

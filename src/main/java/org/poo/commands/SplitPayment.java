@@ -16,11 +16,10 @@ import java.util.List;
 public class SplitPayment implements Commands{
     private final BankDatabase bank;
     private final CommandInput commandInput;
-    private final ArrayNode output;
-    public SplitPayment(BankDatabase bank, CommandInput commandInput, ArrayNode output){
+    public SplitPayment(final BankDatabase bank,
+                        final CommandInput commandInput){
         this.bank = bank;
         this.commandInput = commandInput;
-        this.output = output;
     }
 
     @Override
@@ -33,7 +32,8 @@ public class SplitPayment implements Commands{
             double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
             visited.clear();
             double amountToPayThisAccount = amountToPay * exchangeRate;
-            String description = "Split payment of " + String.format("%.2f", commandInput.getAmount()) + " " + commandInput.getCurrency();
+            String description = "Split payment of " +
+                    String.format("%.2f", commandInput.getAmount()) + " " + commandInput.getCurrency();
             if (errorAccount != null){
                 Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), description)
                         .involvedAccounts(commandInput.getAccounts())
@@ -41,7 +41,7 @@ public class SplitPayment implements Commands{
                         .amount(amountToPay)
                         .currency(commandInput.getCurrency())
                         .build();
-                account.getTransactions().add(transaction);
+                account.addTransaction(transaction);
             } else {
                 account.subBalance(amountToPayThisAccount);
                 Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(), description)
@@ -49,7 +49,7 @@ public class SplitPayment implements Commands{
                         .amount(amountToPay)
                         .currency(commandInput.getCurrency())
                         .build();
-                account.getTransactions().add(transaction);
+                account.addTransaction(transaction);
             }
         }
     }
