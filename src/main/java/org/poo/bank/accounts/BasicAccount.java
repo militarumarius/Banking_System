@@ -1,11 +1,11 @@
 package org.poo.bank.accounts;
 
-public class BasicAccount extends Account{
-    public BasicAccount(String IBAN, String type, String currency) {
-        super(IBAN, type, currency);
+public class BasicAccount extends Account {
+    public BasicAccount(final String iban, final String type, final String currency) {
+        super(iban, type, currency);
     }
 
-    public BasicAccount(BasicAccount account){
+    public BasicAccount(final BasicAccount account) {
         super(account);
     }
 

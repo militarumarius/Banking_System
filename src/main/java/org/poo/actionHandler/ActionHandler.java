@@ -11,13 +11,12 @@ public final class ActionHandler {
     private ActionHandler() {
         throw new UnsupportedOperationException("Utility class");
     }
-
     /**
      * method that handle the command input of the bank
      * @param output The ArrayNode where I store the JSON objects for display
      * @param bank bank database
      */
-    public static void actionHandler (final ObjectInput input,
+    public static void actionHandler(final ObjectInput input,
                                       final ArrayNode output,
                                       final BankDatabase bank) {
         for (CommandInput commandInput : input.getCommands()) {
@@ -39,11 +38,13 @@ public final class ActionHandler {
                     addFunds.execute();
                 }
                 case "createOneTimeCard" -> {
-                    CreateOneTimeCard command = new CreateOneTimeCard(bank, commandInput, commandInput.getAccount());
+                    CreateOneTimeCard command = new CreateOneTimeCard(bank,
+                            commandInput, commandInput.getAccount());
                     command.execute();
                 }
                 case "deleteCard" -> {
-                    DeleteCard deleteCard = new DeleteCard(bank, commandInput, commandInput.getCardNumber());
+                    DeleteCard deleteCard = new DeleteCard(bank, commandInput,
+                            commandInput.getCardNumber());
                     deleteCard.execute();
                 }
                 case "deleteAccount" -> {
@@ -54,45 +55,53 @@ public final class ActionHandler {
                     PayOnline payOnline = new PayOnline(bank, commandInput, output);
                     payOnline.execute();
                 }
-                case "sendMoney"-> {
+                case "sendMoney" -> {
                     SendMoney sendMoney = new SendMoney(bank, commandInput);
                     sendMoney.execute();
                 }
                 case "printTransactions" -> {
-                    PrintTransaction printTransaction = new PrintTransaction(bank, commandInput, output);
+                    PrintTransaction printTransaction = new PrintTransaction(bank,
+                            commandInput, output);
                     printTransaction.execute();
                 }
                 case "setAlias" -> {
                     SetAlias setAlias = new SetAlias(bank, commandInput);
                     setAlias.execute();
                 }
-                case "checkCardStatus"-> {
-                    CheckCardStatus checkCardStatus = new CheckCardStatus(bank, commandInput, output);
+                case "checkCardStatus" -> {
+                    CheckCardStatus checkCardStatus = new CheckCardStatus(bank,
+                            commandInput, output);
                     checkCardStatus.execute();
                 }
-                case "setMinimumBalance"-> {
-                    SetMinimumBalance setMinimumBalance = new SetMinimumBalance(bank, commandInput);
+                case "setMinimumBalance" -> {
+                    SetMinimumBalance setMinimumBalance = new SetMinimumBalance(bank,
+                            commandInput);
                     setMinimumBalance.execute();
                 }
-                case "changeInterestRate"-> {
-                    ChangeInterestRate changeInterestRate = new ChangeInterestRate(bank, commandInput, output);
+                case "changeInterestRate" -> {
+                    ChangeInterestRate changeInterestRate = new ChangeInterestRate(bank,
+                            commandInput, output);
                     changeInterestRate.execute();
                 }
                 case "addInterest" -> {
                     AddInterest addInterest = new AddInterest(bank, commandInput, output);
                     addInterest.execute();
                 }
-                case "splitPayment"-> {
+                case "splitPayment" -> {
                     SplitPayment splitPayment = new SplitPayment(bank, commandInput);
                     splitPayment.execute();
                 }
-                case "report"-> {
+                case "report" -> {
                    Report report = new Report(bank, commandInput, output);
                    report.execute();
                 }
-                case "spendingsReport"-> {
-                    SpendingsReport spendingsReport = new SpendingsReport(bank, commandInput, output);
+                case "spendingsReport" -> {
+                    SpendingsReport spendingsReport = new SpendingsReport(bank,
+                            commandInput, output);
                     spendingsReport.execute();
+                }
+                default -> {
+                    return;
                 }
             }
         }

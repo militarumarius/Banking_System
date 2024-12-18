@@ -8,35 +8,41 @@ import org.poo.actionHandler.PrintOutput;
 import org.poo.bank.BankDatabase;
 import org.poo.bank.accounts.Account;
 import org.poo.fileio.CommandInput;
-import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
 
-import java.util.Comparator;
 import java.util.List;
 
-public class Report implements Commands{
+public class Report implements Commands {
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
-    public Report(final BankDatabase bank, final CommandInput commandInput, final ArrayNode output){
+
+    public Report(final BankDatabase bank,
+                  final CommandInput commandInput,
+                  final ArrayNode output) {
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
     }
 
+    /**
+     * method that execute the report command
+     */
     @Override
     public void execute() {
-        Account account = bank.findUser(commandInput.getAccount());
-        if(account == null){
+        Account account = bank.findAccountByIban(commandInput.getAccount());
+        if (account == null) {
             ErrorOutput errorOutput = new ErrorOutput(ErrorDescription
                     .ACCOUNT_NOT_FOUND.getMessage(), commandInput.getTimestamp());
             ObjectNode node = errorOutput.toObjectNodeDescription();
-            PrintOutput report = new PrintOutput("report", node, commandInput.getTimestamp());
+            PrintOutput report = new PrintOutput("report", node,
+                    commandInput.getTimestamp());
             report.printCommand(output);
             return;
         }
         List<Transaction> filteredTransactions = account.
-                getTransactionsInInterval(commandInput.getStartTimestamp(), commandInput.getEndTimestamp());
+                getTransactionsInInterval(commandInput.getStartTimestamp(),
+                        commandInput.getEndTimestamp());
         PrintOutput report = new PrintOutput("report",
                 PrintOutput.createOutputTransactionObject(filteredTransactions, account),
                 commandInput.getTimestamp());

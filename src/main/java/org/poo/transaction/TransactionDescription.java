@@ -13,7 +13,7 @@ public enum TransactionDescription {
 
     private final String message;
 
-    TransactionDescription(String message) {
+    TransactionDescription(final String message) {
         this.message = message;
     }
 

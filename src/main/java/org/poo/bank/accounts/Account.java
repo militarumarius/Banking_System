@@ -1,21 +1,12 @@
 package org.poo.bank.accounts;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import lombok.Getter;
 import lombok.Setter;
 import org.poo.bank.cards.Card;
-import org.poo.fileio.CommandInput;
 import org.poo.transaction.Commerciant;
 import org.poo.transaction.Transaction;
-import org.poo.transaction.TransactionBuilder;
-
 import java.util.*;
-
 
 public abstract class Account {
     @JsonProperty("IBAN")
@@ -32,19 +23,20 @@ public abstract class Account {
     @JsonIgnore @Setter
     private double minAmount = 0.0;
 
+    /** */
     @JsonIgnore
     public double getMinAmount() {
         return minAmount;
     }
 
-    protected Account(String IBAN, String type, String currency) {
-        this.IBAN = IBAN;
+    protected Account(final String iban, final String type, final String currency) {
+        this.IBAN = iban;
         this.type = type;
         this.currency = currency;
         this.interestRate = 0;
     }
 
-    protected Account(Account account) {
+    protected Account(final Account account) {
         this.IBAN = account.IBAN;
         this.type = account.type;
         this.balance = account.balance;
@@ -52,14 +44,17 @@ public abstract class Account {
         this.cards = new ArrayList<>(account.cards);
     }
 
+    /** */
     public String getType() {
         return type;
     }
 
+    /** */
     public double getBalance() {
         return balance;
     }
 
+    /** */
     public void setBalance(final double amount) {
         balance = amount;
         if (amount < 0) {
@@ -67,74 +62,106 @@ public abstract class Account {
         }
     }
 
+    /** */
     public String getCurrency() {
         return currency;
     }
 
+    /** */
     public List<Card> getCards() {
         return cards;
     }
 
+    /** */
     @JsonIgnore
     public List<Transaction> getTransactions() {
         return transactions;
     }
 
+    /** */
     @JsonIgnore
     public String getIBAN() {
         return IBAN;
     }
 
-    public boolean validatePayment(double amount, double exchangeRate){
+    /**
+     * method that check if a payment can be done
+     */
+    public boolean validatePayment(final double amount, final double exchangeRate) {
         return this.getBalance() >= amount * exchangeRate
                 && this.getBalance() > this.getMinAmount();
     }
 
-    public void subBalance(double amount){
+    /**
+     * method that substract the balanced of the account
+     */
+    public void subBalance(final double amount) {
         balance -= amount;
-        if(balance < 0)
+        if (balance < 0) {
             throw new RuntimeException("error at payment");
+        }
     }
 
-    public void addBalance(double amount){
+    /**
+     * method that add an amount in the balanced of the account
+     */
+    public void addBalance(final double amount) {
         balance += amount;
     }
+    /** */
     @JsonIgnore
     public double getInterestRate() {
         return interestRate;
     }
 
-    public List<Transaction> getTransactionsInInterval(int startTimestamp, int endTimestamp) {
+    /**
+     * method that get the list of the transactions in the given interval
+     */
+    public List<Transaction> getTransactionsInInterval(final int startTimestamp,
+                                                       final int endTimestamp) {
         List<Transaction> filteredTransactions = new ArrayList<>();
         for (Transaction transaction : transactions) {
-            if (transaction.getTimestamp() >= startTimestamp && transaction.getTimestamp() <= endTimestamp) {
+            if (transaction.getTimestamp() >= startTimestamp
+                    && transaction.getTimestamp() <= endTimestamp) {
                 filteredTransactions.add(transaction);
             }
         }
         return filteredTransactions;
     }
 
-    public List<Transaction> getSpendingTransaction(int startTimestamp, int endTimestamp) {
+    /**
+     * method that get the list of the spending transactions in the given interval
+     */
+    public List<Transaction> getSpendingTransaction(final int startTimestamp,
+                                                    final int endTimestamp) {
         List<Transaction> filteredTransactions = new ArrayList<>();
         for (Transaction transaction : transactions) {
-            if (transaction.getTimestamp() >= startTimestamp &&
-                    transaction.getTimestamp() <= endTimestamp && transaction.getDescription().equals("Card payment")) {
+            if (transaction.getTimestamp() >= startTimestamp
+                    && transaction.getTimestamp() <= endTimestamp
+                    && transaction.getDescription().equals("Card payment")) {
                 filteredTransactions.add(transaction);
             }
         }
         return filteredTransactions;
     }
 
-    public List<Commerciant> getCommerciants(List<Transaction> transactions) {
+    /**
+     * method that get the commerciants of the given transactions
+     */
+    public List<Commerciant> getCommerciants(final List<Transaction> listOfTransactions) {
         List<Commerciant> commerciants = new ArrayList<>();
-        for (Transaction transaction : transactions) {
-            Commerciant commerciant = new Commerciant(transaction.getCommerciant(), (Double) transaction.getAmount());
-                commerciants.add(commerciant);
+        for (Transaction transaction : listOfTransactions) {
+            Commerciant commerciant = new Commerciant(transaction.getCommerciant(),
+                    (Double) transaction.getAmount());
+            commerciants.add(commerciant);
         }
         return commerciants;
     }
 
-    public void addTransaction(Transaction transaction){
+    /**
+     * method that add a transaction in the list of the transactions
+     */
+    public void addTransaction(final Transaction transaction) {
         this.getTransactions().add(transaction);
     }
 

@@ -15,53 +15,77 @@ import java.util.Map;
 import static org.poo.utils.Utils.resetRandom;
 
 public class BankDatabase {
-    final private List<User> users;
-    final private List<ExchangeRate> exchangeRates;
-    final Map<String, User> userMap = new HashMap<>();
-    final Map<String, Account> aliasMap = new HashMap<>();
+    private final List<User> users;
+    private final List<ExchangeRate> exchangeRates;
+    private final Map<String, User> userMap = new HashMap<>();
+    private final Map<String, Account> aliasMap = new HashMap<>();
 
-    public BankDatabase(ObjectInput input) {
+    public BankDatabase(final ObjectInput input) {
         resetRandom();
-        users =  new ArrayList<>();
+        users = new ArrayList<>();
         exchangeRates = new ArrayList<>();
-        for(UserInput user : input.getUsers())
+        for (UserInput user : input.getUsers()) {
             users.add(new User(user));
-        for(ExchangeInput rate : input.getExchangeRates())
+        }
+        for (ExchangeInput rate : input.getExchangeRates()) {
             addExchangeRate(rate);
+        }
         createEmailMap();
     }
 
+    /**
+     */
     public Map<String, User> getUserMap() {
         return userMap;
     }
 
+    /**
+     */
     public List<User> getUsers() {
         return users;
     }
 
+    /**
+     */
     public List<ExchangeRate> getExchangeRates() {
         return exchangeRates;
     }
 
-    public List<User> copyUsers(){
-        List<User> copyUsers= new ArrayList<>();
-
-        for(User user : users)
+    /**
+     * method that copy the users for the output
+     */
+    public List<User> copyUsers() {
+        List<User> copyUsers = new ArrayList<>();
+        for (User user : users) {
             copyUsers.add(new User(user));
+        }
         return copyUsers;
     }
-    public void createEmailMap(){
+
+    /**
+     * method that create the email hasmap
+     * */
+    public void createEmailMap() {
         for (User user : users) {
             userMap.put(user.getEmail(), user);
         }
     }
 
-    public void addExchangeRate(ExchangeInput rate){
+    /**
+     * method that add the exchange rate in the bank database
+     */
+    public void addExchangeRate(final ExchangeInput rate) {
         this.exchangeRates.add(new ExchangeRate(rate.getRate(), rate.getFrom(), rate.getTo()));
         double newRate = 1 / rate.getRate();
-        this.exchangeRates.add(new ExchangeRate(newRate, rate.getTo(),rate.getFrom()));
+        this.exchangeRates.add(new ExchangeRate(newRate, rate.getTo(), rate.getFrom()));
     }
-    public double findExchangeRate(String from, String to, List<String> visited) {
+
+    /**
+     * method that find the exchange rate from two currency , using a dfs recursive algoritm
+     */
+    public double findExchangeRate(final String from,
+                                   final  String to,
+                                   final List<String> visited) {
         if (from.equals(to)) {
             return 1;
         }
@@ -78,48 +102,71 @@ public class BankDatabase {
         return -1;
     }
 
-    public Account findUser(String iban){
-        for (User user: users) {
+    /**
+     * method that find the account by is iban
+     */
+    public Account findAccountByIban(final String iban) {
+        for (User user : users) {
             Account account = user.findAccount(iban);
-            if(account != null)
+            if (account != null) {
                 return account;
+            }
         }
         return null;
     }
 
+    /** */
     public Map<String, Account> getAliasMap() {
         return aliasMap;
     }
 
-    public Card findCard(String cardNumber){
-        for (User user : users){
+    /**
+     * method that find a card by his cardnumber
+     */
+    public Card findCard(final String cardNumber) {
+        for (User user : users) {
             Card card = user.findCard(cardNumber);
-            if(card != null)
+            if (card != null) {
                 return card;
+            }
         }
         return null;
     }
 
-    public boolean checkSaving(Account account){
+    /**
+     * method that check if an acoount is an economy account
+     */
+    public boolean checkSaving(final Account account) {
         return account.getType().equals("savings");
     }
 
-    public Account checkSplitPayment(List<Account> accounts, BankDatabase bank, CommandInput commandInput, double amountToPay){
-        for(Account account: accounts.reversed()){
-            List <String> visited = new ArrayList<>();
-            double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
+    /**
+     * method that check if a payment can be split
+     */
+    public Account checkSplitPayment(final List<Account> accounts,
+                                     final BankDatabase bank,
+                                     final CommandInput commandInput,
+                                     final double amountToPay) {
+        for (Account account : accounts.reversed()) {
+            List<String> visited = new ArrayList<>();
+            double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(),
+                    account.getCurrency(), visited);
             visited.clear();
             double amountToPayThisAccount = amountToPay * exchangeRate;
-            if (account.getBalance() < amountToPayThisAccount)
+            if (account.getBalance() < amountToPayThisAccount) {
                 return account;
+            }
         }
         return null;
     }
 
-    public List<Account> convertAccountfromString(List<String> ibans){
-        List <Account> accounts = new ArrayList<>();
-        for(String iban : ibans){
-            accounts.add(this.findUser(iban));
+    /**
+     * method that convert the iban list  to an account list
+     */
+    public List<Account> convertAccountfromString(final List<String> ibans) {
+        List<Account> accounts = new ArrayList<>();
+        for (String iban : ibans) {
+            accounts.add(this.findAccountByIban(iban));
         }
         return accounts;
     }

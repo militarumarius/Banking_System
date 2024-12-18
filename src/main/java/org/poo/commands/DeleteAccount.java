@@ -13,27 +13,32 @@ import org.poo.transaction.Transaction;
 import org.poo.transaction.TransactionBuilder;
 import org.poo.transaction.TransactionDescription;
 
-public class DeleteAccount implements Commands{
+public class DeleteAccount implements Commands {
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
+
     public DeleteAccount(final BankDatabase bank,
-                            final CommandInput commandInput, final ArrayNode output){
+                         final CommandInput commandInput, final ArrayNode output) {
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
     }
 
+    /**
+     * method that execute deleleteAccount command
+     */
     @Override
     public void execute() {
         ErrorOutput errorOutput;
         ObjectNode node;
         User user = bank.getUserMap().get(commandInput.getEmail());
-        if(user == null)
+        if (user == null) {
             return;
+        }
         boolean check = user.getAccounts().removeIf(account ->
                 account.getIBAN().equals(commandInput.getAccount()) && account.getBalance() == 0);
-        if(check) {
+        if (check) {
             errorOutput = new ErrorOutput(ErrorDescription.ACCOUNT_DELETED.getMessage(),
                     commandInput.getTimestamp());
             node = errorOutput.toObjectNodeSuccess();
@@ -41,7 +46,7 @@ public class DeleteAccount implements Commands{
             errorOutput = new ErrorOutput(ErrorDescription.
                     ACCOUNT_COULD_NOT_BE_DELETED.getMessage(), commandInput.getTimestamp());
             node = errorOutput.toObjectNodeErrorWithTimestamp();
-            Account account = bank.findUser(commandInput.getAccount());
+            Account account = bank.findAccountByIban(commandInput.getAccount());
             Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
                     TransactionDescription.INVALID_DELETE_ACCOUNT.getMessage())
                     .build();

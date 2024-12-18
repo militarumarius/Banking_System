@@ -17,24 +17,29 @@ import org.poo.transaction.TransactionDescription;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PayOnline implements Commands{
+public class PayOnline implements Commands {
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
+
     public PayOnline(final BankDatabase bank,
-                           final CommandInput commandInput, final ArrayNode output){
+                     final CommandInput commandInput, final ArrayNode output) {
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
     }
 
+    /**
+     * method that execute the online payment
+     */
     @Override
     public void execute() {
         User user = bank.getUserMap().get(commandInput.getEmail());
-        if(user == null)
+        if (user == null) {
             return;
+        }
         Account account = user.getCardAccountMap().get(commandInput.getCardNumber());
-        if(account == null){
+        if (account == null) {
             ErrorOutput errorOutput = new ErrorOutput(ErrorDescription.
                     CARD_NOT_FOUND.getMessage(), commandInput.getTimestamp());
             ObjectNode node = errorOutput.toObjectNodeDescription();
@@ -44,9 +49,10 @@ public class PayOnline implements Commands{
             return;
         }
         Card card = user.findCard(commandInput.getCardNumber());
-        if(card == null)
+        if (card == null) {
             return;
-        if(card.getStatus().equals("frozen")){
+        }
+        if (card.getStatus().equals("frozen")) {
             Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
                     TransactionDescription.CARD_FROZEN.getMessage())
                     .build();
@@ -54,16 +60,18 @@ public class PayOnline implements Commands{
             return;
         }
         List<String> visited = new ArrayList<>();
-        double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(), account.getCurrency(), visited);
-        if(!account.validatePayment(commandInput.getAmount(), exchangeRate)){
+        double exchangeRate = bank.findExchangeRate(commandInput.getCurrency(),
+                account.getCurrency(), visited);
+        if (!account.validatePayment(commandInput.getAmount(), exchangeRate)) {
             Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
                     TransactionDescription.INSUFFICIENT_FUNDS.getMessage())
                     .build();
             account.getTransactions().add(transaction);
             return;
         }
-        if (exchangeRate <= 0)
+        if (exchangeRate <= 0) {
             return;
+        }
         account.subBalance(commandInput.getAmount() * exchangeRate);
         Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
                 TransactionDescription.CARD_PAYMENT.getMessage())
@@ -71,10 +79,11 @@ public class PayOnline implements Commands{
                 .commerciant(commandInput.getCommerciant())
                 .build();
         account.getTransactions().add(transaction);
-        if(card.getType().equals("OneTimeCard")) {
+        if (card.getType().equals("OneTimeCard")) {
             DeleteCard deleteCard = new DeleteCard(bank, commandInput, card.getCardNumber());
             deleteCard.execute();
-            CreateOneTimeCard command = new CreateOneTimeCard(bank, commandInput, account.getIBAN());
+            CreateOneTimeCard command = new CreateOneTimeCard(bank, commandInput,
+                    account.getIBAN());
             command.execute();
         }
     }

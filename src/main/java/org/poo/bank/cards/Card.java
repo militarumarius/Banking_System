@@ -13,7 +13,7 @@ public abstract class Card {
     private final String type;
     @JsonIgnore
     private final Account account;
-    public Card(String cardNumber, String type, Account account) {
+    public Card(final String cardNumber, final String type, final Account account) {
         this.cardNumber = cardNumber;
         this.status = "active";
         this.type = type;

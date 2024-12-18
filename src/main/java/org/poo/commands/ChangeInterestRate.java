@@ -12,24 +12,31 @@ import org.poo.transaction.Transaction;
 import org.poo.transaction.TransactionBuilder;
 import org.poo.transaction.TransactionDescription;
 
-public class ChangeInterestRate implements Commands{
+public class ChangeInterestRate implements Commands {
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
-    public ChangeInterestRate(final BankDatabase bank, final CommandInput commandInput, final ArrayNode output){
+
+    public ChangeInterestRate(final BankDatabase bank,
+                              final CommandInput commandInput,
+                              final ArrayNode output) {
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
     }
 
+    /**
+     * method that change the interest rate of the economy account
+     */
     @Override
     public void execute() {
-        Account account = bank.findUser(commandInput.getAccount());
-        if(!bank.checkSaving(account)){
+        Account account = bank.findAccountByIban(commandInput.getAccount());
+        if (!bank.checkSaving(account)) {
             ErrorOutput errorOutput = new ErrorOutput(ErrorDescription
                     .INVALID_ACCOUNT.getMessage(), commandInput.getTimestamp());
             ObjectNode node = errorOutput.toObjectNodeDescription();
-            PrintOutput changeInterestRate = new PrintOutput("changeInterestRate", node, commandInput.getTimestamp());
+            PrintOutput changeInterestRate = new PrintOutput("changeInterestRate",
+                    node, commandInput.getTimestamp());
             changeInterestRate.printCommand(output);
             return;
         }

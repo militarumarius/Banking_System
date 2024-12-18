@@ -14,21 +14,25 @@ import org.poo.transaction.Transaction;
 import java.util.Comparator;
 import java.util.List;
 
-public class SpendingsReport implements Commands{
+public class SpendingsReport implements Commands {
     private final BankDatabase bank;
     private final CommandInput commandInput;
     private final ArrayNode output;
+
     public SpendingsReport(final BankDatabase bank,
-                           final CommandInput commandInput, final ArrayNode output){
+                           final CommandInput commandInput, final ArrayNode output) {
         this.bank = bank;
         this.commandInput = commandInput;
         this.output = output;
     }
 
+    /**
+     * method that execute the spendingReport command
+     */
     @Override
     public void execute() {
-        Account account = bank.findUser(commandInput.getAccount());
-        if(account == null){
+        Account account = bank.findAccountByIban(commandInput.getAccount());
+        if (account == null) {
             ErrorOutput errorOutput = new ErrorOutput(ErrorDescription.ACCOUNT_NOT_FOUND.
                     getMessage(), commandInput.getTimestamp());
             ObjectNode node = errorOutput.toObjectNodeDescription();
@@ -37,7 +41,7 @@ public class SpendingsReport implements Commands{
             report.printCommand(output);
             return;
         }
-        if(bank.checkSaving(account)) {
+        if (bank.checkSaving(account)) {
             ErrorOutput errorOutput = new ErrorOutput(ErrorDescription.
                     INVALID_SPENDING_REPORT.getMessage(), commandInput.getTimestamp());
             ObjectNode node = errorOutput.toObjectNodeErrorWithoutTimestamp();
@@ -53,7 +57,8 @@ public class SpendingsReport implements Commands{
                 getCommerciants(filteredTransactions);
         commerciants.sort(Comparator.comparing(Commerciant::getCommerciant));
         PrintOutput spendingsReport = new PrintOutput("spendingsReport",
-                PrintOutput.createOutputSpendingTransactionObject(filteredTransactions, commerciants, account),
+                PrintOutput.createOutputSpendingTransactionObject(filteredTransactions,
+                        commerciants, account),
                 commandInput.getTimestamp());
         spendingsReport.printCommand(output);
     }

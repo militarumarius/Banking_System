@@ -3,7 +3,6 @@ package org.poo.transaction;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.bank.accounts.Account;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +23,7 @@ public  class Transaction {
     private String error;
     private List<String> involvedAccounts = new ArrayList<>();
 
-    public Transaction(TransactionBuilder builder) {
+    public Transaction(final TransactionBuilder builder) {
         this.timestamp = builder.getTimestamp();
         this.amount = builder.getAmount();
         this.description = builder.getDescription();
@@ -40,7 +39,7 @@ public  class Transaction {
         this.error = builder.getError();
     }
 
-    public Transaction(Transaction transaction){
+    public Transaction(final Transaction transaction) {
         this.timestamp = transaction.getTimestamp();
         this.transferType = transaction.getTransferType();
         this.description = transaction.getDescription();

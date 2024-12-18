@@ -9,7 +9,9 @@ public class ExchangeRate {
     private String to;
     private double rate;
 
-    public ExchangeRate(double rate, String from, String to){
+    public ExchangeRate(final double rate,
+                        final String from,
+                        final String to) {
         this.rate = rate;
         this.from = from;
         this.to = to;

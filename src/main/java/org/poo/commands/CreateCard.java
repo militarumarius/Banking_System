@@ -12,21 +12,27 @@ import org.poo.transaction.TransactionDescription;
 
 import static org.poo.utils.Utils.generateCardNumber;
 
-public class CreateCard implements Commands{
+public class CreateCard implements Commands {
     private final BankDatabase bank;
     private final CommandInput commandInput;
-    public CreateCard(final BankDatabase bank, final CommandInput commandInput){
+
+    public CreateCard(final BankDatabase bank, final CommandInput commandInput) {
         this.bank = bank;
         this.commandInput = commandInput;
     }
+
+    /**
+     * method that execute the createCard command
+     */
     @Override
     public void execute() {
         User user = bank.getUserMap().get(commandInput.getEmail());
-        if(user == null)
+        if (user == null) {
             return;
+        }
         Account account = user.findAccount(commandInput.getAccount());
         Card newCard = new DebitCard(generateCardNumber(), "DebitCard", account);
-        user.addCard(account,newCard );
+        user.addCard(account, newCard);
         Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
                 TransactionDescription.CARD_CREATION_SUCCESS.getMessage())
                 .account(account.getIBAN())
@@ -36,3 +42,4 @@ public class CreateCard implements Commands{
         account.addTransaction(transaction);
     }
 }
+

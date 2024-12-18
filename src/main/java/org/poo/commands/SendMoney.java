@@ -11,42 +11,53 @@ import org.poo.transaction.TransactionDescription;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SendMoney implements Commands{
+public class SendMoney implements Commands {
     private final BankDatabase bank;
     private final CommandInput commandInput;
-    public SendMoney(BankDatabase bank, CommandInput commandInput){
+
+    public SendMoney(final BankDatabase bank, final CommandInput commandInput) {
         this.bank = bank;
         this.commandInput = commandInput;
     }
 
+    /**
+     * method that make an intern transfer
+     */
     @Override
     public void execute() {
         User user = bank.getUserMap().get(commandInput.getEmail());
-        if(user == null)
+        if (user == null) {
             return;
-        Account receiver = bank.findUser(commandInput.getReceiver());
-        if(receiver == null)
+        }
+        Account receiver = bank.findAccountByIban(commandInput.getReceiver());
+        if (receiver == null) {
             return;
+        }
         Account sender = user.findAccount(commandInput.getAccount());
-        if(sender == null)
+        if (sender == null) {
             return;
-        if(!sender.getIBAN().startsWith("RO"))
+        }
+        if (!sender.getIBAN().startsWith("RO")) {
             return;
+        }
         List<String> visited = new ArrayList<>();
-        double exchangeRate = bank.findExchangeRate(sender.getCurrency(), receiver.getCurrency(), visited);
+        double exchangeRate = bank.findExchangeRate(sender.getCurrency(),
+                receiver.getCurrency(), visited);
         visited.clear();
-        if(sender.getBalance() < commandInput.getAmount()){
+        if (sender.getBalance() < commandInput.getAmount()) {
             Transaction transaction = new TransactionBuilder(commandInput.getTimestamp(),
                     TransactionDescription.INSUFFICIENT_FUNDS.getMessage())
                     .build();
             sender.getTransactions().add(transaction);
             return;
         }
-        if (exchangeRate <= 0)
+        if (exchangeRate <= 0) {
             return;
-        sender.subBalance( commandInput.getAmount());
+        }
+        sender.subBalance(commandInput.getAmount());
         receiver.addBalance(exchangeRate * commandInput.getAmount());
-        String amountSender = String.valueOf(commandInput.getAmount()) + " " + sender.getCurrency();
+        String amountSender = String.valueOf(commandInput.getAmount())
+                + " " + sender.getCurrency();
         Transaction transactionSender = new TransactionBuilder(commandInput.getTimestamp(),
                 commandInput.getDescription())
                 .senderIBAN(commandInput.getAccount())
@@ -55,8 +66,8 @@ public class SendMoney implements Commands{
                 .transferType("sent")
                 .build();
         sender.addTransaction(transactionSender);
-        String amountReceiver = String.valueOf(exchangeRate *
-                commandInput.getAmount()) + " " + receiver.getCurrency();
+        String amountReceiver = String.valueOf(exchangeRate
+                * commandInput.getAmount()) + " " + receiver.getCurrency();
         Transaction transactionReceiver = new TransactionBuilder(commandInput.getTimestamp(),
                 commandInput.getDescription())
                 .senderIBAN(commandInput.getAccount())

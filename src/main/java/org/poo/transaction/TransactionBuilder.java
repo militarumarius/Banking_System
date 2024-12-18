@@ -3,7 +3,6 @@ package org.poo.transaction;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.bank.accounts.Account;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,55 +23,68 @@ public class TransactionBuilder {
     private String error;
     private List<String> involvedAccounts = new ArrayList<>();
 
-    public TransactionBuilder(int timestamp, String description) {
+    public TransactionBuilder(final int timestamp,
+                              final String description) {
         this.timestamp = timestamp;
         this.description = description;
     }
-    public TransactionBuilder senderIBAN(String senderIBAN) {
-        this.senderIBAN = senderIBAN;
+    /** */
+    public TransactionBuilder senderIBAN(final String newSenderIBAN) {
+        this.senderIBAN = newSenderIBAN;
         return this;
     }
-    public TransactionBuilder receiverIBAN(String receiverIBAN) {
-        this.receiverIBAN = receiverIBAN;
+    /** */
+    public TransactionBuilder receiverIBAN(final String newReceiverIBAN) {
+        this.receiverIBAN = newReceiverIBAN;
         return this;
     }
-    public TransactionBuilder amount(Object amount){
-        this.amount = amount;
+    /** */
+    public TransactionBuilder amount(final Object newAmount) {
+        this.amount = newAmount;
         return this;
     }
-    public TransactionBuilder transferType(String transferType){
-        this.transferType = transferType;
+    /** */
+    public TransactionBuilder transferType(final String newTransferType) {
+        this.transferType = newTransferType;
         return this;
     }
-    public TransactionBuilder account(String account){
-        this.account = account;
+    /** */
+    public TransactionBuilder account(final String newAccount) {
+        this.account = newAccount;
         return this;
     }
-    public TransactionBuilder cardHolder(String cardHolder){
-        this.cardHolder = cardHolder;
+    /** */
+    public TransactionBuilder cardHolder(final String newCardHolder) {
+        this.cardHolder = newCardHolder;
         return this;
     }
-    public TransactionBuilder card(String card){
-        this.card = card;
+    /** */
+    public TransactionBuilder card(final String newCard) {
+        this.card = newCard;
         return this;
     }
-    public TransactionBuilder commerciant(String commerciant){
-        this.commerciant = commerciant;
+    /** */
+    public TransactionBuilder commerciant(final String newCommerciant) {
+        this.commerciant = newCommerciant;
         return this;
     }
-    public TransactionBuilder involvedAccounts(List<String> involvedAccounts){
-        this.involvedAccounts = involvedAccounts;
+    /** */
+    public TransactionBuilder involvedAccounts(final List<String> newInvolvedAccounts) {
+        this.involvedAccounts = newInvolvedAccounts;
         return this;
     }
-    public TransactionBuilder currency(String currency){
-        this.currency = currency;
+    /** */
+    public TransactionBuilder currency(final String newCurrency) {
+        this.currency = newCurrency;
         return this;
     }
-    public TransactionBuilder error(String error){
-        this.error = error;
+    /** */
+    public TransactionBuilder error(final String newError) {
+        this.error = newError;
         return this;
     }
-    public Transaction build(){
+    /** */
+    public Transaction build() {
         return new Transaction(this);
     }
 }
