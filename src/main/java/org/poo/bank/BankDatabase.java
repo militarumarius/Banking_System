@@ -81,7 +81,7 @@ public class BankDatabase {
     }
 
     /**
-     * method that find the exchange rate from two currency , using a dfs recursive algoritm
+     * method that find the exchange rate from two currency , using a dfs recursive algorithm
      */
     public double findExchangeRate(final String from,
                                    final  String to,

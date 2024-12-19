@@ -125,7 +125,6 @@ public class User {
 
     /**
      * function that add an account to the user
-     * @param account
      */
     public void addAccount(final Account account) {
         this.accounts.add(account);

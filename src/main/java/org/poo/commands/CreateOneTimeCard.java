@@ -26,7 +26,7 @@ public class CreateOneTimeCard implements Commands {
     }
 
     /**
-     * method that create an one time card
+     * method that create a one time card
      */
     @Override
     public void execute() {
