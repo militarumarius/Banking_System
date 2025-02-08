@@ -1,45 +1,35 @@
-# Project Assignment POO  - J. POO Morgan - Phase One
+# Project Stage 1 - J. POO Morgan Chase & Co.
+## Name : Militaru Ionut-Marius 323CAb
 
-![](https://s.yimg.com/ny/api/res/1.2/aN0SfZTtLF5hLNO0wIN3gg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTcwNTtoPTQyNztjZj13ZWJw/https://o.aolcdn.com/hss/storage/midas/b23d8b7f62a50a7b79152996890aa052/204855412/fit.gif)
+### Project Description
+* The main goal of this project was to implement a simplified banking system. 
+The system simulates the basic functionalities of a bank, 
+providing a user experience that is both intuitive and secure.
 
-#### Assignment Link: [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/2024/proiect-e1](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/2024/proiect-e1)
 
-## Skel Structure
+## Implemented Classes
+* In the actionHandler package, I implemented a class called ActionHandler 
+to manage the commands within the banking system. Additionally, I implemented two classes 
+to print errors or commands to the output and an enum where I defined the different types 
+of errors that can occur.
 
-* src/
-    * checker/ - checker files
-    * fileio/ - contains classes used to read data from the json files
-    * main/
-        * Main - the Main class runs the checker on your implementation. Add the entry point to your implementation in it. Run Main to test your implementation from the IDE or from command line.
-        * Test - run the main method from Test class with the name of the input file from the command line and the result will be written
-          to the out.txt file. Thus, you can compare this result with ref.
-* input/ - contains the tests in JSON format
-* ref/ - contains all reference output for the tests in JSON format
+* In the bank package, I implemented various classes for accounts, cards, users, and the bank database. 
+The Card and Account classes are abstract to allow for extension based on the type of card or account 
+that will be implemented in the future.
 
-## Tests
+* In the commands package, I implemented a Command interface, followed by various types of commands 
+that can occur within the banking system. This design allows for new commands to be added to the banking 
+system with ease, as they are independent of the other commands.
 
-Tests Basic 1 - 8: Infrastructure \
-Tests Functional 9 - 17: Advanced \
-Tests Flow 18 - 20: Large Input
+* In the transaction package, I implemented three classes: Transaction, TransactionBuilder, and Commerciant, 
+along with an enum called TransactionDescription, which contains all types of description that can occur during a 
+transaction. I implemented a TransactionBuilder to avoid creating separate classes for every type of 
+transaction, where only the constructor would differ.
 
-1. test01_create - 2p
-2. test02_delete - 2p
-3. test03_one_time_card - 2p
-4. test04_funds - 2p
-5. test05_money_flow - 2p
-6. test06_non_existing - 2p
-7. test07_send_money_part1 - 3p
-8. test08_send_money_part2 - 3p
-9. test09_print_transactions - 3p
-10. test10_errors - 3p
-11. test11_card_status - 5p
-12. test12_continuous_payments - 5p
-13. test13_savings_account - 5p
-14. test14_split_payments - 5p
-15. test15_every_payment - 5p
-16. test16_report - 5p
-17. test17_spendings_report - 5p
-18. test18_large_input_1 - 7p
-19. test19_large_input_2 - 7p
-20. test19_large_input_3 - 7p
-
+## DESIGN PATTERNS
+#### In the project, I implemented three design patterns
+* I implemented a Factory pattern for account creation to handle the type of account that should be implemented.
+* In the transactions, I implemented a Builder pattern to handle the different types of transactions 
+that can be carried out within the banking system.
+* I implemented a Command pattern to manage the commands in the banking system, making it 
+easier to extend the system by adding new commands.

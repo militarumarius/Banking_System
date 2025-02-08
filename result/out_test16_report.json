@@ -1,0 +1,156 @@
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Emanuel",
+    "lastName" : "Dumitrescu",
+    "email" : "Emanuel_Dumitrescu@gmail.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 838.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "type" : "classic",
+      "balance" : 216.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Jacques",
+    "lastName" : "Loiseau",
+    "email" : "Jacques_Loiseau@gmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 791.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "type" : "classic",
+      "balance" : 586.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 9
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Emanuel",
+    "lastName" : "Dumitrescu",
+    "email" : "Emanuel_Dumitrescu@gmail.ro",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 272.5,
+      "currency" : "RON",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "type" : "classic",
+      "balance" : 497.0,
+      "currency" : "RON",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Jacques",
+    "lastName" : "Loiseau",
+    "email" : "Jacques_Loiseau@gmail.fr",
+    "accounts" : [ {
+      "type" : "classic",
+      "balance" : 791.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "type" : "classic",
+      "balance" : 586.0,
+      "currency" : "EUR",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 14
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 23,
+    "description" : "Card not found"
+  },
+  "timestamp" : 23
+}, {
+  "command" : "payOnline",
+  "output" : {
+    "timestamp" : 24,
+    "description" : "Card not found"
+  },
+  "timestamp" : 24
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 836.5,
+    "currency" : "RON",
+    "IBAN" : "RO58POOB7344468893732422",
+    "transactions" : [ {
+      "timestamp" : 10,
+      "description" : "New card created",
+      "cardHolder" : "Emanuel_Dumitrescu@gmail.ro",
+      "account" : "RO58POOB7344468893732422",
+      "card" : "8207906978464446"
+    }, {
+      "timestamp" : 11,
+      "description" : "Card payment",
+      "amount" : 256.0,
+      "commerciant" : "McDonalds"
+    }, {
+      "timestamp" : 12,
+      "description" : "Card payment",
+      "amount" : 28.5,
+      "commerciant" : "Burger King"
+    } ]
+  },
+  "timestamp" : 25
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 902.5,
+    "currency" : "RON",
+    "IBAN" : "RO69POOB6209498372540635",
+    "transactions" : [ {
+      "timestamp" : 2,
+      "description" : "New account created"
+    } ]
+  },
+  "timestamp" : 26
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 541.0,
+    "currency" : "EUR",
+    "IBAN" : "RO90POOB5450777208072365",
+    "transactions" : [ {
+      "timestamp" : 17,
+      "description" : "Water and electricity bills",
+      "senderIBAN" : "RO90POOB5450777208072365",
+      "receiverIBAN" : "RO69POOB6209498372540635",
+      "amount" : "1012.0 EUR",
+      "transferType" : "sent"
+    } ]
+  },
+  "timestamp" : 27
+}, {
+  "command" : "report",
+  "output" : {
+    "balance" : 1367.0,
+    "currency" : "EUR",
+    "IBAN" : "RO65POOB8944016386845896",
+    "transactions" : [ ]
+  },
+  "timestamp" : 28
+} ]
